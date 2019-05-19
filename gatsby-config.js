@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `FOSS@Amrita (amFOSS) - Code | Share | Grow`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `A Student Community of Open Source Enthusiasts based in Amrita Vishwa Vidyapeetham, Amritapuri. We promote and contribute to FOSS, and mentor students for achieving excellence.`,
     author: 'amfoss'
   },
   plugins: [
