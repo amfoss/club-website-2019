@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{187:function(e,t,n){"use strict";n.r(t);var a=n(0),u=n.n(a),l=n(196),c=n(195);t.default=function(){return u.a.createElement(l.a,null,u.a.createElement(c.a,{title:"About the Club"}),u.a.createElement("h1",null,"About the Club"))}}}]);
+//# sourceMappingURL=component---src-pages-about-js-34b784366dfda2106d17.js.map

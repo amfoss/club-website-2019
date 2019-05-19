@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{191:function(e,n,t){"use strict";t.r(n);var a=t(0),l=t.n(a),i=t(196),u=t(195);n.default=function(){return l.a.createElement(i.a,null,l.a.createElement(u.a,{title:"Life in the Club"}),l.a.createElement("h1",null,"Life in the Club"))}}}]);
+//# sourceMappingURL=component---src-pages-life-js-56672804552c0ed28d2d.js.map

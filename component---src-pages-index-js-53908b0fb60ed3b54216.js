@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{190:function(e,n,a){"use strict";a.r(n);var t=a(0),l=a.n(t),u=a(196),c=a(195);n.default=function(){return l.a.createElement(u.a,null,l.a.createElement(c.a,{title:"India's Leading FOSS Club"}),l.a.createElement("h1",null,"home"))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-53908b0fb60ed3b54216.js.map
