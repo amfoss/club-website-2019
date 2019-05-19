@@ -1,20 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `FOSS@Amrita (amFOSS) - Code | Share | Grow`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: 'amfoss'
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -24,7 +14,57 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-yaml-full`,
+      options: {
+        createChildNodes: true,
+        typeName: `dd`,
+        plugins: [
+          `gatsby-yaml-full-markdown`, // Enable !markdown tags
+          {
+            resolve: `gatsby-yaml-full-file`,
+            options: {
+              path: './content', // If not set, the base path will be the parent
+            },                   // directory of the YAML file being accessed
+          },
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Nunito Sans', 'Rajdhani:400,900']
+        }
+      }
+    },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `tomato`,
+        showSpinner: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
