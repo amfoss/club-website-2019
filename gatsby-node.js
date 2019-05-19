@@ -1,39 +1,13 @@
-const path = require("path")
+const { graphqlForProfiles } = require("./src/scripts/create-profiles");
 
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+function createIndividualPages(actions, graphql) {
+  const { createPage } = actions;
 
-  const ProfileTemplate = path.resolve(`src/templates/profileTemplate.js`)
+  return Promise.all([
+    graphqlForProfiles(graphql, createPage),
+  ])
+}
 
-  return graphql(`
-     {
-        allMembersYaml(sort:{
-            fields: firstName
-            order: ASC
-        })
-        {
-            edges
-            {
-                node
-                {
-                    username
-                }
-            }
-        }
-     }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors)
-    }
-
-    result.data.allMembersYaml.edges.forEach(({ node }) => {
-      createPage({
-        path: '@' + node.username,
-        component: ProfileTemplate,
-        context: {
-          username: node.username
-        }, // additional data can be passed via context
-      })
-    })
-  })
+exports.createPages = ({ graphql, actions }) => {
+  return createIndividualPages(actions, graphql);
 }

@@ -10,7 +10,6 @@ const Blog = ({
   },
 }) => {
   const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
     .map(edge => <div key={edge.node.id}>{edge.node.frontmatter.title}</div>)
 
   return (
