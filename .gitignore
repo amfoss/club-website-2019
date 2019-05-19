@@ -1,3 +1,5 @@
+package-lock.json
+
 # Logs
 logs
 *.log
@@ -58,6 +60,9 @@ typings/
 .cache/
 public
 
+#intelliJ files
+.idea/
+
 # Mac files
 .DS_Store
 
@@ -67,3 +72,4 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
