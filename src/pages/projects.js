@@ -38,6 +38,13 @@ export const pageQuery = graphql`
           title
           contributers
           slug
+          cover{
+            childImageSharp{
+              resize(width: 150){
+                src
+              }
+            }
+          }
         }
       }
     }
