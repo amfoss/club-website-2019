@@ -1,0 +1,11 @@
+firstName: Harshith
+lastName: Pabbati
+username: harshithpabbati
+batch: 2022
+branch: CSE
+tagline: Web Developer
+about: !markdown |
+  Hello
+links:
+  github: https://github.com/harshithpabbati
+  facebook: https://facebook.com/harshithpabbati
