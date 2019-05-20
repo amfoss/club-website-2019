@@ -7,7 +7,7 @@ import avatar from "../../images/defaults/avatar.png"
 const BlogCard = ({ blog }) => (
   <Link to={"/@" + blog.author + "/" + blog.slug} className="blog-card">
     <img
-      src={blog.coverpic ? blog.coverpic : avatar}
+      src={blog.cover ? blog.cover.childImageSharp.resize.src  : avatar}
       alt={blog.slug + `'s image`}
     />
     <h3>

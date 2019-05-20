@@ -41,7 +41,13 @@ export const pageQuery = graphql`
             tags
             slug
             date(formatString: "DD MMMM, YYYY")
-            coverpic
+            cover {
+              childImageSharp {
+                resize(width: 150) {
+                  src
+                }
+              }
+            }
           }
         }
       }
