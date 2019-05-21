@@ -18,21 +18,28 @@ function createBlogPages(result, createPage) {
 function graphqlForBlogs(graphql, createPage) {
   return graphql(`
      {
-      allMarkdownRemark(sort: { 
-      order: DESC
-      fields: [frontmatter___date] 
-      }) 
-      {
-        edges {
-          node {
-            frontmatter {
-              slug
-              author
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            author
+            tags
+            slug
+            date(formatString: "DD MMMM, YYYY")
+            cover {
+              childImageSharp {
+                resize(width: 150) {
+                  src
+                }
+              }
             }
           }
         }
       }
     }
+  }
     `).then(result => {
     if (result.errors) {
       throw result.errors;
