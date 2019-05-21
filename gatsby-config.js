@@ -35,15 +35,9 @@ module.exports = {
       resolve: `gatsby-transformer-yaml-full`,
       options: {
         createChildNodes: true,
-        typeName: `dd`,
         plugins: [
           `gatsby-yaml-full-markdown`, // Enable !markdown tags
-          {
-            resolve: `gatsby-yaml-full-file`,
-            options: {
-              path: './content', // If not set, the base path will be the parent
-            },                   // directory of the YAML file being accessed
-          },
+          `gatsby-yaml-full-file`,
         ],
       },
     },
