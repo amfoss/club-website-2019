@@ -3,6 +3,7 @@ import React from "react"
 import Menu from "./theme/menu"
 import SocialMenu from "./theme/social-menu"
 import { Link } from "gatsby"
+import classnames from "classnames"
 
 import logoIcon from "../images/logos/logo_alt_light.png"
 
@@ -27,7 +28,7 @@ class Header extends React.Component {
             tabIndex="0"
             role="link"
             onClick={this.showSidebar}
-            className="fas fa-bars"
+            className={classnames(`fas`, this.state.showSidebar ? `fa-times` : `fa-bars`)}
           />
           <Link to="/"><img src={logoIcon} alt="AmFOSS" /></Link>
         </div>
