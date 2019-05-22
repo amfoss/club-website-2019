@@ -2,6 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import Menu from "./theme/menu"
 import SocialMenu from "./theme/social-menu"
+import { Link } from "gatsby"
 
 import logoIcon from "../images/logos/logo_alt_light.png"
 
@@ -28,11 +29,11 @@ class Header extends React.Component {
             onClick={this.showSidebar}
             className="fas fa-bars"
           />
-          <img src={logoIcon} alt="AmFOSS" />
+          <Link to="/"><img src={logoIcon} alt="AmFOSS" /></Link>
         </div>
         <div id="sidebar" className={this.state.showSidebar ? "show" : "hide"}>
           <div>
-            <div className="logo" />
+            <Link to="/"><div className="logo" /></Link>
             <Menu />
             <SocialMenu />
           </div>
