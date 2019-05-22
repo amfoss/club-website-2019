@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 
 import ProjectCard from "../components/projects/project-card.js"
+import TitleBar from "../components/titleBar"
 
 const Project = ({
   data: {
@@ -21,7 +22,7 @@ const Project = ({
   return (
     <Layout>
       <SEO title="Project" />
-      <h1>Projects</h1>
+      <TitleBar title="Projects" />
       <div className="row m-0">{Projects}</div>
     </Layout>
   )
