@@ -22,7 +22,7 @@ export default function Template({ data: { markdownRemark } }) {
             src={markdownRemark.frontmatter.cover ? markdownRemark.frontmatter.cover.publicURL  : avatar}
             alt={markdownRemark.frontmatter.slug + `'s image`}
           />
-          <imd className="blog-text">{markdownRemark.frontmatter.description}</imd>
+          <div className="blog-text">{markdownRemark.frontmatter.description}</div>
         </div>
       </div>
     </Layout>
