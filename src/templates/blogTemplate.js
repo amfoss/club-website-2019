@@ -17,7 +17,7 @@ export default function Template({ data: { markdownRemark } }) {
             <h3>@{markdownRemark.frontmatter.author}</h3>
         </div>
         <div className="blog-description">
-          <imd
+          <img
             className="blog-image"
             src={markdownRemark.frontmatter.cover ? markdownRemark.frontmatter.cover.publicURL  : avatar}
             alt={markdownRemark.frontmatter.slug + `'s image`}
