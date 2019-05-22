@@ -45,7 +45,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Nunito Sans', 'Rajdhani:400,900']
+          families: ['Nunito Sans', 'Rajdhani:400,700']
         }
       }
     },

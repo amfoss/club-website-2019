@@ -35,6 +35,7 @@ export const pageQuery = graphql`
     allProjectsYaml{
       edges{
         node{
+          id
           title
           contributers
           slug
