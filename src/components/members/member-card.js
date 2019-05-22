@@ -5,15 +5,17 @@ import { Link } from "gatsby"
 import avatar from "../../images/defaults/avatar.png"
 
 const MemberCard = ({ member }) => (
-  <Link to={"/@" + member.username} className="member-card">
+  <Link to={"/@" + member.username} className="member-card card">
     <img
       src={member.avatar ? member.avatar.childImageSharp.resize.src : avatar}
-      alt={member.firstName + " " + member.lastname + `'s photo`}
+      alt={member.firstName + " " + member.lastName + `'s photo`}
     />
-    <h3>
-      {member.firstName} {member.lastName}
-    </h3>
-    <sub>{member.tagline}</sub>
+    <div>
+      <h3 className="mt-3">
+        {member.firstName} {member.lastName}
+      </h3>
+      <sub>{member.tagline}</sub>
+    </div>
   </Link>
 )
 

@@ -5,34 +5,26 @@ import HomeSection from "./homeSection"
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-      allHomeSectionsYaml
-      {
+      allHomeSectionsYaml {
         edges {
-           node{
+          node {
             id
             Title
             Content
-            childrenHomeSectionsPointsYaml
-            {
+            childrenHomeSectionsPointsYaml {
               id
               Text
-              Icon
-              {
-                childImageSharp
-                {
-                  fluid
-                  {
+              Icon {
+                childImageSharp {
+                  fluid {
                     src
                   }
                 }
               }
             }
-            childFileYaml
-            {
-              childImageSharp
-              {
-                fluid
-                {
+            childFileYaml {
+              childImageSharp {
+                fluid {
                   src
                 }
               }
@@ -43,7 +35,7 @@ export default () => {
     }
   `)
 
-  return (
-    data.allHomeSectionsYaml.edges.map((edge,i) =>  <HomeSection key={edge.node.id} index={i} section={edge.node} /> )
-  )
+  return data.allHomeSectionsYaml.edges.map((edge, i) => (
+    <HomeSection key={edge.node.id} index={i} section={edge.node} />
+  ))
 }

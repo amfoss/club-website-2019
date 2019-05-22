@@ -12,7 +12,7 @@ const Members = ({
   },
 }) => {
   const Members = edges.map(edge => (
-    <div key={edge.node.id} className="col-md-4 m-4">
+    <div key={edge.node.id} className="col-sm-6 col-md-4 col-lg-3 col-xl-2">
       <MemberCard member={edge.node} />
     </div>
   ))
@@ -21,7 +21,7 @@ const Members = ({
     <Layout>
       <SEO title="Members" />
       <h1>Members</h1>
-      <div className="row m-0">{Members}</div>
+      <div className="row m-0 p-4">{Members}</div>
     </Layout>
   )
 }
@@ -40,7 +40,7 @@ export const pageQuery = graphql`
           username
           avatar {
             childImageSharp {
-              resize(width: 150) {
+              resize(width: 300) {
                 src
               }
             }

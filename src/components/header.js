@@ -7,26 +7,30 @@ import logoIcon from "../images/logos/logo_alt_light.png"
 
 class Header extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      showSidebar: false
-    };
+      showSidebar: false,
+    }
   }
 
-  showSidebar = () =>
-  {
-    const current = this.state.showSidebar;
-    this.setState({showSidebar: !current});
+  showSidebar = () => {
+    const current = this.state.showSidebar
+    this.setState({ showSidebar: !current })
   }
 
-  render()
-  {
-     return(<header >
+  render() {
+    return (
+      <header>
         <div id="topbar">
-          <i onClick={this.showSidebar} className="fas fa-bars" />
+          <i
+            tabIndex="0"
+            role="link"
+            onClick={this.showSidebar}
+            className="fas fa-bars"
+          />
           <img src={logoIcon} alt="AmFOSS" />
         </div>
-        <div id="sidebar" className={this.state.showSidebar ? 'show': 'hide' }>
+        <div id="sidebar" className={this.state.showSidebar ? "show" : "hide"}>
           <div>
             <div className="logo" />
             <Menu />

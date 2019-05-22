@@ -4,10 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-     allFile(filter: {ext: {eq: ".mp4"}})
-      {
-        nodes
-        {
+      allFile(filter: { ext: { eq: ".mp4" } }) {
+        nodes {
           publicURL
         }
       }

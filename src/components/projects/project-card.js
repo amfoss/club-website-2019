@@ -5,14 +5,12 @@ import { Link } from "gatsby"
 import avatar from "../../images/defaults/avatar.png"
 
 const ProjectCard = ({ project }) => (
-  <Link to={'/projects/' + project.slug } className="project-card">
+  <Link to={"/projects/" + project.slug} className="project-card">
     <img
-      src={project.cover ? project.cover.childImageSharp.resize.src  : avatar}
+      src={project.cover ? project.cover.childImageSharp.resize.src : avatar}
       alt={project.slug + `'s image`}
     />
-    <h3>
-      {project.title}
-    </h3>
+    <h3>{project.title}</h3>
   </Link>
 )
 

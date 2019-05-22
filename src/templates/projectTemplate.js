@@ -8,9 +8,7 @@ export default function Template({ data: { projectsYaml } }) {
     <Layout>
       <SEO title={projectsYaml.title} />
       <div className="project">
-        <h1>
-          {projectsYaml.title}
-        </h1>
+        <h1>{projectsYaml.title}</h1>
       </div>
     </Layout>
   )
@@ -18,7 +16,7 @@ export default function Template({ data: { projectsYaml } }) {
 
 export const pageQuery = graphql`
   query {
-    projectsYaml{
+    projectsYaml {
       title
       contributers
     }

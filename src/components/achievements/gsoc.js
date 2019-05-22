@@ -4,14 +4,11 @@ import { StaticQuery, graphql } from "gatsby"
 export default () => (
   <StaticQuery
     query={graphql`
-    query {
-        allGSoCYaml
-        {
+      query {
+        allGSoCYaml {
           totalCount
-          edges
-          {
-            node
-            {
+          edges {
+            node {
               id
               Member
               Year
@@ -21,15 +18,13 @@ export default () => (
         }
       }
     `}
-    render={
-      data => (
-        <div>
-          <h1>Google Summer of Code</h1>
-          {data.allGSoCYaml.edges.map(edge =>  (
-              <div key={edge.node.id}>{edge.node.Member}</div>)
-          )}
-        </div>
-      )
-    }
+    render={data => (
+      <div>
+        <h1>Google Summer of Code</h1>
+        {data.allGSoCYaml.edges.map(edge => (
+          <div key={edge.node.id}>{edge.node.Member}</div>
+        ))}
+      </div>
+    )}
   />
 )

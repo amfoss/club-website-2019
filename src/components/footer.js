@@ -18,7 +18,8 @@ const Footer = () => (
       </div>
       <div className="col-lg-4 p-2">
         <div className="w-100">
-          &copy; Team amFOSS 2007-{new Date().getFullYear()}. All Rights Reserved.
+          &copy; Team amFOSS 2007-{new Date().getFullYear()}. All Rights
+          Reserved.
         </div>
       </div>
       <div className="col-lg-3 p-2">

@@ -14,15 +14,21 @@ export default function Template({ data: { markdownRemark } }) {
           <h1>{markdownRemark.frontmatter.title}</h1>
         </div>
         <div className="blog-author">
-            <h3>@{markdownRemark.frontmatter.author}</h3>
+          <h3>@{markdownRemark.frontmatter.author}</h3>
         </div>
         <div className="blog-description">
           <img
             className="blog-image"
-            src={markdownRemark.frontmatter.cover ? markdownRemark.frontmatter.cover.publicURL  : avatar}
+            src={
+              markdownRemark.frontmatter.cover
+                ? markdownRemark.frontmatter.cover.publicURL
+                : avatar
+            }
             alt={markdownRemark.frontmatter.slug + `'s image`}
           />
-          <div className="blog-text">{markdownRemark.frontmatter.description}</div>
+          <div className="blog-text">
+            {markdownRemark.frontmatter.description}
+          </div>
         </div>
       </div>
     </Layout>
@@ -30,9 +36,9 @@ export default function Template({ data: { markdownRemark } }) {
 }
 
 export const pageQuery = graphql`
-  query{
-    markdownRemark{
-      frontmatter{
+  query {
+    markdownRemark {
+      frontmatter {
         author
         slug
         title
@@ -40,7 +46,7 @@ export const pageQuery = graphql`
         categories
         tags
         description
-        cover{
+        cover {
           publicURL
         }
       }

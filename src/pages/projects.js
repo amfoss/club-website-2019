@@ -7,10 +7,9 @@ import { graphql } from "gatsby"
 
 import ProjectCard from "../components/projects/project-card.js"
 
-
 const Project = ({
-  data:{
-    allProjectsYaml: {edges},
+  data: {
+    allProjectsYaml: { edges },
   },
 }) => {
   const Projects = edges.map(edge => (
@@ -31,16 +30,16 @@ export default Project
 
 export const pageQuery = graphql`
   query {
-    allProjectsYaml{
-      edges{
-        node{
+    allProjectsYaml {
+      edges {
+        node {
           id
           title
           contributers
           slug
-          cover{
-            childImageSharp{
-              resize(width: 150){
+          cover {
+            childImageSharp {
+              resize(width: 150) {
                 src
               }
             }

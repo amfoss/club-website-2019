@@ -6,13 +6,13 @@ import Footer from "./footer"
 import "../styles/style.sass"
 
 const Layout = ({ children }) => (
-   <div>
-      <Header />
-      <div id="page-container">
-        <main>{children}</main>
-        <Footer />
-      </div>
+  <div>
+    <Header />
+    <div id="page-container">
+      <main>{children}</main>
+      <Footer />
     </div>
+  </div>
 )
 
 Layout.propTypes = {
