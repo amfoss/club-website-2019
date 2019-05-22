@@ -1,6 +1,7 @@
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css")
 
-$font-size-menu: calc(0.8rem + 0.5vw)
+$font-size-menu: calc(1rem + 0.4vw)
 
 body
   background: #eee
@@ -42,10 +43,46 @@ h5
 h5
   font-size: calc(0.8rem + 0.6vw)
 
+#page-container
+  position: relative
+  margin-top: 4rem
+
+#topbar
+  background: #222
+  height: 4rem
+  width: 100%
+  position: fixed
+  padding: 1.2rem 2rem
+  top: 0
+  z-index: 3000
+  box-shadow: 10px 0px 15px
+  i
+    color: white
+    font-size: 1.2rem
+    padding: 0 1rem
+  img
+    height: 1.3rem
+
+@media (min-width: 900px)
+  #page-container
+    margin-left: 18rem
+    min-height: 100vh
+    margin-top: 0 !important
+
+  #topbar
+    display: none!important
+
+  #sidebar .logo
+    display: block!important
+
+.show
+  display: block!important
+
 #sidebar
   display: none
   align-items: center
   justify-content: center
+  padding-top: 1vh
   width: 16rem
   min-height: 100vh
   position: fixed
@@ -53,6 +90,7 @@ h5
   background-image: linear-gradient(315deg, #485461 0%, #28313b 74%)
   font-family: 'Rajdhani', sans-serif
   box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2)
+  z-index: 5000
   div
     width: 100%
   .logo
@@ -61,6 +99,7 @@ h5
     background-position: center
     background-repeat: no-repeat
     height: 20vh
+    display: none
   .menu
     margin: 5vh 0rem
     .menu-item
@@ -72,8 +111,8 @@ h5
       font-size: $font-size-menu
       font-weight: 900
       img
-        width: calc(0.8rem + 0.7vw)
-        height: calc(0.8rem + 0.7vw)
+        width: calc(1rem + 0.5vw)
+        height: calc(1rem + 0.5vw)
         margin-right: 0.5rem
     .menu-item:hover, .menu-item:focus, .menu-item[aria-current="page"]
       background: #0097a7
@@ -267,4 +306,3 @@ h5
       div
         div
           width: 100%
-

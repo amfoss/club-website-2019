@@ -15,8 +15,10 @@ export default () => {
   `)
 
   return (
-    <video autoPlay loop id="home-video">
-      <source src={data.allFile.nodes[0].publicURL} type="video/mp4" />
-    </video>
+    <React.Fragment>
+      <video autoPlay loop muted id="home-video">
+        <source src={data.allFile.nodes[0].publicURL} type="video/mp4" />
+      </video>
+    </React.Fragment>
   )
 }
