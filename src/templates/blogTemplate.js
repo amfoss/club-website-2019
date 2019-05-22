@@ -4,15 +4,14 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import avatar from "../images/defaults/avatar.png"
+import TitleBar from "../components/titleBar"
 
 export default function Template({ data: { markdownRemark } }) {
   return (
     <Layout>
       <div>
         <SEO title={markdownRemark.frontmatter.title} />
-        <div className="blog-title">
-          <h1>{markdownRemark.frontmatter.title}</h1>
-        </div>
+        <TitleBar title={markdownRemark.frontmatter.title}/>
         <div className="blog-author">
           <h3>@{markdownRemark.frontmatter.author}</h3>
         </div>

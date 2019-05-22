@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import MemberCard from "../components/members/member-card.js"
+import TitleBar from "../components/titleBar"
 
 const Members = ({
   data: {
@@ -20,7 +21,7 @@ const Members = ({
   return (
     <Layout>
       <SEO title="Members" />
-      <h1>Members</h1>
+      <TitleBar title="Members" />
       <div className="row m-0 p-4">{Members}</div>
     </Layout>
   )

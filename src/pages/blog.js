@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import BlogCard from "../components/blogs/blog-card.js"
+import TitleBar from "../components/titleBar"
 
 const Blog = ({
   data: {
@@ -20,7 +21,7 @@ const Blog = ({
   return (
     <Layout>
       <SEO title="Blog" />
-      <h1>Blog</h1>
+      <TitleBar title="Blog" />
       <div className="row m-0">{Blogs}</div>
     </Layout>
   )
