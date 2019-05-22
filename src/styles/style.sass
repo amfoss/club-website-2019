@@ -1,4 +1,5 @@
-@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+
 $font-size-menu: calc(0.8rem + 0.5vw)
 
 body
@@ -9,10 +10,24 @@ body
 footer
   display: block
   .sub-footer
-    display: block
-    background: black
-    color: white
+    background: #333
+    color: #999
     padding: 1rem
+    div
+      align-items: center
+      display: flex
+      justify-content: center
+      text-align: center
+      margin: 0.5vh 0.5rem
+    img
+      height: 3.2rem
+      padding: 0 0.5rem
+    a
+      padding: 0.3rem
+      color: #999
+      text-decoration: none
+    a:hover
+      color: white
 
 h1, h2, h3, h4, h5, h6
   font-family: 'Rajdhani', sans-serif
@@ -155,4 +170,95 @@ h5
       span
         display: block
         font-size: 80%
+
+%flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+#footer-nav
+  @extend %flex-center
+  background-color: #ffc107
+  color: #000
+  padding: 2rem
+  min-height: 50vh
+  font-size: 1rem
+
+  a
+    color: inherit
+    display: inline-block
+    padding: 0.5rem 0
+  a:hover
+    text-decoration: none
+    padding-bottom: 0.3rem
+    border-bottom: 2px solid
+
+  .row
+    width: 100%
+
+  h4
+    font-weight: 900
+    font-size: calc(1rem + 0.8vmin)
+    border-bottom: 2px solid
+    margin: 1rem 0
+    display: inline-block
+
+  ul
+    list-style: none
+    padding: 0 0.5rem
+
+    li
+      line-height: 110%
+
+  form
+    %form-border-black
+      box-shadow: 2px 3px 2px rgba(0,0,0,0.3)
+      border-radius: 0
+
+    input, textarea
+      font-size: 1rem
+      @extend %form-border-black
+
+    button
+      color: black
+      background: white
+      margin: 0
+      @extend %form-border-black
+
+#sub-footer
+  background-color: #333
+  color: #999
+  padding: 0.3rem
+
+  #footer-logos
+    height: 6rem
+    @extend %flex-center
+
+  img
+    height: 3.2rem
+    padding: 0 0.5rem
+
+  a
+    padding: 0.3rem
+    color: #999
+
+  div
+    text-align: center
+    padding: 0.3rem
+
+  a:hover
+    color: #eee
+    text-decoration: none
+    outline: none
+
+@media (min-width: 576px)
+  #contact-details
+    justify-content: center
+
+@media (max-width: 80rem)
+  #footer-nav
+    .row
+      div
+        div
+          width: 100%
 

@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Flex, Box } from "@rebass/grid"
 
 import MemberCard from "../components/members/member-card.js"
 
@@ -13,16 +12,16 @@ const Members = ({
   },
 }) => {
   const Members = edges.map(edge => (
-    <Box key={edge.node.id} m={2} width={[1 / 3, 1 / 4, 1 / 5]}>
+    <div key={edge.node.id} className="col-md-4 m-4">
       <MemberCard member={edge.node} />
-    </Box>
+    </div>
   ))
 
   return (
     <Layout>
       <SEO title="Members" />
       <h1>Members</h1>
-      <Flex>{Members}</Flex>
+      <div className="row m-0">{Members}</div>
     </Layout>
   )
 }

@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import BlogCard from "../components/blogs/blog-card.js"
-import { Box } from "@rebass/grid"
 
 const Blog = ({
   data: {
@@ -13,16 +12,16 @@ const Blog = ({
   },
 }) => {
   const Blogs = edges.map(edge => (
-    <Box key={edge.node.id} m={4} width={[1 / 3, 1 / 4, 1 / 5]}>
+    <div key={edge.node.id} className="col-md-4 m-4">
       <BlogCard blog={edge.node.frontmatter} />
-    </Box>
+    </div>
   ))
 
   return (
     <Layout>
       <SEO title="Blog" />
       <h1>Blog</h1>
-      <div>{Blogs}</div>
+      <div className="row m-0">{Blogs}</div>
     </Layout>
   )
 }

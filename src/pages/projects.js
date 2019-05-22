@@ -3,7 +3,6 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { Box } from "@rebass/grid"
 import { graphql } from "gatsby"
 
 import ProjectCard from "../components/projects/project-card.js"
@@ -15,16 +14,16 @@ const Project = ({
   },
 }) => {
   const Projects = edges.map(edge => (
-    <Box key={edge.node.id} m={4} width={[1 / 3, 1 / 4, 1 / 5]}>
+    <div key={edge.node.id} className="col-md-4 m-4">
       <ProjectCard project={edge.node} />
-    </Box>
+    </div>
   ))
 
   return (
     <Layout>
       <SEO title="Project" />
       <h1>Projects</h1>
-      <div>{Projects}</div>
+      <div className="row m-0">{Projects}</div>
     </Layout>
   )
 }

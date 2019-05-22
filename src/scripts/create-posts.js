@@ -15,7 +15,7 @@ function createBlogPages(result, createPage) {
   });
 }
 
-function graphqlForBlogs(graphql, createPage) {
+function graphqlForPosts(graphql, createPage) {
   return graphql(`
      {
     allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
@@ -47,4 +47,4 @@ function graphqlForBlogs(graphql, createPage) {
     createBlogPages(result, createPage);
   });
 }
-exports.graphqlForBlogs = graphqlForBlogs;
+exports.graphqlForPosts = graphqlForPosts;
