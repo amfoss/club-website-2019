@@ -36,7 +36,7 @@ export const pageQuery = graphql`
         node {
           id
           title
-          contributers
+          members
           slug
           cover {
             childImageSharp {

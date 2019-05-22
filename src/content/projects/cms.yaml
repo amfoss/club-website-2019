@@ -1,4 +1,6 @@
 title: "amFOSS cms"
-contributers: "aswin shenoy"
+members: "aswin shenoy"
 slug: "cms"
+tagline: "cms"
+description: "description"
 cover: ./covers/cms.png

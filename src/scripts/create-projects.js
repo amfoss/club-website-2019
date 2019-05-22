@@ -9,7 +9,7 @@ function createProjectPages(result, createPage) {
       component: ProjectTemplate,
       context: {
         title: node.title,
-        contributers: node.contributers,
+        members: node.members,
       },
     })
   })
@@ -22,7 +22,7 @@ function graphqlForProjects(graphql, createPage) {
         edges {
           node {
             title
-            contributers
+            members
             slug
           }
         }
