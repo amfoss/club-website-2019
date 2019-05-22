@@ -1,11 +1,7 @@
 firstName: Akhil
 lastName: K Gangadharan
-username: akhilam512
+username: akhil
+avatar: ./avatars/akhil.jpg
 batch: 2022
 branch: CSE
-tagline: Innovator | Technologist | Problem Solver.
-about: !markdown |
-  I am a gsocer
-links:
-  github: https://github.com/aswinshenoy
-  facebook: https://facebook.com/aswinshenoy
+tagline: A speck of carefully arranged star dust.
