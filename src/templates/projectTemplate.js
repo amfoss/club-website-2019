@@ -8,51 +8,103 @@ import portfolioIcon from "../images/icons/portfolio.png"
 import bulbIcon from "../images/icons/bulb.png"
 
 
-export default function Template({ data: { projectsYaml } }) {
-  return (
-    <Layout>
-      <SEO title={projectsYaml.title} />
-      <div className="project">
-        <section id="cover">
-          <div className='container'>
-            <div className='row m-0 bg-white section-card'>
-              <div className='col-md-4'>
-                <img
-                  src={projectsYaml.cover ? projectsYaml.cover.childImageSharp.resize.src : avatar}
-                  alt={projectsYaml.slug + `'s image`}
-                />
-              </div>
-              <div className='col-md-8'>
-                <h1>{projectsYaml.title}</h1>
-                <p>{projectsYaml.tagline}</p>
-              </div>
-            </div>
+export default class ProjectTemplate extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      switchTab: null,
+    }
+  }
+
+  handleDescriptionClick(){
+    this.setState({
+      switchTab: 'descriptionTab',
+    });
+  }
+
+  handleGalleryClick(){
+    this.setState({
+      switchTab: 'galleryTab',
+    });
+  }
+
+  handleMembersClick(){
+    this.setState({
+      switchTab: 'membersTab',
+    });
+  }
+
+  renderTab(){
+    if(this.state.switchTab === 'galleryTab') {
+      return (
+        <section className="my-4 container">
+          <div className="gallery">
+            <img
+              src={this.props.data.projectsYaml.cover ? this.props.data.projectsYaml.cover.childImageSharp.resize.src : avatar}
+              alt={this.props.data.projectsYaml.slug + `'s image`}
+            />
           </div>
         </section>
-        <div id='section-switcher'>
-          <a id='description-tab-button'>
-            <img src={bulbIcon} alt="description" />
-              <span>Description</span>
-          </a>
-          <a id='gallery-tab-button'>
-            <img src={portfolioIcon} alt="gallery" />
-              <span>Gallery</span>
-          </a>
-          <a id='members-tab-button'>
-            <img src={crowdIcon} alt="members" />
-              <span>Members</span>
-          </a>
-        </div>
-        <section className="tab" id="description-tab">
-          <section className="my-4 container">
-            <div className="post-card">
-              <p>{projectsYaml.description}</p>
+      );
+    } if(this.state.switchTab === 'membersTab'){
+      return (
+        <section className="my-4 container col-md-4">
+          <div className="post-card">
+            <h5>{this.props.data.projectsYaml.members}</h5>
+          </div>
+        </section>
+      );
+    } else{
+      return (
+        <section className="my-4 container">
+          <div className="post-card">
+            <p>{this.props.data.projectsYaml.description}</p>
+          </div>
+        </section>
+      );
+    }
+  }
+
+  render() {
+    return (
+      <Layout>
+        <SEO title={this.props.data.projectsYaml.title}/>
+        <div className="project">
+          <section id="cover">
+            <div className='container'>
+              <div className='row m-0 bg-white section-card'>
+                <div className='col-md-4'>
+                  <img
+                    src={this.props.data.projectsYaml.cover ? this.props.data.projectsYaml.cover.childImageSharp.resize.src : avatar}
+                    alt={this.props.data.projectsYaml.slug + `'s image`}
+                  />
+                </div>
+                <div className='col-md-8'>
+                  <h1>{this.props.data.projectsYaml.title}</h1>
+                  <p>{this.props.data.projectsYaml.tagline}</p>
+                </div>
+              </div>
             </div>
           </section>
-        </section>
-      </div>
-    </Layout>
-  )
+          <div id='section-switcher'>
+            <a id="description-tab-button" onClick={this.handleDescriptionClick.bind(this)}>
+              <img src={bulbIcon} alt="description"/>
+              <span>Description</span>
+            </a>
+            <a id='gallery-tab-button' onClick={this.handleGalleryClick.bind(this)}>
+              <img src={portfolioIcon} alt="gallery"/>
+              <span>Gallery</span>
+            </a>
+            <a id='members-tab-button' onClick={this.handleMembersClick.bind(this)}>
+              <img src={crowdIcon} alt="members"/>
+              <span>Members</span>
+            </a>
+          </div>
+          {this.renderTab()}
+        </div>
+      </Layout>
+    )
+  }
 }
 
 export const pageQuery = graphql`
