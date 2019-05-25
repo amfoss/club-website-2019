@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import avatar from "../images/defaults/avatar.png"
-import TitleBar from "../components/theme/titleBar"
+import TitleBar from "../components/theme/title-bar"
 
 export default function Template({ data: { markdownRemark } }) {
   return (

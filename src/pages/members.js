@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import MemberCard from "../components/members/member-card.js"
-import TitleBar from "../components/theme/titleBar"
+import TitleBar from "../components/theme/title-bar"
 
 
 export default class Members extends React.Component {
@@ -35,7 +35,7 @@ export default class Members extends React.Component {
             if(part.startsWith(query)) flag=1; });
           if(flag) return 1;
         }
-        else return 1;
+        return 1;
       }
     )
     return (

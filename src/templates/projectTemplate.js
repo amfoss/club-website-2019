@@ -87,18 +87,18 @@ export default class ProjectTemplate extends React.Component {
             </div>
           </section>
           <div id='section-switcher'>
-            <a id="description-tab-button" onClick={this.handleDescriptionClick.bind(this)}>
+            <div id="description-tab-button" onClick={this.handleDescriptionClick.bind(this)}>
               <img src={bulbIcon} alt="description"/>
               <span>Description</span>
-            </a>
-            <a id='gallery-tab-button' onClick={this.handleGalleryClick.bind(this)}>
+            </div>
+            <div id='gallery-tab-button' onClick={this.handleGalleryClick.bind(this)}>
               <img src={portfolioIcon} alt="gallery"/>
               <span>Gallery</span>
-            </a>
-            <a id='members-tab-button' onClick={this.handleMembersClick.bind(this)}>
+            </div>
+            <div id='members-tab-button' onClick={this.handleMembersClick.bind(this)}>
               <img src={crowdIcon} alt="members"/>
               <span>Members</span>
-            </a>
+            </div>
           </div>
           {this.renderTab()}
         </div>

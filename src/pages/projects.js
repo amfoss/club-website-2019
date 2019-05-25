@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 
 import ProjectCard from "../components/projects/project-card.js"
-import TitleBar from "../components/theme/titleBar"
+import TitleBar from "../components/theme/title-bar"
 
 const Project = ({
   data: {

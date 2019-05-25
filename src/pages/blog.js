@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import BlogCard from "../components/blogs/blog-card.js"
-import TitleBar from "../components/theme/titleBar"
+import TitleBar from "../components/theme/title-bar"
 
 const Blog = ({
   data: {
