@@ -12,20 +12,20 @@ export default class Members extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      term: '',
+      searchTerm: '',
     }
   }
 
   handleSearch(event){
     this.setState({
-      term: event.target.value
+      searchTerm: event.target.value
     })
   }
 
   render() {
     let filteredMembers = this.props.data.allMembersYaml.edges.filter(
       (edge) =>{
-        return edge.node.username.indexOf(this.state.term) !== -1;
+        return edge.node.username.indexOf(this.state.searchTerm.toLowerCase()) !== -1;
       }
     )
     return (
