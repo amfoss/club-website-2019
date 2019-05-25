@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import GSoC from "../components/achievements/gsoc"
-import TitleBar from "../components/titleBar"
+import TitleBar from "../components/theme/titleBar"
 
 const Achievements = () => (
   <Layout>

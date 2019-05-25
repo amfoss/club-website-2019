@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 
 import ProjectCard from "../components/projects/project-card.js"
-import TitleBar from "../components/titleBar"
+import TitleBar from "../components/theme/titleBar"
 
 const Project = ({
   data: {
@@ -14,7 +14,7 @@ const Project = ({
   },
 }) => {
   const Projects = edges.map(edge => (
-    <div key={edge.node.id} className="col-md-4 m-4">
+    <div key={edge.node.id} className="col-lg-3 col-md-4 col-sm-6 m-4">
       <ProjectCard project={edge.node} />
     </div>
   ))
@@ -40,7 +40,7 @@ export const pageQuery = graphql`
           slug
           cover {
             childImageSharp {
-              resize(width: 150) {
+              resize(width: 500) {
                 src
               }
             }

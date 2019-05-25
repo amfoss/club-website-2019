@@ -5,15 +5,15 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import BlogCard from "../components/blogs/blog-card.js"
-import TitleBar from "../components/titleBar"
+import TitleBar from "../components/theme/titleBar"
 
 const Blog = ({
   data: {
     allMarkdownRemark: { edges },
   },
 }) => {
-  const Blogs = edges.map(edge => (
-    <div key={edge.node.id} className="col-md-4 m-4">
+  const Posts = edges.map(edge => (
+    <div key={edge.node.id} className="col-lg-3 col-md-4 col-sm-6 m-4">
       <BlogCard blog={edge.node.frontmatter} />
     </div>
   ))
@@ -22,7 +22,7 @@ const Blog = ({
     <Layout>
       <SEO title="Blog" />
       <TitleBar title="Blog" />
-      <div className="row m-0">{Blogs}</div>
+      <div className="row m-0">{Posts}</div>
     </Layout>
   )
 }
@@ -43,7 +43,7 @@ export const pageQuery = graphql`
             date(formatString: "DD MMMM, YYYY")
             cover {
               childImageSharp {
-                resize(width: 150) {
+                resize(width: 500) {
                   src
                 }
               }
