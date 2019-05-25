@@ -48,7 +48,7 @@ export default class Members extends React.Component {
                    placeholder="Search Here"  onChange={this.handleSearch.bind(this)} />
           </div>
         </div>
-        <div className="row m-0 p-4">
+        <div className="row m-0 p-1 mb-4">
           {filteredMembers.map(edge => (
             <div key={edge.node.id} className="col-sm-6 col-md-4 col-lg-3 col-xl-2 p-2">
               <MemberCard member={edge.node} />

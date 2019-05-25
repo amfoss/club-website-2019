@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import HomeSection from "./homeSection"
+import SectionCard from "../theme/section-card"
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -36,6 +36,14 @@ export default () => {
   `)
 
   return data.allHomeSectionsYaml.edges.map((edge, i) => (
-    <HomeSection key={edge.node.id} index={i} section={edge.node} />
+    <SectionCard
+          key={edge.node.id}
+          index={i}
+          section={edge.node}
+          title={edge.node.Title}
+          content={edge.node.Content}
+          image={edge.node.childFileYaml.childImageSharp.fluid.src}
+          points={edge.node.childrenHomeSectionsPointsYaml}
+    />
   ))
 }

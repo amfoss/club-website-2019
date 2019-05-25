@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import classnames from "classnames"
 
-const HomePoints = points => (
+const SectionPoints = points => (
   <React.Fragment>
     <hr />
     <div className="row m-0 points my-4">
@@ -22,23 +22,19 @@ const HomePoints = points => (
   </React.Fragment>
 )
 
-const HomeSection = ({ section, index }) => (
+const SectionCard = ({ index, title, content, image, points }) => (
   <div className="home-card">
     <div className="row m-0">
       <div
         className={classnames(
-          `
-            col-xl-6`,
+          `col-xl-6`,
           `order-xl-${index % 2 === 0 ? 1 : 2}`,
           `order-lg-1`,
           `d-flex`,
           `align-items-center`
         )}
       >
-        <img
-          src={section.childFileYaml.childImageSharp.fluid.src}
-          alt={section.Title}
-        />
+        { image ? <img src={image} alt={title}/> : null }
       </div>
       <div
         className={classnames(
@@ -46,27 +42,32 @@ const HomeSection = ({ section, index }) => (
           `order-md-${index % 2 === 0 ? 2 : 1}`
         )}
       >
-        <h2>{section.Title}</h2>
+        <h2>{title}</h2>
         <div
           className={index % 2 === 0 ? 1 : 2}
-          dangerouslySetInnerHTML={{ __html: section.Content }}
+          dangerouslySetInnerHTML={{ __html: content }}
         />
       </div>
     </div>
-    {section.childrenHomeSectionsPointsYaml.length
-      ? HomePoints(section.childrenHomeSectionsPointsYaml)
-      : null}
+    {points && points.length  ? SectionPoints(points) : null}
   </div>
 )
 
-HomeSection.propTypes = {
-  section: PropTypes.any,
+SectionCard.propTypes = {
   index: PropTypes.number,
+  title: PropTypes.string,
+  content: PropTypes.string,
+  image: PropTypes.string,
+  points: PropTypes.any,
 }
 
-HomeSection.defaultProps = {
+SectionCard.defaultProps = {
   section: null,
   index: 1,
+  title: '',
+  content: '',
+  image: null,
+  points: null
 }
 
-export default HomeSection
+export default SectionCard
