@@ -35,7 +35,7 @@ export default class Members extends React.Component {
             if(part.startsWith(query)) flag=1; });
           if(flag) return 1;
         }
-        return 1;
+        else return 1;
       }
     )
     return (
