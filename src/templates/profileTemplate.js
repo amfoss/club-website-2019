@@ -1,18 +1,21 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 export default function Template({ data: { membersYaml } }) {
   return (
-    <Layout>
+    <div>
       <SEO title={membersYaml.firstName + " " + membersYaml.lastName} />
-      <div className="blog-post-container">
-        <h1>
-          {membersYaml.firstName} {membersYaml.lastName}
-        </h1>
-      </div>
-    </Layout>
+      <section id="cover">
+        <div className='name text-center'>
+          <img src={membersYaml.avatar.childImageSharp.fluid.src} id="avatar"
+               className="rounded-circle" />
+            <h1>{membersYaml.firstName} {membersYaml.lastName}</h1>
+
+            <h3 className='tagline'>{membersYaml.tagline}</h3>
+        </div>
+      </section>
+    </div>
   )
 }
 
@@ -22,6 +25,14 @@ export const pageQuery = graphql`
       firstName
       lastName
       username
+      tagline
+      avatar{
+        childImageSharp{
+          fluid{
+            src
+          }
+        }
+      }
     }
   }
 `
