@@ -31,8 +31,11 @@ export default class Members extends React.Component {
           if(edge.node.username.toLowerCase().startsWith(query)) return 1;
           if(edge.node.firstName.toLowerCase().startsWith(query)) return 1;
           let flag=0;
-          edge.node.lastName.toLowerCase().split(" ").forEach( part => {
-            if(part.startsWith(query)) flag=1; });
+          if(edge.node.lastName)
+          {
+            edge.node.lastName.toLowerCase().split(" ").forEach( part => {
+              if(part.startsWith(query)) flag=1; });
+          }
           if(flag) return 1;
         }
         else return 1;
@@ -45,7 +48,8 @@ export default class Members extends React.Component {
         <div className='bg-white row m-0' id='filter-bar'>
           <div className="col-md-4 col-10 align-items-center justify-content-center">
             <input id="search-box" type="text" className="form-control"
-                   placeholder="Search Here"  onChange={this.handleSearch.bind(this)} />
+                   placeholder="Search Here"  onChange={this.handleSearch.bind(this)}
+            />
           </div>
         </div>
         <div className="row m-0 p-1 mb-4">
