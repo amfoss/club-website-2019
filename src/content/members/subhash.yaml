@@ -1,6 +1,14 @@
-firstName: Subhash
-lastName:
-username: subhash
-avatar: ./avatars/ubhash.jpg
+firstName:  Subhash Reddy
+lastName: Kallam
+username: Subhashreddykallam
+avatar: ./avatars/yourname.jpg
 batch: 2022
 branch: CSE
+tagline: First, solve the problem. Then, write the code.
+about: !markdown |
+  Competitive programmer || Tech Enthusiast.
+links:
+  github: https://github.com/Storm1seven
+  codeforces: https://codeforces.com/profile/III_Wolverine_III
+  codechef: https://www.codechef.com/users/storm1seven
+  twitter: https://twitter.com/SubhashKallam
