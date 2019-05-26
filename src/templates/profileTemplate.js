@@ -19,7 +19,7 @@ export default function Template({ data: { membersYaml } }) {
           />
             <h1>{membersYaml.firstName} {membersYaml.lastName}</h1>
 
-            <h3 className='tagline'>{membersYaml.tagline}</h3>
+            <h5 className='tagline'>{membersYaml.tagline}</h5>
           </div>
           {membersYaml.links ? <div className="social-links">
             <SocialIcon name="github" link={membersYaml.links.github} />
@@ -30,6 +30,7 @@ export default function Template({ data: { membersYaml } }) {
           </div> : null}
         </div>
       </section>
+      <div className="tabs"></div>
     </Layout>
   )
 }

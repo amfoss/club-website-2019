@@ -47,7 +47,7 @@ export default class Members extends React.Component {
         <TitleBar title="Members"/>
         <div className='bg-white row m-0' id='filter-bar'>
           <div className="col-md-4 col-10 align-items-center justify-content-center">
-            <input id="search-box" type="text" className="form-control"
+            <input id="search-box" type="text" className="form w-75"
                    placeholder="Search Here"  onChange={this.handleSearch.bind(this)}
             />
           </div>
