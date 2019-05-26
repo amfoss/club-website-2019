@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
+import avatar from "../images/defaults/avatar.png"
 
 export default function Template({ data: { membersYaml } }) {
   return (
@@ -8,8 +9,11 @@ export default function Template({ data: { membersYaml } }) {
       <SEO title={membersYaml.firstName + " " + membersYaml.lastName} />
       <section id="cover">
         <div className='name text-center'>
-          <img src={membersYaml.avatar.childImageSharp.fluid.src} id="avatar"
-               className="rounded-circle" />
+          <img
+            src={membersYaml.avatar ? membersYaml.avatar.childImageSharp.fluid.src : avatar}
+            alt={membersYaml.firstName + " " + membersYaml.lastName + `'s photo`}
+            className="rounded-circle"
+          />
             <h1>{membersYaml.firstName} {membersYaml.lastName}</h1>
 
             <h3 className='tagline'>{membersYaml.tagline}</h3>
