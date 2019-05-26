@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import MemberList from "../theme/member-list"
 
 export default () => (
   <StaticQuery
@@ -19,12 +20,10 @@ export default () => (
       }
     `}
     render={data => (
-      <div>
-        <h1>Google Summer of Code</h1>
-        {data.allGSoCYaml.edges.map(edge => (
-          <div key={edge.node.id}>{edge.node.Member}</div>
-        ))}
-      </div>
+        <div className="p-2">
+            <h3 className="ml-2 mb-0">Google Summer of Code</h3>
+            <MemberList members={data.allGSoCYaml.edges} />
+        </div>
     )}
   />
 )

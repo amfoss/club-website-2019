@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import MemberCard from "../components/members/member-card.js"
+import MemberCard from "../components/theme/member-card.js"
 import TitleBar from "../components/theme/title-bar"
 
 
@@ -29,12 +29,19 @@ export default class Members extends React.Component {
         if(query!=='')
         {
           if(edge.node.username.toLowerCase().startsWith(query)) return 1;
-          if(edge.node.firstName.toLowerCase().startsWith(query)) return 1;
           let flag=0;
+          if(edge.node.firstName)
+          {
+            edge.node.firstName.toLowerCase().split(" ").forEach( part => {
+              if(part.startsWith(query)) flag=1;
+            });
+          }
+          if(flag) return 1;
           if(edge.node.lastName)
           {
             edge.node.lastName.toLowerCase().split(" ").forEach( part => {
-              if(part.startsWith(query)) flag=1; });
+              if(part.startsWith(query)) flag=1;
+            });
           }
           if(flag) return 1;
         }
@@ -55,7 +62,13 @@ export default class Members extends React.Component {
         <div className="row m-0 p-1 mb-4">
           {filteredMembers.map(edge => (
             <div key={edge.node.id} className="col-sm-6 col-md-4 col-lg-3 col-xl-2 p-2">
-              <MemberCard member={edge.node} />
+              <MemberCard
+                username={edge.node.username}
+                firstName={edge.node.firstName}
+                lastName={edge.node.lastName}
+                tagline={edge.node.tagline}
+                avatar={edge.node.avatar ? edge.node.avatar.childImageSharp.resize.src : null}
+              />
             </div>
           ))}
         </div>
