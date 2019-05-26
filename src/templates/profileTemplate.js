@@ -21,13 +21,13 @@ export default function Template({ data: { membersYaml } }) {
 
             <h3 className='tagline'>{membersYaml.tagline}</h3>
           </div>
-          <div className="social-links">
+          {membersYaml.links ? <div className="social-links">
             <SocialIcon name="github" link={membersYaml.links.github} />
             <SocialIcon name="facebook" link={membersYaml.links.facebook} />
             <SocialIcon name="twitter" link={membersYaml.links.twitter} />
             <SocialIcon name="instagram" link={membersYaml.links.instagram} />
             <SocialIcon name="linkedin" link={membersYaml.links.linkedin} />
-          </div>
+          </div> : null}
         </div>
       </section>
     </Layout>
