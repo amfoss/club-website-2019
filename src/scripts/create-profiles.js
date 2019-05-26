@@ -32,4 +32,5 @@ function graphqlForProfiles(graphql, createPage) {
     createProfilePages(result, createPage)
   })
 }
+
 exports.graphqlForProfiles = graphqlForProfiles

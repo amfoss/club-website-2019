@@ -34,7 +34,7 @@ const SectionCard = ({ index, title, content, image, points }) => (
           `align-items-center`
         )}
       >
-        { image ? <img src={image} alt={title}/> : null }
+        {image ? <img src={image} alt={title} /> : null}
       </div>
       <div
         className={classnames(
@@ -49,7 +49,7 @@ const SectionCard = ({ index, title, content, image, points }) => (
         />
       </div>
     </div>
-    {points && points.length  ? SectionPoints(points) : null}
+    {points && points.length ? SectionPoints(points) : null}
   </div>
 )
 
@@ -64,10 +64,10 @@ SectionCard.propTypes = {
 SectionCard.defaultProps = {
   section: null,
   index: 1,
-  title: '',
-  content: '',
+  title: "",
+  content: "",
   image: null,
-  points: null
+  points: null,
 }
 
 export default SectionCard

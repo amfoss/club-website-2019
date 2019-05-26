@@ -10,7 +10,7 @@ const ProjectCard = ({ project }) => (
       src={project.cover ? project.cover.childImageSharp.resize.src : avatar}
       alt={project.slug + `'s image`}
     />
-    <h3>{project.title}</h3>
+    <h5>{project.title}</h5>
   </Link>
 )
 

@@ -5,9 +5,8 @@ import SectionCard from "../theme/section-card"
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-      allStoryYaml{
-        nodes
-        {
+      allStoryYaml {
+        nodes {
           id
           Title
           Content

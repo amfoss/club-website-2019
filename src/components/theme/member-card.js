@@ -11,9 +11,9 @@ const MemberCard = ({ username, firstName, lastName, avatar, tagline }) => (
       alt={firstName + " " + lastName + `'s photo`}
     />
     <div>
-      <h6 className="mt-3">
+      <h5 className="mt-3">
         {firstName} {lastName}
-      </h6>
+      </h5>
       <sub>{tagline}</sub>
     </div>
   </Link>
@@ -25,15 +25,14 @@ MemberCard.propTypes = {
   lastName: PropTypes.string,
   avatar: PropTypes.string,
   tagline: PropTypes.string,
-
 }
 
 MemberCard.defaultProps = {
-  username: '',
-  firstName: '',
-  lastName: '',
-  avatar: '',
-  tagline: ''
+  username: "",
+  firstName: "",
+  lastName: "",
+  avatar: "",
+  tagline: "",
 }
 
 export default MemberCard

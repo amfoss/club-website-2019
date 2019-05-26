@@ -11,7 +11,7 @@ export default function Template({ data: { markdownRemark } }) {
     <Layout>
       <div>
         <SEO title={markdownRemark.frontmatter.title} />
-        <TitleBar title={markdownRemark.frontmatter.title}/>
+        <TitleBar title={markdownRemark.frontmatter.title} />
         <div className="blog-author">
           <h3>@{markdownRemark.frontmatter.author}</h3>
         </div>

@@ -13,23 +13,28 @@ body
 
 footer
   display: block
+
   .sub-footer
     background: #333
     color: #999
     padding: 1rem
+
     div
       align-items: center
       display: flex
       justify-content: center
       text-align: center
       margin: 0.5vh 0.5rem
+
     img
       height: 3.2rem
       padding: 0 0.5rem
+
     a
       padding: 0.3rem
       color: #999
       text-decoration: none
+
     a:hover
       color: white
 
@@ -50,7 +55,7 @@ h4
   font-size: calc(1.3rem + 1vw)
 
 h5
-  font-size: calc(1rem + 0.6vw)
+  font-size: calc(1rem + 0.8vw)
 
 h6
   font-size: calc(0.8rem + 0.6vw)
@@ -63,6 +68,7 @@ h6
   box-shadow: 8px 10px 20px 0 rgba(46, 61, 73, 0.15)
   border: none
   border-radius: 0
+
 .card:hover, .card:focus
   box-shadow: 4px 5px 10px 0 rgba(46, 61, 73, 0.15)
   outline: none
@@ -74,6 +80,7 @@ h6
   padding: 1rem
   text-decoration: none
   box-shadow: 8px 10px 20px 0 rgba(46, 61, 73, 0.15)
+
   img
     width: 100%
 
@@ -89,6 +96,7 @@ h6
   padding: 1rem
   text-decoration: none
   box-shadow: 8px 10px 20px 0 rgba(46, 61, 73, 0.15)
+
   img
     width: 100%
 
@@ -126,6 +134,35 @@ h6
   box-shadow: 5px 3px 3px 4px rgba(0, 0, 0, 0.2)
   display: flex
 
+
+.list-card
+  text-decoration: none !important
+  color: black
+  padding: 0.2rem
+
+  h6
+    margin-bottom: 0.2rem
+    text-transform: uppercase
+
+  .item-details
+    margin-left: 0.5rem
+    display: flex
+    align-items: center
+
+  .list-tagline
+    font-size: calc(0.8rem + 0.3vw)
+    font-weight: 600
+    color: #555
+
+  img
+    width: 80px
+    height: 80px
+    object-fit: contain
+
+.list-card:hover, .list-card:focus
+  background: #eee
+  color: black
+
 .blog-text
   background: white
   padding: 2rem
@@ -144,14 +181,19 @@ h6
   padding: calc(1vw + 0.8rem)
   margin: calc(1vh + 0.5rem) calc(0.5vw + 0.5rem)
   box-shadow: 8px 10px 20px 0 rgba(46, 61, 73, 0.15)
+
   p
     font-size: calc(0.8rem + 0.3vmax)
+
   img
     max-width: 100%
+
   .points
     text-align: center
+
     img
       width: 5rem
+
     h5
       span
         display: block
@@ -174,6 +216,7 @@ h6
     color: inherit
     display: inline-block
     padding: 0.5rem 0
+
   a:hover
     text-decoration: none
     padding-bottom: 0.3rem
@@ -198,7 +241,7 @@ h6
 
   form
     %form-border-black
-      box-shadow: 2px 3px 2px rgba(0,0,0,0.3)
+      box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3)
       border-radius: 0
 
     input, textarea

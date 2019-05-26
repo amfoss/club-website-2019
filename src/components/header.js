@@ -24,17 +24,24 @@ class Header extends React.Component {
     return (
       <header>
         <div id="topbar">
-          <Link to="/"><img src={logoIcon} alt="AmFOSS" /></Link>
+          <Link to="/">
+            <img src={logoIcon} alt="AmFOSS" />
+          </Link>
           <i
             tabIndex="0"
             role="link"
             onClick={this.showSidebar}
-            className={classnames(`fas`, this.state.showSidebar ? `fa-times` : `fa-bars`)}
+            className={classnames(
+              `fas`,
+              this.state.showSidebar ? `fa-times` : `fa-bars`
+            )}
           />
         </div>
         <div id="sidebar" className={this.state.showSidebar ? "show" : "hide"}>
           <div>
-            <Link to="/"><div className="logo" /></Link>
+            <Link to="/">
+              <div className="logo" />
+            </Link>
             <Menu />
             <SocialMenu />
           </div>

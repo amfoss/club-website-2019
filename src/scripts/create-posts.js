@@ -47,4 +47,5 @@ function graphqlForPosts(graphql, createPage) {
     createBlogPages(result, createPage)
   })
 }
+
 exports.graphqlForPosts = graphqlForPosts

@@ -9,8 +9,10 @@ const Achievements = () => (
   <Layout>
     <SEO title="Achievements" />
     <TitleBar title="Achievements" />
-    <div className="p-2">
-      <GSoC />
+    <div className="row m-0">
+      <div className="col-md-6 col-lg-4 p-2">
+        <GSoC />
+      </div>
     </div>
   </Layout>
 )

@@ -11,14 +11,17 @@ $font-size-menu: calc(1rem + 0.3vmax)
   box-shadow: 10px 0px 15px
   display: flex
   align-items: center
+
   i
     color: white
     font-size: 1.2rem
     padding: 0 1rem
     position: absolute
     right: 1rem
+
   i:hover, i:focus
     outline: none
+
   img
     height: 1.3rem
 
@@ -32,16 +35,16 @@ $font-size-menu: calc(1rem + 0.3vmax)
     margin-top: 0 !important
 
   #topbar
-    display: none!important
+    display: none !important
 
   #sidebar .logo
-    display: block!important
+    display: block !important
 
   #filter-bar
-    top: 0!important
+    top: 0 !important
 
 .show
-  display: flex!important
+  display: flex !important
 
 #sidebar
   display: none
@@ -57,8 +60,10 @@ $font-size-menu: calc(1rem + 0.3vmax)
   box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2)
   z-index: 5000
   overflow-y: auto
+
   div
     width: 100%
+
   .logo
     background-image: url("../images/logo_light.png")
     background-size: contain
@@ -66,8 +71,10 @@ $font-size-menu: calc(1rem + 0.3vmax)
     background-repeat: no-repeat
     height: 20vh
     display: none
+
   .menu
     margin: 5vh 0rem
+
     .menu-item
       display: flex
       padding: 0.8rem
@@ -76,28 +83,33 @@ $font-size-menu: calc(1rem + 0.3vmax)
       text-decoration: none
       font-size: $font-size-menu
       font-weight: 900
+
       img
         width: calc(1.2rem + 0.5vw)
         height: calc(1.2rem + 0.5vw)
         margin-right: 0.5rem
+
     .menu-item:hover, .menu-item:focus, .menu-item[aria-current="page"]
       background: #0097a7
       outline: none
+
   .social-menu
     display: flex
     align-items: center
     justify-content: center
+
     .social-icon
       padding: 0.3rem
       display: flex
       align-items: center
       justify-content: center
+
       img
         width: 2rem
 
 @media (max-width: 700px)
   #sidebar
-    width: 100%!important
+    width: 100% !important
     padding: 0 10vw
     align-items: baseline
 

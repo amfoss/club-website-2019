@@ -37,13 +37,13 @@ export default () => {
 
   return data.allHomeSectionsYaml.edges.map((edge, i) => (
     <SectionCard
-          key={edge.node.id}
-          index={i}
-          section={edge.node}
-          title={edge.node.Title}
-          content={edge.node.Content}
-          image={edge.node.childFileYaml.childImageSharp.fluid.src}
-          points={edge.node.childrenHomeSectionsPointsYaml}
+      key={edge.node.id}
+      index={i}
+      section={edge.node}
+      title={edge.node.Title}
+      content={edge.node.Content}
+      image={edge.node.childFileYaml.childImageSharp.fluid.src}
+      points={edge.node.childrenHomeSectionsPointsYaml}
     />
   ))
 }

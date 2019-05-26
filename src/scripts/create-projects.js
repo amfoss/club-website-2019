@@ -35,4 +35,5 @@ function graphqlForProjects(graphql, createPage) {
     createProjectPages(result, createPage)
   })
 }
+
 exports.graphqlForProjects = graphqlForProjects

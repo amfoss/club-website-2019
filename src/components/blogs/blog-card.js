@@ -10,7 +10,7 @@ const BlogCard = ({ blog }) => (
       src={blog.cover ? blog.cover.childImageSharp.resize.src : avatar}
       alt={blog.slug + `'s image`}
     />
-    <h3>{blog.title}</h3>
+    <h5>{blog.title}</h5>
   </Link>
 )
 

@@ -5,7 +5,6 @@ import SEO from "../components/seo"
 import TitleBar from "../components/theme/title-bar"
 import StorySections from "../components/about/storySections"
 
-
 const About = () => (
   <Layout>
     <SEO title="About the Club" />
