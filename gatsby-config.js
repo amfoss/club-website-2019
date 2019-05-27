@@ -17,6 +17,8 @@ module.exports = {
         icon: `src/images/favicon.png`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -50,9 +52,7 @@ module.exports = {
       }
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-nprogress`,

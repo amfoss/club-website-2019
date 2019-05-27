@@ -66,13 +66,13 @@ export default class Members extends React.Component {
           {filteredMembers.map(edge => (
             <div
               key={edge.node.id}
-              className="col-sm-6 col-md-4 col-lg-3 py-4 px-2"
+              className="col-md-4 col-lg-3 col-xl-2 col-6 py-4 px-2"
             >
               <MemberCard
                 username={edge.node.username}
                 firstName={edge.node.firstName}
                 lastName={edge.node.lastName}
-                tagline={edge.node.tagline}
+                tag={edge.node.role}
                 avatar={
                   edge.node.avatar
                     ? edge.node.avatar.childImageSharp.resize.src
@@ -97,6 +97,7 @@ export const pageQuery = graphql`
           lastName
           tagline
           username
+          role
           avatar {
             childImageSharp {
               resize(width: 300) {

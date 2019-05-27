@@ -1,7 +1,6 @@
 firstName:  Subhash
 lastName: Reddy Kallam
-username: Subhashreddykallam
-avatar: ./avatars/yourname.jpg
+username: subhash
 batch: 2022
 branch: CSE
 tagline: First, solve the problem. Then, write the code.
@@ -12,4 +11,4 @@ links:
   codeforces: https://codeforces.com/profile/III_Wolverine_III
   codechef: https://www.codechef.com/users/storm1seven
   twitter: https://twitter.com/SubhashKallam
-Role: Member
+role: Member

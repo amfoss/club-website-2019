@@ -5,9 +5,7 @@ avatar: ./avatars/ashwin.png
 batch: 2022
 branch: CSE
 tagline: Innovator | Technologist | Problem Solver.
-about: !markdown |
-  I am stupid asshole
 links:
   github: https://github.com/aswinshenoy
   facebook: https://facebook.com/aswinshenoy
-Role: Member
+role: Member

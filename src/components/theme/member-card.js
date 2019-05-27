@@ -4,16 +4,15 @@ import { Link } from "gatsby"
 
 import defaultAvatar from "../../images/defaults/avatar.png"
 
-const MemberCard = ({ username, firstName, lastName, avatar, tagline }) => (
+const MemberCard = ({ username, firstName, lastName, avatar, tag, tagline }) => (
   <Link to={"/@" + username} className="member-card card">
     <img
       src={avatar ? avatar : defaultAvatar}
       alt={firstName + " " + lastName + `'s photo`}
     />
+    <div className={"tag " + tag}>{tag}</div>
     <div>
-      <h5 className="mt-3">
-        {firstName} {lastName}
-      </h5>
+      <h6>{firstName} {lastName}</h6>
       <sub>{tagline}</sub>
     </div>
   </Link>
