@@ -1,6 +1,7 @@
-title: "amFOSS cms"
-members: "aswin shenoy"
+title: "amFOSS CMS"
+members: ["ashwin", "harshith"]
 slug: "cms"
-tagline: "cms"
-description: "description"
+tagline: "amFOSS Club Management System (CMS) is django-based web-app which lays framework for the amfoss website, the amfoss webapp, and the amfoss app."
+description: !markdown |
+  amFOSS Club Management System (CMS) is django-based web-app which lays framework for the amfoss website, the amfoss webapp, and the amfoss app.
 cover: ./covers/cms.png

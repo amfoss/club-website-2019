@@ -13,20 +13,20 @@ export default function Template({ data: { markdownRemark } }) {
         <SEO title={markdownRemark.frontmatter.title} />
         <TitleBar title={markdownRemark.frontmatter.title} />
         <div className="blog-author">
-          <h3>@{markdownRemark.frontmatter.author}</h3>
+          <h6>@{markdownRemark.frontmatter.author}</h6>
         </div>
-        <div className="blog-description">
-          <img
-            className="blog-image"
-            src={
-              markdownRemark.frontmatter.cover
-                ? markdownRemark.frontmatter.cover.publicURL
-                : avatar
-            }
-            alt={markdownRemark.frontmatter.slug + `'s image`}
-          />
-          <div className="blog-text">
-            {markdownRemark.frontmatter.description}
+        <div className="row m-2 p-2">
+          <div className="col-md-8">
+            <img
+              className="w-100"
+              src={
+                markdownRemark.frontmatter.cover
+                  ? markdownRemark.frontmatter.cover.publicURL
+                  : avatar
+              }
+              alt={markdownRemark.frontmatter.slug + `'s image`}
+            />
+            <div className="blog-text"  dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
           </div>
         </div>
       </div>
@@ -49,6 +49,7 @@ export const pageQuery = graphql`
           publicURL
         }
       }
+      html
     }
   }
 `
