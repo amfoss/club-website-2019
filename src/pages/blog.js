@@ -3,9 +3,8 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
-import BlogCard from "../components/blogs/blog-card.js"
 import TitleBar from "../components/theme/title-bar"
+import PostCard from "../components/blogs/post-card.js"
 
 const Blog = ({
   data: {
@@ -13,8 +12,8 @@ const Blog = ({
   },
 }) => {
   const Posts = edges.map(edge => (
-    <div key={edge.node.id} className="col-lg-3 col-md-4 col-sm-6 m-4">
-      <BlogCard blog={edge.node.frontmatter} />
+    <div key={edge.node.id} className="col-lg-6 m-4">
+      <PostCard blog={edge.node.frontmatter} />
     </div>
   ))
 
@@ -40,7 +39,9 @@ export const pageQuery = graphql`
             author
             tags
             slug
+            categories
             date(formatString: "DD MMMM, YYYY")
+            description
             cover {
               childImageSharp {
                 resize(width: 500) {

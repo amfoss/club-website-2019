@@ -91,7 +91,7 @@ const FooterNav = () => (
               <i className="fa fa-comments" />
               IRC Chat
             </h6>
-            <p>amfoss@irccloud.com</p>
+            <p>#amfoss on Freenode.</p>
             <h6>
               <i className="fa fa-envelope" />
               Email
