@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import defaultAvatar from "../../images/defaults/avatar.png"
 
 const ListCard = ({ username, firstName, lastName, avatar, tagline }) => (
-  <Link to={"/@" + username} className="list-card card">
+  <Link to={"/@" + username} className="card">
     <div className="d-flex">
       <div className="p-0">
         <img
@@ -15,9 +15,7 @@ const ListCard = ({ username, firstName, lastName, avatar, tagline }) => (
       </div>
       <div className="item-details">
         <div>
-          <h6>
-            {firstName} {lastName}
-          </h6>
+          <h6> {firstName} {lastName} </h6>
           <div className="list-tagline">{tagline}</div>
         </div>
       </div>

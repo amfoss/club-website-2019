@@ -136,9 +136,25 @@ h6
 
 
 .list-card
-  text-decoration: none !important
-  color: black
-  padding: 0.2rem
+  background: white
+  .list-heading
+    padding: 1rem
+    font-size: calc(1rem + 0.6vw)
+    font-family: 'Rajdhani', sans-serif
+    font-weight: 900
+    background: #ffc107
+    color: #000
+    select
+      background: none
+      border: none
+      font-weight: 900
+      float: right
+  .list:hover, .list:focus
+    background: inherit!important
+  a
+    text-decoration: none !important
+    color: black
+    padding: 0.2rem
 
   h6
     margin-bottom: 0.2rem
@@ -159,9 +175,9 @@ h6
     height: 80px
     object-fit: contain
 
-.list-card:hover, .list-card:focus
-  background: #eee
-  color: black
+  a:hover, a:focus
+    background: #eee
+    color: black
 
 .blog-text
   background: white
