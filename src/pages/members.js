@@ -16,6 +16,8 @@ export default class Members extends React.Component {
   }
 
   handleSearch(event) {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
     this.setState({
       searchTerm: event.target.value,
     })
