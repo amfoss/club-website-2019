@@ -10,6 +10,19 @@ export default () => {
           id
           Title
           Content
+          Slider
+          {
+            Image
+            {
+              childImageSharp
+              {
+                resize
+                {
+                  src
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -22,6 +35,7 @@ export default () => {
       section={node}
       title={node.Title}
       content={node.Content}
+      slider={node.Slider}
     />
   ))
 }

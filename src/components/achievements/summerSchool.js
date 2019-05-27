@@ -6,14 +6,14 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        allGSoCYaml {
+        allSummerSchoolYaml {
           totalCount
           edges {
             node {
               id
               Member
               Year
-              Org
+              University
             }
           }
         }
@@ -21,7 +21,7 @@ export default () => (
     `}
     render={data => (
       <div className="p-2 my-4">
-          <AchievementList title="Google Summer of Code" members={data.allGSoCYaml.edges} tagname="Org" />
+        <AchievementList title="Summer School"  members={data.allSummerSchoolYaml.edges} tagname="University" />
       </div>
     )}
   />

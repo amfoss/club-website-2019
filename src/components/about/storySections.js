@@ -10,6 +10,17 @@ export default () => {
           id
           Title
           Content
+          Quote
+          childFileYaml
+            {
+              childImageSharp
+              {
+                resize
+                {
+                  src
+                }
+              }
+            }
         }
       }
     }
@@ -22,6 +33,8 @@ export default () => {
       section={node}
       title={node.Title}
       content={node.Content}
+      image={node.childFileYaml ? node.childFileYaml.childImageSharp.resize.src : null}
+      quote={node.Quote}
     />
   ))
 }

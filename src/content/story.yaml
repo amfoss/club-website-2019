@@ -1,15 +1,16 @@
 - Title: The Spark
+  Image: !file ../images/photos/vipin_sir.jpg
   Content: !markdown |
     The club’s story starts when its founder, Mr. Vipin Pavithran, who worked in the US,
     for over 10 years experienced in software engineering joined Amrita University in 2006.
 
-    “One of the vivid memories that I have of my bachelors was lack of support from the institution. I
-    know the value of right guidance at the right time and how it can make a huge impact. This
-    made me want to help any one who needed guidance.”
-
     He quickly realised that the students here had little focus, confidence and exposure to
     take on the real world, due to the absence of proper mentoring and support.
+  Quote: “One of the vivid memories that I have of my bachelors was lack of support from the institution. I
+    know the value of right guidance at the right time and how it can make a huge impact. This
+    made me want to help any one who needed guidance.”
 - Title: A Humble Beginning
+  Image: !file ../images/photos/ibm-great-mind.png
   Content: !markdown |
     In the summer of 2006, he was approached by Abhilash T G seeking mentoring to participate in the
     IBM Great Mind Challenge 2006. Soon a team of enthusiasts was formed, and rigorous preparation had
@@ -25,11 +26,11 @@
 
     In the end, they ended up among the Top 5 teams from India, and were invited to Mumbai for the
     prize distribution ceremony. This was the first national level prize to be won by Amritapuri students.
-
-    "This was a great confidence booster for not only them but also inspired other students who now
+  Quote: “This was a great confidence booster for not only them but also inspired other students who now
     thought they too can, if they try. Prior to this most Amrita students believed that to win in a
-    national contest they needed to be from IITs."
+    national contest they needed to be from IITs.”
 - Title: Winning the Sun Code for Freedom
+  Image: !file ../images/photos/sun-code-for-freedom.png
   Content: !markdown |
     Motivated by the success, Vipin started searching for more contests at national and international level.
     He then came across the Sun Code For Freedom 200X, conducted  by Sun Microsystems, which was about making
@@ -44,9 +45,6 @@
     to it. He also wrote documentation of the whole process, so that his peers could also get started with it.
     Soon many students started contributing to it.
 
-    "I had a set a target that our students will make 108 contributions before the deadline.
-    However, the engineers from Sun were really skeptical about the count."
-
     Every day students would stayback in the lab till late and work on making contributions to various open source
     software from Sun. On the last day of the contest, i.e. 14th February, special permission was granted for the
     girls too to stayback in the lab till midnight.
@@ -60,8 +58,7 @@
     In 2010, Vipin chanced upon Google Summer of Code, and 3 members of the club got selections the very first
     time. Over the years, through the experiences shared by the seniors, more and more students started
     participating in GSoC. Having started with a strength of 10 members, the club now has about 100 active
-    members, and several alumni actively developing the club.
-
-    "They learn valuable skills that is not normally learned in the classrooms such as reading large code base,
+    members, and several alumni actively developing the club
+  Quote: “They learn valuable skills that is not normally learned in the classrooms such as reading large code base,
     coding using a certain coding standards, using VCS, communicating effectively via IRC & email.
-    They also practically learn about the software development life cycle."
+    They also practically learn about the software development life cycle.”
