@@ -24,6 +24,7 @@ MemberCard.propTypes = {
   lastName: PropTypes.string,
   avatar: PropTypes.string,
   tagline: PropTypes.string,
+  tag: PropTypes.string
 }
 
 MemberCard.defaultProps = {
@@ -32,6 +33,7 @@ MemberCard.defaultProps = {
   lastName: "",
   avatar: "",
   tagline: "",
+  tag: "Member"
 }
 
 export default MemberCard
