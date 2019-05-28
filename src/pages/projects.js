@@ -14,7 +14,7 @@ const Project = ({
   },
 }) => {
   const Projects = edges.map(edge => (
-    <div key={edge.node.id} className="col-lg-3 col-md-4 col-sm-6 m-4">
+    <div key={edge.node.id} className="col-lg-3 col-md-4 col-sm-6">
       <ProjectCard project={edge.node} />
     </div>
   ))
@@ -23,7 +23,7 @@ const Project = ({
     <Layout>
       <SEO title="Project" />
       <TitleBar title="Projects" />
-      <div className="row m-0">{Projects}</div>
+      <div className="row mx-2 my-4">{Projects}</div>
     </Layout>
   )
 }

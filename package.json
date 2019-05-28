@@ -8,6 +8,7 @@
     "classnames": "^2.2.6",
     "gatsby": "^2.5.5",
     "gatsby-image": "^2.1.0",
+    "gatsby-plugin-disqus": "^1.0.3",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-nprogress": "^2.0.10",
     "gatsby-plugin-offline": "^2.1.1",

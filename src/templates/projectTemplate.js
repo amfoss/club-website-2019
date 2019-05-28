@@ -62,7 +62,7 @@ export default class ProjectTemplate extends React.Component {
     } else {
       return (
         <section className="my-4 container">
-          <div className="post-card"  dangerouslySetInnerHTML={{ __html: this.props.data.projectsYaml.description}} />
+          <div className="card p-4"  dangerouslySetInnerHTML={{ __html: this.props.data.projectsYaml.description}} />
         </section>
       )
     }
