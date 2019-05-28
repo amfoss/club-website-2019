@@ -10,7 +10,7 @@ const MemberCard = ({ username, firstName, lastName, avatar, tag, tagline }) => 
       src={avatar ? avatar : defaultAvatar}
       alt={firstName + " " + lastName + `'s photo`}
     />
-    <div className={"tag " + tag}>{tag}</div>
+    <div className={"role-tag " + tag}>{tag}</div>
     <div>
       <h6>{firstName} {lastName}</h6>
       <sub>{tagline}</sub>
