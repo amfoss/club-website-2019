@@ -29,7 +29,7 @@ export default () => {
 
   return (
     <div className="card my-4">
-      <h5 className="bg-brand p-4">Why Join amFOSS?</h5>
+      <h4 className="bg-brand p-4">Why Join amFOSS?</h4>
         { data.allWhyJoinYaml.edges.map((edge, i) => (
             <ListCard
               key={edge.node.id}
