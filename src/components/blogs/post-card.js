@@ -20,7 +20,7 @@ export default ({ blog }) => (
             ) : null
           }
           <h6 className="w-75 px-3">{blog.title}</h6>
-          <p className="px-3 pb-4">{blog.description}</p>
+          <p className="px-3">{blog.description}</p>
           <div className="post-card-footer">
             <span><i className="fa fa-calendar-alt" /> {blog.date}</span>
             <span><i className="fa fa-user" /> @{blog.author} </span>

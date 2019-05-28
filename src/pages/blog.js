@@ -12,7 +12,7 @@ const Blog = ({
   },
 }) => {
   const Posts = edges.map(edge => (
-    <div key={edge.node.id} className="col-lg-6 m-4">
+    <div key={edge.node.id} className="col-lg-6 m-4 p-0">
       <PostCard blog={edge.node.frontmatter} />
     </div>
   ))

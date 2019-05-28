@@ -38,6 +38,7 @@ export const pageQuery = graphql`
           title
           members
           slug
+          description
           cover {
             childImageSharp {
               resize(width: 500) {
