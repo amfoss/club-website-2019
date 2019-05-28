@@ -20,7 +20,7 @@ export default () => (
       }
     `}
     render={data => (
-      <div className="p-2 my-4">
+      <div className="p-2">
         <AchievementList title="Summer School"  members={data.allSummerSchoolYaml.edges} tagname="University" />
       </div>
     )}
