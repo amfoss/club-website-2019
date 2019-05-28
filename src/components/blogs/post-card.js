@@ -7,13 +7,13 @@ import avatar from "../../images/defaults/avatar.png"
 export default ({ blog }) => (
   <Link to={"/@" + blog.author + "/" + blog.slug} className="post-card">
     <div className="row m-0">
-      <div className="col-4 p-0">
+      <div className="col-md-4 p-0">
       <img
         src={blog.cover ? blog.cover.childImageSharp.resize.src : avatar}
         alt={blog.slug + `'s image`}
       />
       </div>
-      <div className="col-8 d-flex p-0 align-items-center">
+      <div className="col-md-8 d-flex p-0 align-items-center">
         <div>
           { blog.categories ? blog.categories.map( (c,id) =>
               <div key={id} className={"tag mt-4 "+c}>{c}</div>

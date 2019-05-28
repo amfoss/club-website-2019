@@ -17,6 +17,16 @@ module.exports = {
         icon: `src/images/favicon.png`,
       },
     },
+    {
+      resolve: `gatsby-transformer-yaml-full`,
+      options: {
+        createChildNodes: true,
+        plugins: [
+          `gatsby-yaml-full-markdown`, // Enable !markdown tags
+          `gatsby-yaml-full-file`,
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     {
@@ -31,16 +41,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-yaml-full`,
-      options: {
-        createChildNodes: true,
-        plugins: [
-          `gatsby-yaml-full-markdown`, // Enable !markdown tags
-          `gatsby-yaml-full-file`,
-        ],
       },
     },
     {
