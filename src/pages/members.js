@@ -68,7 +68,7 @@ export default class Members extends React.Component {
           {filteredMembers.map(edge => (
             <div
               key={edge.node.id}
-              className="col-md-4 col-lg-3 col-xl-2 col-6 py-4 px-2"
+              className="col-md-4 col-lg-3 col-xl-2 col-6 p-2"
             >
               <MemberCard
                 username={edge.node.username}

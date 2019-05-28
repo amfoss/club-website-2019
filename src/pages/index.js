@@ -3,15 +3,22 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HomeSections from "../components/home/homeSections"
-import HomeLanding from "../components/home/HomeLanding"
-import Script from "react-load-script"
+import HomeLanding from "../components/home/homeLanding"
+import WhyJoin from "../components/home/whyJoin"
+
 
 const IndexPage = () => (
   <Layout>
     <SEO title="India's Leading FOSS Club" />
-    <Script url="https://cdnjs.cloudflare.com/ajax/libs/typeit/6.0.2/typeit.min.js" />
     <HomeLanding />
     <HomeSections />
+    <div className="row m-0">
+      <div className="col-md-6">
+        <WhyJoin />
+      </div>
+      <div className="col-md-6">
+      </div>
+    </div>
   </Layout>
 )
 

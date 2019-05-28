@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import TitleBar from "../components/theme/title-bar"
-import PostCard from "../components/blogs/post-card.js"
+import PostCard from "../components/blog/post-card.js"
 
 const Blog = ({
   data: {

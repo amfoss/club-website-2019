@@ -26,12 +26,12 @@ const SectionPoints = points => {
   )
 }
 
-const CardSlider = slider => {
+const CardSlider = ({slider, title}) => {
   return (
     <Carousel autoPlay={true} showArrows={false} showStatus={false} showIndicators={false} showThumbs={false} swipeable className="w-100">
       {
-        slider.slider.length ? slider.slider.map((slide,i) =>
-          (<img key={i} src={slide.Image.childImageSharp.fluid.src} />)) : null
+        slider.length ? slider.map((slide,i) =>
+          (<img key={i} src={slide.Image.childImageSharp.fluid.src} alt={"Photos of " + title} />)) : null
       }
     </Carousel>
   )
@@ -48,7 +48,7 @@ const SectionCard = ({ index, title, content, image, points, quote, slider }) =>
           `align-items-center`
         )}
       >
-        { slider ? <CardSlider slider={slider} />
+        { slider ? <CardSlider slider={slider} title={title} />
           : image ?  <img src={image} alt={title}/> : null
         }
       </div>

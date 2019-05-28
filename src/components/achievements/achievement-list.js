@@ -8,8 +8,6 @@ const AchievementList = ({ title, members, tagname }) => {
   const [year, setYear] = useState(years[0]);
   const profiles = getProfiles()
   let filtered = members.filter( member => member.node.Year == year)
-  console.log(members)
-  console.log(year)
   return (
     <div className="list-card card">
       <div className="list-heading d-flex">
