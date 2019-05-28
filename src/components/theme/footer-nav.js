@@ -75,7 +75,7 @@ const FooterNav = () => (
               <a href="/about#social-initiatives">Social Initiatives</a>
             </li>
             <li>
-              <a href="/blog#events">Events & Workshops</a>
+              <a href="https://github.com/amfoss/workshops">Events & Workshops</a>
             </li>
             <li>
               <a href="/blog#news">Press & Media</a>
@@ -87,24 +87,13 @@ const FooterNav = () => (
         <div id="contact">
           <h4>Contact Us</h4>
           <div className="footer-contact">
-            <h6>
-              <i className="fa fa-comments" />
-              IRC Chat
-            </h6>
+            <h6><i className="fa fa-comments" />  IRC Chat</h6>
             <p>#amfoss on Freenode.</p>
-            <h6>
-              <i className="fa fa-envelope" />
-              Email
-            </h6>
+            <h6><i className="fa fa-envelope" />  Email</h6>
             <p>
-              <a href="mailto:amritapurifoss@gmail.com">
-                amritapurifoss@gmail.com
-              </a>
+              <a href="mailto:amritapurifoss@gmail.com"> amritapurifoss@gmail.com</a>
             </p>
-            <h6>
-              <i className="fa fa-location-arrow" />
-              Address
-            </h6>
+            <h6><i className="fa fa-location-arrow" /> Address</h6>
             <p>
               FOSS@Amrita, <br /> Amrita Vishwa Vidyapeetham, <br />
               Amritapuri, Clappana P.O.,

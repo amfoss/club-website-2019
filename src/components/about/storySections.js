@@ -15,7 +15,7 @@ export default () => {
             {
               childImageSharp
               {
-                resize
+                fluid
                 {
                   src
                 }
@@ -33,7 +33,7 @@ export default () => {
       section={node}
       title={node.Title}
       content={node.Content}
-      image={node.childFileYaml ? node.childFileYaml.childImageSharp.resize.src : null}
+      image={node.childFileYaml ? node.childFileYaml.childImageSharp.fluid.src : null}
       quote={node.Quote}
     />
   ))

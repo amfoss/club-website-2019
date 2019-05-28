@@ -9,7 +9,7 @@ const About = () => (
   <Layout>
     <SEO title="About the Club" />
     <TitleBar title="About the Club" />
-    <h1 className="mt-4 ml-4">Our Story</h1>
+    <h2 className="mt-4 ml-4">Our Story</h2>
     <StorySections />
   </Layout>
 )

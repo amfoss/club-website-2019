@@ -12,7 +12,7 @@ export default function Template({ data: { markdownRemark } }) {
   return (
     <Layout>
         <SEO title={markdownRemark.frontmatter.title} />
-        <TitleBar title={markdownRemark.frontmatter.title} />
+        <TitleBar title={markdownRemark.frontmatter.title} type="h3" />
         <div className="row mx-0 my-4">
           <div className="col-md-9 order-2 order-md-1">
             <div className="card p-4 content-text-size"  dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />

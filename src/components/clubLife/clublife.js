@@ -16,7 +16,7 @@ export default () => {
             {
               childImageSharp
               {
-                resize
+                fluid
                 {
                   src
                 }

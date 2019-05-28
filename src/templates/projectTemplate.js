@@ -134,7 +134,7 @@ export const pageQuery = graphql`
       description
       cover {
         childImageSharp {
-          resize(width: 150) {
+          resize(width: 350) {
             src
           }
         }

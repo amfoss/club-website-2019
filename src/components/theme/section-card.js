@@ -31,7 +31,7 @@ const CardSlider = slider => {
     <Carousel autoPlay={true} showArrows={false} showStatus={false} showIndicators={false} showThumbs={false} swipeable className="w-100">
       {
         slider.slider.length ? slider.slider.map((slide,i) =>
-          (<img key={i} src={slide.Image.childImageSharp.resize.src} />)) : null
+          (<img key={i} src={slide.Image.childImageSharp.fluid.src} />)) : null
       }
     </Carousel>
   )
