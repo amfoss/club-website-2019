@@ -6,6 +6,7 @@ import avatar from "../images/defaults/avatar.png"
 import crowdIcon from "../images/icons/crowd.png"
 import portfolioIcon from "../images/icons/portfolio.png"
 import bulbIcon from "../images/icons/bulb.png"
+import MemberList from "../components/projects/membersList"
 
 export default class ProjectTemplate extends React.Component {
   constructor(props) {
@@ -53,10 +54,8 @@ export default class ProjectTemplate extends React.Component {
     }
     if (this.state.switchTab === "membersTab") {
       return (
-        <section className="my-4 container col-md-4">
-          <div className="post-card">
-            <h5>{this.props.data.projectsYaml.members}</h5>
-          </div>
+        <section className="my-4">
+          <MemberList projectmembers={this.props.data.projectsYaml} />
         </section>
       )
     } else {
