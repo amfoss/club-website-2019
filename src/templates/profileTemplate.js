@@ -12,7 +12,7 @@ export default ({ data: { membersYaml } }) => {
       <SEO title={member.firstName + " " + member.lastName} />
       <section id="cover">
         <div className="container d-md-flex justify-content-center">
-          <div className="d-flex align-items-center">
+          <div className="d-flex align-items-center justify-content-center">
             <img
               src={
                 member.avatar
