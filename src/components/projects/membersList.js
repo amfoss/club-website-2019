@@ -2,10 +2,10 @@ import React from "react"
 import getProfiles from "../theme/getProfiles"
 import MemberCard from "../theme/member-card"
 
-const MemberList = ({ projectmembers }) => {
+const MemberList = ({ members }) => {
   return (
     <div className="row m-0 p-1 mb-4">
-      {projectmembers.members.map(member =>{
+      {members.members.map(member =>{
         const profiles = getProfiles()
         let profile = profiles.find(
           profile => profile.node.username === member

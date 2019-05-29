@@ -14,7 +14,7 @@ const Project = ({
   },
 }) => {
   const Projects = edges.map(edge => (
-    <div key={edge.node.id} className="col-lg-3 col-md-4 col-sm-6">
+    <div key={edge.node.id} className="col-xl-3 col-md-4 col-sm-6">
       <ProjectCard project={edge.node} />
     </div>
   ))

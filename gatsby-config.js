@@ -8,8 +8,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `amFOSS Website`,
+        short_name: `amfoss`,
         start_url: `/`,
         background_color: `#ffc107`,
         theme_color: `#ffc107`,
@@ -17,6 +17,7 @@ module.exports = {
         icon: `src/images/favicon.png`,
       },
     },
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-transformer-yaml-full`,
       options: {

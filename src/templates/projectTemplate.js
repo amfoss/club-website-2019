@@ -55,7 +55,7 @@ export default class ProjectTemplate extends React.Component {
     if (this.state.switchTab === "membersTab") {
       return (
         <section className="my-4">
-          <MemberList projectmembers={this.props.data.projectsYaml} />
+          <MemberList members={this.props.data.projectsYaml} />
         </section>
       )
     } else {
