@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import HomeSections from "../components/home/homeSections"
 import HomeLanding from "../components/home/homeLanding"
 import WhyJoin from "../components/home/whyJoin"
+import AlertBox from "../components/home/alertBox"
 
 
 const IndexPage = () => (
@@ -18,6 +19,7 @@ const IndexPage = () => (
       </div>
       <div className="col-md-6">
       </div>
+      <AlertBox />
     </div>
   </Layout>
 )
