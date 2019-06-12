@@ -66,6 +66,9 @@ h6
 .bg-brand
   background: #ffc107!important
 
+.heading-font
+  font-family: Rajdhani, sans-serif
+
 #page-container
   position: relative
   margin-top: 4rem
@@ -334,40 +337,26 @@ h6
 .alert-box
   background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,114,255,1) 0%, rgba(0,132,255,1) 90% )
   color: white
-  font-family: Rajdhani, sans-serif
-    
-  span
-    font-size: 35px
 
-.text-bold
-  font-size: 35px
-  font-weight: bolder
-  letter-spacing: 1px
+  .button
+    padding:  0.5rem 1rem
+    border-radius: 5px
+    display: inline-block
+    background-color: rgba(256,256,256,0.1)
+    border: 1px solid white
+    color: white
+    font-weight: 900
+    font-size: calc(0.8rem + 0.7vw)
+  .button:hover
+    background: white
+    color: black
+
 
 .box
   border: none
   margin: 0
   background-color: white
   color: #43CBFF
-
-.button
-  padding:  1rem 1rem
-  border-radius: 5px
-  display: inline-block
-  background-color: rgba(256,256,256,0.1)
-  border: 1px solid white
-  color: white
-  font-weight: 900
-  font-size: calc(0.8rem + 0.7vw)
-  line-height: 0.8
-
-.button:hover
-  letter-spacing: 1px
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57)
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57)
-  box-shadow: 5px 40px -10px rgba(0,0,0,0.57)
-  transition: all 0.4s ease 0s
-  text-decoration: none
 
 @media (min-width: 576px)
   #contact-details
