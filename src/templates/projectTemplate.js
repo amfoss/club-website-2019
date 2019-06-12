@@ -39,17 +39,19 @@ export default class ProjectTemplate extends React.Component {
     if (this.state.switchTab === "galleryTab") {
       return <section className="my-4 container">
         <div className="gallery">
-          {this.props.data.projectsYaml.gallery.map(image => {
-            return(<img
-              style={{padding: 8}}
-              src={
-                image
-                  ? image.childImageSharp.resize.src
-                  : avatar
-              }
-              alt={image}
-            />)
-          })}
+          <div className="row">
+            {this.props.data.projectsYaml.gallery.map(image => {
+              return(<div className="col-sm-6 project-image my-2" key={image.childImageSharp.resize.src}>
+                <img
+                src={
+                  image
+                    ? image.childImageSharp.resize.src
+                    : avatar
+                }
+                alt={image}
+                /></div>)
+            })}
+          </div>
         </div>
       </section>
     }
