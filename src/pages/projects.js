@@ -37,6 +37,13 @@ export const pageQuery = graphql`
           id
           title
           members
+          gallery {
+            childImageSharp{
+              resize(width: 500) {
+                src
+              }
+            }
+          }
           slug
           description
           cover {
