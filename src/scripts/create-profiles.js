@@ -1,6 +1,6 @@
 const path = require("path")
 
-function createProfilePages(result, createPage) {
+function createProfiles(result, createPage) {
   const ProfileTemplate = path.resolve(`src/templates/profileTemplate.js`)
   const members = result.data.allMembersYaml.edges
   members.forEach(({ node }) => {
@@ -29,7 +29,7 @@ function graphqlForProfiles(graphql, createPage) {
     if (result.errors) {
       throw result.errors
     }
-    createProfilePages(result, createPage)
+    createProfiles(result, createPage)
   })
 }
 

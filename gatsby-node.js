@@ -1,5 +1,5 @@
 const { graphqlForProfiles } = require("./src/scripts/create-profiles");
-const { graphqlForPosts } = require("./src/scripts/create-posts");
+const { graphqlForNews } = require("./src/scripts/create-articles");
 const { graphqlForProjects } = require("./src/scripts/create-projects");
 
 function createIndividualPages(actions, graphql) {
@@ -7,7 +7,7 @@ function createIndividualPages(actions, graphql) {
 
   return Promise.all([
     graphqlForProfiles(graphql, createPage),
-    graphqlForPosts(graphql, createPage),
+    graphqlForNews(graphql, createPage),
     graphqlForProjects(graphql, createPage)
   ])
 }

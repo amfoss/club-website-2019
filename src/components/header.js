@@ -2,10 +2,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import Menu from "./theme/menu"
 import SocialMenu from "./theme/social-menu"
-import { Link } from "gatsby"
+import { StaticQuery, Link } from "gatsby"
 import classnames from "classnames"
-
-import logoIcon from "../images/logos/logo_alt_light.png"
 
 class Header extends React.Component {
   constructor(props) {
@@ -25,7 +23,28 @@ class Header extends React.Component {
       <header>
         <div id="topbar">
           <Link to="/">
-            <img src={logoIcon} alt="AmFOSS" />
+            <StaticQuery
+              query={graphql`
+                query {
+                 allFile(filter: { name: { eq: "logo_alt_light"}, extension: { eq: "png"}})
+                  {
+                    nodes
+                    {
+                      childImageSharp
+                      {
+                        fluid
+                        {
+                          src
+                        }
+                      }
+                    }
+                  }
+                }
+              `}
+              render={data => (
+                <img src={data.allFile.nodes[0].childImageSharp.fluid.src} alt="AmFOSS" />
+              )}
+            />
           </Link>
           <i
             tabIndex="0"

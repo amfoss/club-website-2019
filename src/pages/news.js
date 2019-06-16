@@ -4,29 +4,29 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import TitleBar from "../components/theme/title-bar"
-import PostCard from "../components/blog/post-card.js"
+import NewsCard from "../components/news/news-card.js"
 
-const Blog = ({
+const News = ({
   data: {
     allMarkdownRemark: { edges },
   },
 }) => {
-  const Posts = edges.map(edge => (
+  const Articles = edges.map(edge => (
     <div key={edge.node.id} className="col-lg-6 m-4 p-0">
-      <PostCard blog={edge.node.frontmatter} />
+      <NewsCard article={edge.node.frontmatter} />
     </div>
   ))
 
   return (
     <Layout>
-      <SEO title="Blog" />
-      <TitleBar title="Blog" />
-      <div className="row m-0">{Posts}</div>
+      <SEO title="News" />
+      <TitleBar title="News" />
+      <div className="row m-0">{Articles}</div>
     </Layout>
   )
 }
 
-export default Blog
+export default News
 
 export const pageQuery = graphql`
   query {

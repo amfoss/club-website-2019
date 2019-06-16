@@ -1,5 +1,6 @@
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css")
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap')
 
 @import "./navigation"
 @import "./project"
@@ -9,10 +10,13 @@
 body
   background: #eee
   margin: 0
-  font-family: 'Nunito Sans', sans-serif
+  font-family: 'Montserrat', sans-serif
 
 footer
   display: block
+
+  h6
+    font-size: 1rem
 
   .sub-footer
     background: #333
@@ -39,26 +43,26 @@ footer
       color: white
 
 h1, h2, h3, h4, h5, h6
-  font-family: 'Rajdhani', sans-serif
-  font-weight: 900
+  font-family: 'Montserrat', sans-serif
+  font-weight: 700
 
 h1
-  font-size: calc(2rem + 1.8vw)
+  font-size: calc(2rem + 1.2vw)
 
 h2
-  font-size: calc(1.8rem + 1.5vw)
+  font-size: calc(1.8rem + 1vw)
 
 h3
-  font-size: calc(1.5rem + 1.3vw)
+  font-size: calc(1.5rem + 0.8vw)
 
 h4
-  font-size: calc(1.3rem + 1vw)
+  font-size: calc(1.3rem + 0.6vw)
 
 h5
-  font-size: calc(1rem + 0.8vw)
+  font-size: calc(1rem + 0.5vw)
 
 h6
-  font-size: calc(1rem + 0.6vw)
+  font-size: calc(1rem + 0.4vw)
 
 .content-text-size
   font-size: calc(0.8rem + 0.5vw)
@@ -67,7 +71,7 @@ h6
   background: #ffc107!important
 
 .heading-font
-  font-family: Rajdhani, sans-serif
+  font-family: 'Montserrat', sans-serif
 
 #page-container
   position: relative
@@ -94,7 +98,7 @@ h6
   display: block
   text-decoration: none
   box-shadow: 8px 10px 20px 0 rgba(46, 61, 73, 0.15)
-  font-family: 'Nunito Sans', sans-serif
+  font-family: 'Montserrat', sans-serif
   padding: 0!important
 
   p
@@ -120,7 +124,7 @@ h6
     margin: 1rem
     border-radius: 1rem
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3)
-  .News
+  .Achievement
     background: #01579B!important
 
 .post-card:hover
@@ -180,7 +184,7 @@ h6
   .list-heading
     padding: 1rem
     font-size: calc(1rem + 0.6vw)
-    font-family: 'Rajdhani', sans-serif
+    font-family: 'Montserrat', sans-serif
     font-weight: 900
     background: #ffc107
     color: #000
@@ -198,7 +202,6 @@ h6
 
   h6
     margin-bottom: 0.2rem
-    text-transform: uppercase
 
   .item-details
     margin-left: 0.5rem
@@ -207,7 +210,7 @@ h6
 
   .list-tagline
     font-size: calc(0.8rem + 0.2vw)
-    font-weight: 600
+    font-weight: 400
 
   img
     width: 80px
@@ -368,3 +371,21 @@ h6
       div
         div
           width: 100%
+
+#home-landing
+  height: 80vmin
+  background-color: #263238
+  color: white
+  .overlay
+    display: flex
+    align-items: center
+    justify-content: center
+    top: 0
+    bottom: 0
+    height: 100%
+    h1
+      span
+        display: inline-block
+        color: rgb(255, 193, 7)
+
+

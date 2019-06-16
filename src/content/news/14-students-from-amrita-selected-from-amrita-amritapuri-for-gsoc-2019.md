@@ -4,7 +4,7 @@ slug: "14-students-from-amrita-amritapuri-selected-for-gsoc-2019"
 author: amfoss
 cover: ./covers/gsoc-2019.jpg
 date: "2019-05-08"
-categories: ["News"]
+categories: ["Achievement"]
 tags: ["gsoc", "google"]
 description: "14 Students from Amrita Vishwa Vidyapeetham, Amritapuri Campus selected for Google Summer of Code 2019 Program."
 ---

@@ -33,7 +33,7 @@ const FooterNav = () => (
           <h4>For Students</h4>
           <ul>
             <li>
-              <a href="https://github.com/amfoss/praveshan">How to Join?</a>
+              <a href="https://join.amfoss.in/">How to Join?</a>
             </li>
             <li>
               <a href="https://github.com/amfoss/vidyaratna">

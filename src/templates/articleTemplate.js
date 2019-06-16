@@ -11,7 +11,13 @@ import TitleBar from "../components/theme/title-bar"
 export default function Template({ data: { markdownRemark } }) {
   return (
     <Layout>
-        <SEO title={markdownRemark.frontmatter.title} />
+        <SEO
+            title={markdownRemark.frontmatter.title}
+            description={markdownRemark.frontmatter.description}
+            author={markdownRemark.frontmatter.author}
+            keywords={markdownRemark.frontmatter.tags ? markdownRemark.frontmatter.tags.join(', ') : null}
+            type="article"
+        />
         <TitleBar title={markdownRemark.frontmatter.title} type="h3" />
         <div className="row mx-0 my-4">
           <div className="col-md-9 order-2 order-md-1">
@@ -31,10 +37,9 @@ export default function Template({ data: { markdownRemark } }) {
                 <div className="m-4">
                   <h6>@{markdownRemark.frontmatter.author}</h6>
                   <div>
-                    <h6>Category</h6>
                   {
                       markdownRemark.frontmatter.categories.map((cat,id) => (
-                            <li key={id}>{cat}</li>
+                        <div key={id} className={"tag mt-4 "+cat}>{cat}</div>
                       ))
                   }
                   </div>

@@ -21,7 +21,7 @@ const Menu = () => (
     />
     <MenuItem name="Members" link="/members" icon={membersIcon} />
     <MenuItem name="Projects" link="/projects" icon={ProjectsIcon} />
-    <MenuItem name="Blog" link="/blog" icon={blogIcon} />
+    <MenuItem name="News" link="/news" icon={blogIcon} />
   </div>
 )
 

@@ -1,12 +1,12 @@
 const path = require("path")
 
-function createBlogPages(result, createPage) {
-  const BlogTemplate = path.resolve(`src/templates/blogTemplate.js`)
-  const blogs = result.data.allMarkdownRemark.edges
-  blogs.forEach(({ node }) => {
+function createArticles(result, createPage) {
+  const ArticleTemplate = path.resolve(`src/templates/articleTemplate.js`)
+  const articles = result.data.allMarkdownRemark.edges
+  articles.forEach(({ node }) => {
     createPage({
-      path: "@" + node.frontmatter.author + "/" + node.frontmatter.slug,
-      component: BlogTemplate,
+      path: "news/" + node.frontmatter.slug,
+      component: ArticleTemplate,
       context: {
         author: node.frontmatter.author,
         slug: node.frontmatter.slug,
@@ -15,7 +15,7 @@ function createBlogPages(result, createPage) {
   })
 }
 
-function graphqlForPosts(graphql, createPage) {
+function graphqlForNews(graphql, createPage) {
   return graphql(`
     {
       allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
@@ -44,8 +44,8 @@ function graphqlForPosts(graphql, createPage) {
     if (result.errors) {
       throw result.errors
     }
-    createBlogPages(result, createPage)
+    createArticles(result, createPage)
   })
 }
 
-exports.graphqlForPosts = graphqlForPosts
+exports.graphqlForNews = graphqlForNews

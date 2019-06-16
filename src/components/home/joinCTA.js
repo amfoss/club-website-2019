@@ -7,7 +7,7 @@ export default () =>  {
         <div className="col-sm-8 col-lg-9 col-xl-10">
           <div className="d-flex align-items-center mb-2">
               <h6 className="bg-white text-dark p-2 rounded heading-font card">
-              INVITING STUDENTS OF 2022 BATCH
+              INVITING STUDENTS OF 2023 BATCH
               </h6>
           </div>
           <p>
@@ -17,7 +17,7 @@ export default () =>  {
           </p>
         </div>
         <div className="col-sm-4 col-lg-3 col-xl-2 px-0 justify-content-center d-flex align-items-center">
-            <a className="btn btn-lg button heading-font" role="button" href="https://github.com/amfoss/praveshan">Get Started</a>
+            <a className="btn btn-lg button heading-font" role="button" href="https://join.amfoss.in/">Get Started</a>
         </div>
       </div>
     </div>
