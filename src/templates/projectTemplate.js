@@ -7,6 +7,7 @@ import crowdIcon from "../images/icons/crowd.png"
 import portfolioIcon from "../images/icons/portfolio.png"
 import bulbIcon from "../images/icons/bulb.png"
 import MemberList from "../components/projects/membersList"
+import SocialIcon from "../components/theme/social-icon"
 
 export default class ProjectTemplate extends React.Component {
   constructor(props) {
@@ -38,14 +39,19 @@ export default class ProjectTemplate extends React.Component {
     if (this.state.switchTab === "galleryTab") {
       return <section className="my-4 container">
         <div className="gallery">
-          {this.props.data.projectsYaml.gallery.map(image => {
-            return(<img src={
-                image
-                  ? image.childImageSharp.resize.src
-                  : avatar
-              }
-            />)
-          })}
+          <div className="row">
+            {this.props.data.projectsYaml.gallery.map(image => {
+              return(<div className="col-sm-6 project-image my-2" key={image.childImageSharp.resize.src}>
+                <img
+                src={
+                  image
+                    ? image.childImageSharp.resize.src
+                    : avatar
+                }
+                alt={image}
+                /></div>)
+            })}
+          </div>
         </div>
       </section>
     }
@@ -86,6 +92,13 @@ export default class ProjectTemplate extends React.Component {
                 <div className="col-md-8">
                   <h1>{this.props.data.projectsYaml.title}</h1>
                   <p>{this.props.data.projectsYaml.tagline}</p>
+                  {this.props.data.projectsYaml.links ? (
+                    <div className="social-links">
+                      <SocialIcon name="github" link={this.props.data.projectsYaml.links.github} />
+                      <SocialIcon name="website" link={this.props.data.projectsYaml.links.website} />
+                      <SocialIcon name="irc" link={this.props.data.projectsYaml.links.irc} />
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </div>
@@ -127,6 +140,18 @@ export const pageQuery = graphql`
       members
       slug
       tagline
+      gallery {
+        childImageSharp{
+          resize(width: 500) {
+            src
+          }
+        }
+      }
+      links{
+        github
+        website
+        irc
+      }
       description
       cover {
         childImageSharp {
