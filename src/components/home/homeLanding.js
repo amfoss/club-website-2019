@@ -27,7 +27,7 @@ export default () => {
       <div className="overlay">
         <div className="text-center">
 
-            <Typing speed={25} >
+            <Typing speed={50} >
               <h3>
               <span>A Student Community of Open Source Enthusiasts</span>
               <Typing.Reset count={1} delay={500} />
