@@ -22,7 +22,10 @@ function graphqlForProjects(graphql, createPage) {
         edges {
           node {
             title
-            members
+            members{
+              user
+              role
+            }
             slug
           }
         }

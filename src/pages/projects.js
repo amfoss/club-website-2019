@@ -36,7 +36,10 @@ export const pageQuery = graphql`
         node {
           id
           title
-          members
+          members{
+            user
+            role
+          }
           gallery {
             childImageSharp{
               resize(width: 500) {

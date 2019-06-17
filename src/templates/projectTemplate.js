@@ -137,7 +137,10 @@ export const pageQuery = graphql`
   query {
     projectsYaml {
       title
-      members
+      members{
+        user
+        role
+      }
       slug
       tagline
       gallery {
