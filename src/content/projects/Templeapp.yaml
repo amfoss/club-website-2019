@@ -1,0 +1,25 @@
+title: "Temple App"
+members:
+  - user: abhijit
+    role: Maintainer
+  - user: rajendra
+    role: Maintainer
+  - user: yash
+    role: Maintainer
+  - user: ajay
+    role: Developer
+  - user: gopika
+    role: Developer
+  - user: shivangi
+    role: Developer
+
+slug: "Temple App"
+tagline: "Temple App is an Android app aimed for managing the finances of temples"
+description:
+  Temple App is an Android app aimed for managing the finances of temples
+cover: ./covers/Templeapp.png
+gallery:
+  - ./gallery/Templeapp-ss-1.png
+links:
+  github: https://github.com/amfoss/TempleApp
+  chatroom: https://webchat.freenode.net/?channels=%23amfoss-android
