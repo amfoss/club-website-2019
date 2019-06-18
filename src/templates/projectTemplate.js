@@ -96,7 +96,7 @@ export default class ProjectTemplate extends React.Component {
                     <div className="social-links">
                       <SocialIcon name="github" link={this.props.data.projectsYaml.links.github} />
                       <SocialIcon name="website" link={this.props.data.projectsYaml.links.website} />
-                      <SocialIcon name="irc" link={this.props.data.projectsYaml.links.irc} />
+                      <SocialIcon name="chatroom" link={this.props.data.projectsYaml.links.chatroom} />
                     </div>
                   ) : null}
                 </div>
@@ -134,8 +134,8 @@ export default class ProjectTemplate extends React.Component {
 }
 
 export const pageQuery = graphql`
-  query {
-    projectsYaml {
+  query($title: String!) {
+    projectsYaml(title: { eq: $title }) {
       title
       members{
         user
@@ -153,7 +153,7 @@ export const pageQuery = graphql`
       links{
         github
         website
-        irc
+        chatroom
       }
       description
       cover {

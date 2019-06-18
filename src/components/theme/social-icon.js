@@ -7,7 +7,7 @@ import twitter from "../../images/icons/twitter.png"
 import linkedin from "../../images/icons/linkedin.png"
 import github from "../../images/icons/github.png"
 import website from "../../images/icons/website.png"
-import irc from "../../images/icons/irc.png"
+import chatroom from "../../images/icons/chatroom.png"
 
 const SocialIcon = ({ name, link }) => (
   <a href={link} className="social-icon">
@@ -17,7 +17,7 @@ const SocialIcon = ({ name, link }) => (
     {name === "linkedin" ? <img src={linkedin} alt={name} /> : null}
     {name === "github" ? <img src={github} alt={name} /> : null}
     {name === "website" ? <img src={website} alt={name} /> : null }
-    {name === "irc" ? <img src={irc} alt={name} /> : null}
+    {name === "chatroom" ? <img src={chatroom} alt={name} /> : null}
   </a>
 )
 
@@ -29,7 +29,7 @@ SocialIcon.propTypes = {
     "linkedin",
     "github",
     "website",
-    "irc",
+    "chatroom",
     "web",
   ]),
   link: PropTypes.string,

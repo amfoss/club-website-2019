@@ -66,8 +66,8 @@ export default function Template({ data: { markdownRemark } }) {
 }
 
 export const pageQuery = graphql`
-  query {
-    markdownRemark {
+   query($id: String!) {
+    markdownRemark(id: {eq: $id}) {
       frontmatter {
         author
         slug

@@ -10,6 +10,7 @@ function createArticles(result, createPage) {
       context: {
         author: node.frontmatter.author,
         slug: node.frontmatter.slug,
+        id: node.id,
       },
     })
   })

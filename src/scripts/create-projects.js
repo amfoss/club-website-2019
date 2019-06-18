@@ -8,8 +8,7 @@ function createProjectPages(result, createPage) {
       path: "/projects" + "/" + node.slug,
       component: ProjectTemplate,
       context: {
-        title: node.title,
-        members: node.members,
+        title: node.title
       },
     })
   })
