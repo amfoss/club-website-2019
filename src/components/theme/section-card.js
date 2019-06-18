@@ -28,7 +28,7 @@ const SectionPoints = points => {
 
 const CardSlider = ({slider, title}) => {
   return (
-    <Carousel autoPlay={true} showArrows={false} showStatus={false} showIndicators={false} showThumbs={false} swipeable className="w-100">
+    <Carousel autoPlay showArrows={false} showStatus={false} showIndicators={false} showThumbs={false} infiniteLoop swipeable className="w-100">
       {
         slider.length ? slider.map((slide,i) =>
           (<img key={i} src={slide.Image.childImageSharp.fluid.src} alt={"Photos of " + title} />)) : null
