@@ -17,7 +17,7 @@ function createProjectPages(result, createPage) {
 function graphqlForProjects(graphql, createPage) {
   return graphql(`
     {
-      allProjectsYaml {
+      allProjectsYaml(sort: { fields: slug, order: ASC }) {
         edges {
           node {
             title

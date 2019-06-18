@@ -6,14 +6,14 @@ members:
     role: Maintainer
   - user: yash
     role: Maintainer
-  - user: ajay
-    role: Developer
+  - user: Chromicle
+    role: Lead
   - user: gopika
     role: Developer
   - user: shivangi
     role: Developer
 
-slug: "Temple App"
+slug: "templeapp"
 tagline: "Temple App is an Android app aimed for managing the finances of temples"
 description:
   Temple App is an Android app aimed for managing the finances of temples
