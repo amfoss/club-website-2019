@@ -12,77 +12,122 @@ export default class Members extends React.Component {
     super(props)
     this.state = {
       searchTerm: "",
+      filterRole: "all",
     }
   }
 
+  goTop = () => {
+    window.scrollTo(0, 0);
+  }
+
   handleSearch(event) {
-    document.body.scrollTop = 0
-    document.documentElement.scrollTop = 0
+    this.goTop()
     this.setState({
       searchTerm: event.target.value,
+    })
+  }
+  memberFilter(event){
+    this.goTop()
+    this.setState({
+      filterRole: event.target.value,
     })
   }
 
   render() {
     let filteredMembers = this.props.data.allMembersYaml.edges.filter(edge => {
+      let qflag = 1
       let query = this.state.searchTerm.toLowerCase()
+      let rflag = 1
+      let role = this.state.filterRole
       if (query !== "") {
-        if (edge.node.username.toLowerCase().startsWith(query)) return 1
-        let flag = 0
+        qflag = 0
+        // Search matches username
+        if (edge.node.username.toLowerCase().startsWith(query))
+          qflag = 1
+        // Search matches username
         if (edge.node.firstName) {
           edge.node.firstName
             .toLowerCase()
             .split(" ")
             .forEach(part => {
-              if (part.startsWith(query)) flag = 1
+              if (part.startsWith(query)) qflag = 1
             })
         }
-        if (flag) return 1
         if (edge.node.lastName) {
           edge.node.lastName
             .toLowerCase()
             .split(" ")
             .forEach(part => {
-              if (part.startsWith(query)) flag = 1
+              if (part.startsWith(query)) qflag = 1
             })
         }
-        if (flag) return 1
-      } else return 1
+      }
+      if(role !== "all")
+      {
+         rflag = 0
+         if(edge.node.role === this.state.filterRole)
+           rflag = 1
+      }
+      if(qflag&&rflag) return 1
     })
     return (
       <Layout>
         <SEO title="Members" />
-        <TitleBar title="Members" />
-        <div className="bg-white row m-0" id="filter-bar">
-          <div className="col-md-4 col-10 align-items-center justify-content-center">
-            <input
-              id="search-box"
-              type="text"
-              className="form w-75"
-              placeholder="Search Here"
-              onChange={this.handleSearch.bind(this)}
-            />
-          </div>
-        </div>
-        <div className="row m-0 p-1 mb-4">
-          {filteredMembers.map(edge => (
-            <div
-              key={edge.node.id}
-              className="col-md-4 col-lg-3 col-xl-2 col-6 p-2"
-            >
-              <MemberCard
-                username={edge.node.username}
-                firstName={edge.node.firstName}
-                lastName={edge.node.lastName}
-                tag={edge.node.role}
-                avatar={
-                  edge.node.avatar
-                    ? edge.node.avatar.childImageSharp.resize.src
-                    : null
-                }
-              />
+        <TitleBar title="Members" id="members" />
+        <a
+          style={{position: 'fixed', right: '1rem', bottom: '1rem', backgroundColor: '#ffc107', borderRadius: '100vh', fontSize: "1.2rem", zIndex: 5000 }}
+           onClick={() => { this.goTop()}}
+           className="fas fa-angle-up p-3"
+        />
+        <div className="row m-0 p-1">
+          <div className="col-md-8 col-lg-9 p-2 order-2 order-md-1">
+            <div className="row m-0 p-1 mb-4">
+              {filteredMembers.map(edge => (
+                <div
+                  key={edge.node.id}
+                  className="col-6 col-md-6 col-lg-4 col-xl-3 p-2"
+                >
+                  <MemberCard
+                    username={edge.node.username}
+                    firstName={edge.node.firstName}
+                    lastName={edge.node.lastName}
+                    tag={edge.node.role}
+                    avatar={
+                      edge.node.avatar
+                        ? edge.node.avatar.childImageSharp.resize.src
+                        : null
+                    }
+                  />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+          <div className="col-md-4 col-lg-3 order-md-2 order-1 px-2">
+            <div className="card p-2 mt-4" id="filter-card">
+              <div className="mt-4 mx-2">
+                <div>Search</div>
+                <input
+                  id="search-box"
+                  type="text"
+                  className="form w-100 p-2 mt-2"
+                  placeholder="Search Here"
+                  onChange={this.handleSearch.bind(this)}
+                />
+                <hr />
+              </div>
+              <div className="mb-4 mx-2">
+                <div>Filter By Role</div>
+                <select className="bg-white p-2 w-100 mt-2" onChange={this.memberFilter.bind(this)} value={this.state.filterRole}>
+                  <option value="all">{this.state.filterRole === "all" ? 'Change Role' : ' Everyone' }</option>
+                  <option value="Member">Members</option>
+                  <option value="Mentor">Mentors</option>
+                  <option value="Alumni">Alumni</option>
+                  <option value="Alumni Mentor">Alumni Mentors</option>
+                  <option value="Faculty Mentor">Faculty Mentors</option>
+                </select>
+              </div>
+            </div>
+          </div>
         </div>
       </Layout>
     )
