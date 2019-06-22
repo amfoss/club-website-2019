@@ -15,11 +15,7 @@ export default () => {
               id
               Text
               Icon {
-                childImageSharp {
-                  fluid {
-                    src
-                  }
-                }
+                 publicURL
               }
             }
             childFileYaml {

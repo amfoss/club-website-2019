@@ -12,14 +12,10 @@ const IndexPage = () => (
   <Layout>
     <SEO title="India's Leading FOSS Club" />
     <HomeLanding />
-    <HomeSections />
-    <div className="row m-0">
-      <div className="col-md-6">
+    <div style={{ background: "#ffe", padding: "1rem" }} >
+        <HomeSections />
         <WhyJoin />
-      </div>
-      <div className="col-md-6">
-      </div>
-      <JoinCTA />
+        <JoinCTA />
     </div>
   </Layout>
 )

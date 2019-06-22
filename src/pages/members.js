@@ -102,8 +102,8 @@ export default class Members extends React.Component {
               ))}
             </div>
           </div>
-          <div className="col-md-4 col-lg-3 order-md-2 order-1 px-2">
-            <div className="card p-2 mt-4" id="filter-card">
+          <div className="col-md-4 col-lg-3 order-md-2 order-1 px-2 py-4">
+            <div className="card p-2 position-sticky" style={{ top: "1rem" }} id="filter-card">
               <div className="mt-4 mx-2">
                 <div>Search</div>
                 <input

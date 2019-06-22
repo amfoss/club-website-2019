@@ -7,18 +7,21 @@ import { Carousel } from 'react-responsive-carousel';
 const SectionPoints = points => {
   return (
     <React.Fragment>
-      <hr />
       <div className="row m-0 points my-4">
         {points.map(point => (
           <div key={point.id} className="col-md-4">
-            <img
-              src={point.Icon.childImageSharp.fluid.src}
-              alt={point.Text[0] + point.Text[1]}
-            />
-            <h6>
-              {point.Text[0]}
-              <span>{point.Text[1]}</span>
-            </h6>
+            <div className="card py-4 m-2">
+              <div>
+                <img
+                  src={point.Icon.publicURL}
+                  alt={point.Text[0] + point.Text[1]}
+                />
+              </div>
+              <h5 className="mb-4">
+                {point.Text[0]}
+                <span>{point.Text[1]}</span>
+              </h5>
+            </div>
           </div>
         ))}
       </div>
@@ -37,11 +40,11 @@ const CardSlider = ({slider, title}) => {
   )
 }
 const SectionCard = ({ index, title, content, image, points, quote, slider }) => (
-  <div className="home-card">
+  <div className="home-sections">
     <div className="row m-0">
       <div
         className={classnames(
-          `col-xl-4`,
+          `col-xl-6`,
           `order-xl-${index % 2 === 0 ? 1 : 2}`,
           `order-lg-1`,
           `d-flex`,
@@ -49,17 +52,17 @@ const SectionCard = ({ index, title, content, image, points, quote, slider }) =>
         )}
       >
         { slider ? <CardSlider slider={slider} title={title} />
-          : image ?  <img src={image} alt={title}/> : null
+          : image ?  <img src={image} alt={title} className="cover" /> : null
         }
       </div>
       <div
         className={classnames(
-          `col-xl-8`,
+          `col-xl-6`,
           `mt-4`,
           `order-md-${index % 2 === 0 ? 2 : 1}`
         )}
       >
-        <h3>{title}</h3>
+        <h2>{title}</h2>
         <div
           className={index % 2 === 0 ? 1 : 2}
           dangerouslySetInnerHTML={{ __html: content }}

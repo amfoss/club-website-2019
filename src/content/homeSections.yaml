@@ -33,11 +33,11 @@
     technical skills, also engage in talks, debates, sports, cultural activities, yoga sessions etc.
   Points:
     - Text: [Mentor & train students, to take on the world]
-      Icon: ../images/icons/mentorship.png
+      Icon: ../images/illus/mentor.svg
     - Text: [Promote Open Source, and Computer Science]
-      Icon: ../images/icons/open-source.png
+      Icon: ../images/illus/talk.svg
     - Text: [Contribute to Open Source, Projects & Communities]
-      Icon: ../images/icons/contribute.png
+      Icon: ../images/illus/code.svg
 - Title: What we have achieved?
   Image: !file ../images/illus/what_did_we_achieve.png
   Content: !markdown |

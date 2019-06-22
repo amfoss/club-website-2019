@@ -22,22 +22,16 @@ const ListCard = ({ username, firstName, lastName, avatar, tagline, title, icon 
           </div>
         </div>
       </Link>) :
-      (<div className="card p-3">
-        <div className="d-md-flex">
-          <div className="p-0">
+      (<div className="card px-3 pt-4 pb-2 h-100 text-center my-2">
+          <div className="mt-2">
             <img
               src={icon ? icon : null}
               alt={title}
-              style={{width: "5rem"}}
+              style={{height: "15vmax", maxWidth: "100%"}}
             />
           </div>
-          <div className="item-details p-2">
-            <div>
-              <h6>{title}</h6>
-              <div className="list-tagline">{tagline}</div>
-            </div>
-          </div>
-        </div>
+          <h5 className="mt-4">{title}</h5>
+          <div className="list-tagline">{tagline}</div>
       </div>)
 )
 
