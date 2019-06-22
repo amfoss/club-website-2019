@@ -6,11 +6,10 @@ import { Carousel } from 'react-responsive-carousel';
 
 const SectionPoints = points => {
   return (
-    <React.Fragment>
       <div className="row m-0 points my-4">
         {points.map(point => (
-          <div key={point.id} className="col-md-4">
-            <div className="card py-4 m-2">
+          <div key={point.id} className="col-md-4 p-2">
+            <div className="card px-2 py-4 h-100">
               <div>
                 <img
                   src={point.Icon.publicURL}
@@ -25,7 +24,23 @@ const SectionPoints = points => {
           </div>
         ))}
       </div>
-    </React.Fragment>
+  )
+}
+
+const SectionStats = stats => {
+  return (
+    <div className="row m-0 points my-4">
+      {
+        stats.map(point => (
+          <div className="col-6 col-md-4 col-lg-3 p-2">
+            <div className="stats-card card px-2 h-100">
+              <h6>{point.Num}</h6>
+              <div className="lead">{point.Text}</div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
   )
 }
 
@@ -39,9 +54,9 @@ const CardSlider = ({slider, title}) => {
     </Carousel>
   )
 }
-const SectionCard = ({ index, title, content, image, points, quote, slider }) => (
+const SectionCard = ({ index, title, content, image, points, stats, quote, slider }) => (
   <div className="home-sections">
-    <div className="row m-0">
+    <div className="row m-0 p-4">
       <div
         className={classnames(
           `col-xl-6`,
@@ -71,6 +86,7 @@ const SectionCard = ({ index, title, content, image, points, quote, slider }) =>
     </div>
     { quote ? <React.Fragment><hr /><div className="quote">{quote}</div></React.Fragment> : null}
     {points && points.length ? SectionPoints(points) : null}
+    {stats && stats.length ? SectionStats(stats) : null}
   </div>
 )
 
@@ -80,6 +96,7 @@ SectionCard.propTypes = {
   content: PropTypes.string,
   image: PropTypes.string,
   points: PropTypes.any,
+  stats: PropTypes.any,
   quote: PropTypes.string,
   slider: PropTypes.any
 }

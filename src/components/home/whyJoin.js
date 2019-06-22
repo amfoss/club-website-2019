@@ -22,7 +22,7 @@ export default () => {
 
   return (
     <div className="my-4 mx-2">
-      <h2 className="text-center my-4">Why Join amFOSS?</h2>
+      <h2 className="text-center my-4">Why Join Us?</h2>
         <div className="row m-0">
         { data.allWhyJoinYaml.edges.map((edge, i) => (
             <div className="col-md-6 col-xl-3 p-2"  key={edge.node.id}>

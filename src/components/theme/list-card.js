@@ -22,7 +22,7 @@ const ListCard = ({ username, firstName, lastName, avatar, tagline, title, icon 
           </div>
         </div>
       </Link>) :
-      (<div className="card px-3 pt-4 pb-2 h-100 text-center my-2">
+      (<div className="card px-4 pt-4 pb-2 h-100 text-center my-2">
           <div className="mt-2">
             <img
               src={icon ? icon : null}

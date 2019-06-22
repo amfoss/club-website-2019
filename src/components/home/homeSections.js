@@ -18,6 +18,11 @@ export default () => {
                  publicURL
               }
             }
+            childrenHomeSectionsStatsYaml
+            {
+              Text
+              Num
+            }
             childFileYaml {
               childImageSharp {
                 fluid {
@@ -40,6 +45,7 @@ export default () => {
       content={edge.node.Content}
       image={edge.node.childFileYaml.childImageSharp.fluid.src}
       points={edge.node.childrenHomeSectionsPointsYaml}
+      stats={edge.node.childrenHomeSectionsStatsYaml}
     />
   ))
 }

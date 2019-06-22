@@ -6,6 +6,7 @@ import HomeSections from "../components/home/homeSections"
 import HomeLanding from "../components/home/homeLanding"
 import WhyJoin from "../components/home/whyJoin"
 import JoinCTA from "../components/home/joinCTA"
+import AlumniSuccess from "../components/home/alumniSuccess"
 
 
 const IndexPage = () => (
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <HomeLanding />
     <div style={{ background: "#ffe", padding: "1rem" }} >
         <HomeSections />
+        <AlumniSuccess />
         <WhyJoin />
         <JoinCTA />
     </div>
