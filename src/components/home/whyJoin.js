@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import SectionCard from "../theme/section-card"
 import ListCard from "../theme/list-card"
 
 export default () => {
@@ -13,14 +12,8 @@ export default () => {
             Reason
             Explanation
             Icon {
-              childImageSharp
-              {
-                fluid
-                {
-                  src
-                }
-              }
-            }            
+             publicURL
+            }      
           }
         }
       }
@@ -28,17 +21,21 @@ export default () => {
   `)
 
   return (
-    <div className="card my-4">
-      <h4 className="bg-brand p-4">Why Join amFOSS?</h4>
+    <div className="my-4 mx-2">
+      <h2 className="text-center my-4">Why Join Us?</h2>
+        <div className="row m-0">
         { data.allWhyJoinYaml.edges.map((edge, i) => (
-            <ListCard
-              key={edge.node.id}
-              title={edge.node.Reason}
-              tagline={edge.node.Explanation}
-              icon={edge.node.Icon.childImageSharp.fluid.src}
-            />
+            <div className="col-md-6 col-xl-3 p-2"  key={edge.node.id}>
+              <ListCard
+                key={edge.node.id}
+                title={edge.node.Reason}
+                tagline={edge.node.Explanation}
+                icon={edge.node.Icon.publicURL}
+              />
+            </div>
           ))
         }
+        </div>
     </div>
   )
 }

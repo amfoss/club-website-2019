@@ -15,12 +15,13 @@ export default () => {
               id
               Text
               Icon {
-                childImageSharp {
-                  fluid {
-                    src
-                  }
-                }
+                 publicURL
               }
+            }
+            childrenHomeSectionsStatsYaml
+            {
+              Text
+              Num
             }
             childFileYaml {
               childImageSharp {
@@ -44,6 +45,7 @@ export default () => {
       content={edge.node.Content}
       image={edge.node.childFileYaml.childImageSharp.fluid.src}
       points={edge.node.childrenHomeSectionsPointsYaml}
+      stats={edge.node.childrenHomeSectionsStatsYaml}
     />
   ))
 }

@@ -12,7 +12,7 @@ export default class Members extends React.Component {
     super(props)
     this.state = {
       searchTerm: "",
-      filterRole: "all",
+      filterRole: "active",
     }
   }
 
@@ -65,10 +65,15 @@ export default class Members extends React.Component {
       if(role !== "all")
       {
          rflag = 0
-         if(edge.node.role === this.state.filterRole)
+         if(role === "active")
+         {
+           if(["Member", "Mentor", "Alumni Mentor", "Faculty Mentor"].indexOf(edge.node.role) !== -1)
+             rflag = 1
+         }
+         else if(edge.node.role === this.state.filterRole)
            rflag = 1
       }
-      if(qflag&&rflag) return 1
+      if(qflag&&rflag&&!edge.node.hide) return 1
     })
     return (
       <Layout>
@@ -81,6 +86,14 @@ export default class Members extends React.Component {
         />
         <div className="row m-0 p-1">
           <div className="col-md-8 col-lg-9 p-2 order-2 order-md-1">
+            <div className="m-2">
+            { this.state.filterRole === "all" ? "Showing Everyone" : (
+                <>Showing {filteredMembers.length} {
+                this.state.filterRole === "active" ? "Active Members" : null
+              } of {this.props.data.allMembersYaml.edges.length} Members.
+              </>
+            )}
+            </div>
             <div className="row m-0 p-1 mb-4">
               {filteredMembers.map(edge => (
                 <div
@@ -102,10 +115,11 @@ export default class Members extends React.Component {
               ))}
             </div>
           </div>
-          <div className="col-md-4 col-lg-3 order-md-2 order-1 px-2">
-            <div className="card p-2 mt-4" id="filter-card">
-              <div className="mt-4 mx-2">
-                <div>Search</div>
+          <div className="col-md-4 col-lg-3 order-md-2 order-1 px-2 py-4">
+            <div className="card p-4 position-sticky" style={{ top: "1rem" }} id="filter-card">
+              <h5 className="my-3">Search & Filter</h5>
+              <div className="mx-2">
+                <div>Search by Name</div>
                 <input
                   id="search-box"
                   type="text"
@@ -118,7 +132,8 @@ export default class Members extends React.Component {
               <div className="mb-4 mx-2">
                 <div>Filter By Role</div>
                 <select className="bg-white p-2 w-100 mt-2" onChange={this.memberFilter.bind(this)} value={this.state.filterRole}>
-                  <option value="all">{this.state.filterRole === "all" ? 'Change Role' : ' Everyone' }</option>
+                  <option value="active">{this.state.filterRole === "active" ? 'Change Role' : ' Active' }</option>
+                  <option value="all">Everyone</option>
                   <option value="Member">Members</option>
                   <option value="Mentor">Mentors</option>
                   <option value="Alumni">Alumni</option>
@@ -145,6 +160,7 @@ export const pageQuery = graphql`
           tagline
           username
           role
+          hide
           avatar {
             childImageSharp {
               resize(width: 300) {

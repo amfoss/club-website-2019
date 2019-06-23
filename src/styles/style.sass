@@ -1,6 +1,7 @@
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css")
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:700&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Poppins:400&display=swap')
 
 @import "./navigation"
 @import "./project"
@@ -10,7 +11,7 @@
 body
   background: #eee
   margin: 0
-  font-family: 'Montserrat', sans-serif
+  font-family: 'Poppins', sans-serif
 
 footer
   display: block
@@ -43,7 +44,7 @@ footer
       color: white
 
 h1, h2, h3, h4, h5, h6
-  font-family: 'Montserrat', sans-serif
+  font-family: 'Josefin Sans', sans-serif
   font-weight: 700
 
 h1
@@ -71,7 +72,7 @@ h6
   background: #ffc107!important
 
 .heading-font
-  font-family: 'Montserrat', sans-serif
+  font-family: 'Josefin Sans', sans-serif
 
 #page-container
   position: relative
@@ -99,7 +100,6 @@ h6
   display: block
   text-decoration: none
   box-shadow: 8px 10px 20px 0 rgba(46, 61, 73, 0.15)
-  font-family: 'Montserrat', sans-serif
   padding: 0!important
 
   p
@@ -184,8 +184,7 @@ h6
   background: white
   .list-heading
     padding: 1rem
-    font-size: calc(1rem + 0.6vw)
-    font-family: 'Montserrat', sans-serif
+    font-size: calc(1rem + 0.4vw)
     font-weight: 900
     background: #ffc107
     color: #000
@@ -229,16 +228,13 @@ h6
 #home-video
   width: 100%
 
-.home-card
-  background: white
-  padding: calc(1vw + 0.8rem)
-  margin: calc(1vh + 0.5rem) calc(0.5vw + 0.5rem)
-  box-shadow: 8px 10px 20px 0 rgba(46, 61, 73, 0.15)
+.home-sections
+  margin: calc(4vmin + 1.5rem) calc(0.5vw + 0.5rem)
 
   p
     font-size: calc(0.8rem + 0.3vmax)
 
-  img
+  .cover
     width: 100%
 
   .quote
@@ -249,13 +245,14 @@ h6
     text-align: center
 
     img
-      height: 5rem
-      width: auto
+      width: 15vmax
+      max-width: 100%
+      min-width: 180px
 
-    h6
+    h5
       span
         display: block
-        font-size: 80%
+        font-size: 90%
 
 %flex-center
   display: flex
@@ -389,4 +386,10 @@ h6
         display: inline-block
         color: rgb(255, 193, 7)
 
-
+.stats-card
+  padding: 6vh 0
+  h6
+    font-size: calc(1.2rem + 5vmin)
+    font-weight: 900
+  div
+    font-size: calc(1rem + 0.3vw)
