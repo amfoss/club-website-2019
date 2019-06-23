@@ -27,7 +27,7 @@ const ListCard = ({ username, firstName, lastName, avatar, tagline, title, icon 
             <img
               src={icon ? icon : null}
               alt={title}
-              style={{height: "15vmax", maxWidth: "100%"}}
+              style={{width: "15vmax", maxWidth: "100%", minWidth: "180px"}}
             />
           </div>
           <h5 className="mt-4">{title}</h5>

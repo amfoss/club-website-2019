@@ -9,17 +9,19 @@ const SectionPoints = points => {
       <div className="row m-0 points my-4">
         {points.map(point => (
           <div key={point.id} className="col-md-4 p-2">
-            <div className="card px-2 py-4 h-100">
+            <div className="card px-2 py-4 h-100 d-flex align-items-center">
               <div>
-                <img
-                  src={point.Icon.publicURL}
-                  alt={point.Text[0] + point.Text[1]}
-                />
+                <div className="mx-2 mb-4">
+                  <img
+                    src={point.Icon.publicURL}
+                    alt={point.Text[0] + point.Text[1]}
+                  />
+                </div>
+                <h5 className="mb-0">
+                  {point.Text[0]}
+                  <span>{point.Text[1]}</span>
+                </h5>
               </div>
-              <h5 className="mb-4">
-                {point.Text[0]}
-                <span>{point.Text[1]}</span>
-              </h5>
             </div>
           </div>
         ))}

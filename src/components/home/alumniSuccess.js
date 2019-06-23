@@ -25,12 +25,12 @@ export default () => {
       }
   `)
   return (
-    <div className="text-center" style={{ marginBottom: "10vh" }}>
+    <div className="text-center" style={{ marginBottom: "4vh" }}>
       <h3 className="mb-4"> Our Alumni Work at</h3>
       <div style={{ padding: "0 5vw"}} >
           {
               data.allFile.edges.map( edge => (
-              <img src={edge.node.publicURL} style={{ height: "6vmax", maxHeight: "4rem" }} className="p-3" />
+              <img src={edge.node.publicURL} style={{ height: "2vmax", maxHeight: "40px", minHeight: "28px", margin: "1vmax" }}  />
               ))
           }
       </div>
