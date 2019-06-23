@@ -25,7 +25,7 @@ export default () => {
       }
   `)
   return (
-    <div className="text-center" style={{ marginBottom: "4vh" }}>
+    <div className="text-center bg-white" style={{ padding: "4vh 0" }}>
       <h3 className="mb-4"> Our Alumni Work at</h3>
       <div style={{ padding: "0 5vw"}} >
           {
