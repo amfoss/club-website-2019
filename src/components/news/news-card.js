@@ -18,7 +18,7 @@ export default ({ article }) => (
               <div key={id} className={"tag mt-4 "+c}>{c}</div>
             ) : null
           }
-          <h6 className="w-75 px-3">{article.title}</h6>
+          <h6 className="w-75 px-3 text-uppercase">{article.title}</h6>
           <p className="px-3">{article.description}</p>
           <div className="post-card-footer">
             <span><i className="fa fa-calendar-alt" /> {article.date}</span>
