@@ -12,7 +12,7 @@ const News = ({
   },
 }) => {
   const Articles = edges.map(edge => (
-    <div key={edge.node.id} className="col-lg-6 m-4 p-0">
+    <div key={edge.node.id} className="p-2">
       <NewsCard article={edge.node.frontmatter} />
     </div>
   ))
@@ -21,7 +21,11 @@ const News = ({
     <Layout>
       <SEO title="News" />
       <TitleBar title="News" />
-      <div className="row m-0">{Articles}</div>
+      <div className="row m-0">
+        <div className="col-md-8 col-lg-9 p-2">
+          {Articles}
+        </div>
+      </div>
     </Layout>
   )
 }
