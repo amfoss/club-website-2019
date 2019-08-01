@@ -25,8 +25,8 @@ const Footer = () => (
       <div className="col-lg-3 p-2">
         <div className="w-100">
           <a href="#privacy">Privacy</a>
-          <a href="#feedback">Feedback</a>
-          <a href="#terms">Terms of Use</a>
+          <a href="mailto:amritapurifoss@gmail.com">Feedback</a>
+          <a href="https://coc.amfoss.in/">Code Of Conduct</a>
         </div>
       </div>
     </div>

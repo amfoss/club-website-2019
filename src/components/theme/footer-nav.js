@@ -22,9 +22,6 @@ const FooterNav = () => (
             <li>
               <a href="/achievements">Achievements</a>
             </li>
-            <li>
-              <a href="/gallery">Gallery</a>
-            </li>
           </ul>
         </div>
       </div>
