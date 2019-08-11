@@ -66,7 +66,7 @@ const FooterNav = () => (
           <h4>The Club</h4>
           <ul>
             <li>
-              <a href="/blog">amFOSS Blog</a>
+              <a href="http://blog.amfoss.in">amFOSS Blog</a>
             </li>
             <li>
               <a href="/about#social-initiatives">Social Initiatives</a>
@@ -75,7 +75,7 @@ const FooterNav = () => (
               <a href="https://github.com/amfoss/workshops">Events & Workshops</a>
             </li>
             <li>
-              <a href="/blog#news">Press & Media</a>
+              <a href="/news">Press & Media</a>
             </li>
           </ul>
         </div>

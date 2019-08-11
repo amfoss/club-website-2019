@@ -12,6 +12,18 @@
 
 Website for FOSS@Amrita powered by JAM Stack (Gatsby). 
 
+## :minidisc: [Installation Instructions](https://github.com/amfoss/website/wiki/Installation)
+Make sure that you have `Node JS` and `NPM ` installed. Else you can refer to [installation page on our wiki](https://github.com/amfoss/website/wiki/Installation)
+
+Navigate into site's directory and start it up.
+```
+cd website/
+npm install
+npm start
+```
+
+Your site is now running at `https://localhost:8000` 
+
 [build-badge]:https://api.travis-ci.com/amfoss/website.svg?branch=master
 [build]:https://travis-ci.com/amfoss/website
 [contributors-badge]:https://img.shields.io/github/contributors/amfoss/website.svg
