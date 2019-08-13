@@ -40,7 +40,7 @@ export default () => {
           <div className="col-sm-8 col-lg-9 col-xl-10">
             <div className="d-flex align-items-center mb-2">
               <h6 className="bg-white text-dark p-2 rounded heading-font card">
-                INVITING STUDENTS OF 2023 BATCH
+                INVITING STUDENTS OF 2019 BATCH
               </h6>
             </div>
             <p>
