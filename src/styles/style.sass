@@ -2,6 +2,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css")
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:700&display=swap')
 @import url('https://fonts.googleapis.com/css?family=Poppins:400&display=swap')
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css')
 
 @import "./navigation"
 @import "./project"
@@ -24,6 +25,7 @@ footer
     color: #999
     padding: 1rem
 
+
     div
       align-items: center
       display: flex
@@ -39,6 +41,7 @@ footer
       padding: 0.3rem
       color: #999
       text-decoration: none
+      font-size: 0.8rem
 
     a:hover
       color: white
@@ -154,7 +157,7 @@ h6
   #sidebar
     display: flex
   #page-container
-    margin-left: 16rem
+    margin-left: 15rem
 
 #page-container
   padding: 0 0
@@ -229,8 +232,6 @@ h6
   width: 100%
 
 .home-sections
-  margin: calc(4vmin + 1.5rem) calc(0.5vw + 0.5rem)
-
   p
     font-size: calc(0.8rem + 0.3vmax)
 
@@ -313,6 +314,7 @@ h6
   background-color: #333
   color: #999
   padding: 0.3rem
+  font-size: 90%
 
   #footer-logos
     height: 6rem
@@ -371,20 +373,52 @@ h6
           width: 100%
 
 #home-landing
-  height: 80vmin
-  background-color: #263238
+  position: relative
+  height: 100vmin
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  background-color: #333
+  background-image: url("../images/photos/cover.jpg")
   color: white
   .overlay
-    display: flex
-    align-items: center
-    justify-content: center
-    top: 0
-    bottom: 0
+    background: linear-gradient(to right, rgba(0,0,0,0.70),rgba(0,0,0,0.75),rgba(0,0,0,0.80),rgba(0,0,0,0.75),rgba(0,0,0,0.70))
     height: 100%
-    h1
-      span
-        display: inline-block
-        color: rgb(255, 193, 7)
+    #landing-info
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 2vw
+      top: 0
+      bottom: 0
+      h1
+        font-size: calc(1.3rem + 1.5vw)
+        line-height: 1
+        span
+          font-size: calc(1.5rem + 1.8vw)
+          display: block
+          margin-top: 0.5rem
+          color: rgb(255, 193, 7)
+      p
+        max-width: 1200px
+        line-height: 1.5
+        font-size: 1.2rem
+        margin-bottom: 2rem
+    #landing-btn
+      position: absolute
+      bottom: 1.5rem
+      text-align: center
+      justify-content: center
+      width: 100%
+      a
+        color: white
+        padding: 0.5rem 1rem
+        margin: 1rem 0.5rem
+        font-size: calc(1rem + 2vw)
+        text-decoration: none
+      a:hover
+        text-decoration: none
 
 .stats-card
   padding: 6vh 0

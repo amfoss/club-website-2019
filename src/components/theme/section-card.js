@@ -57,7 +57,7 @@ const CardSlider = ({slider, title}) => {
   )
 }
 const SectionCard = ({ index, title, content, image, points, stats, quote, slider }) => (
-  <div className="home-sections">
+  <div className="home-sections" id={`home-section-${index+1}`}>
     <div className="row m-0 p-4">
       <div
         className={classnames(

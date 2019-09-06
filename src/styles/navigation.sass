@@ -30,7 +30,7 @@ $font-size-menu: calc(1rem + 0.3vh)
 
 @media (min-width: 900px)
   #page-container
-    margin-left: 18rem
+    margin-left: 15rem
     min-height: 100vh
     margin-top: 0 !important
 
@@ -50,12 +50,11 @@ $font-size-menu: calc(1rem + 0.3vh)
   display: none
   align-items: center
   justify-content: center
-  padding-top: 1vh
-  width: 16rem
+  width: 15rem
   min-height: 100vh
+  height: 100%
   position: fixed
-  background-color: #485461
-  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%)
+  background-color: #37474F
   box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2)
   z-index: 5000
   overflow-y: auto
@@ -68,7 +67,7 @@ $font-size-menu: calc(1rem + 0.3vh)
     background-size: contain
     background-position: center
     background-repeat: no-repeat
-    height: 20vh
+    height: 25vh
     display: none
 
   .menu
@@ -76,8 +75,7 @@ $font-size-menu: calc(1rem + 0.3vh)
 
     .menu-item
       display: flex
-      padding: 0.8rem
-      margin: 0.5rem 0
+      padding: 0.6rem
       color: white
       text-decoration: none
       font-size: $font-size-menu
@@ -88,9 +86,16 @@ $font-size-menu: calc(1rem + 0.3vh)
         height: calc(1.2rem + 0.5vw)
         margin-right: 0.5rem
 
-    .menu-item:hover, .menu-item:focus, .menu-item[aria-current="page"]
-      background: #0097a7
+    .menu-item[aria-current="page"]
+      background: #0097a7!important
+      color: white!important
+    .menu-item:hover, .menu-item:focus
+      background: #ffc107
+      color: black
       outline: none
+      img
+        transition-duration: 1s
+        display: none!important
 
   .social-menu
     display: flex
