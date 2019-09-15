@@ -19,14 +19,14 @@ const Project = ({
       return 1
   })
   const Projects = filter.map(edge => (
-    <div key={edge.node.id} className="col-xl-3 col-md-4 col-sm-6">
+    <div key={edge.node.id} className="col-xl-5 col-md-10 col-sm-6 pb-4">
       <ProjectCard project={edge.node} />
     </div>
   ))
 
   return (
     <Layout>
-      <SEO title="Project" />
+      <SEO title="Projects" />
       <TitleBar title="Projects" />
       <div className="row m-0 p-1">
         <div className="col-md-8 col-lg-9 p-2 order-2 order-md-1">
