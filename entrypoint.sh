@@ -27,6 +27,7 @@ git remote add origin "${remote_repo}"
 
 # push to publishing branch
 git checkout "${remote_branch}" || git checkout --orphan "${remote_branch}"
+touch CNAME | echo "amfoss.in" >> CNAME
 git add --all
 timestamp=$(date -u)
 git commit -m "Automated deployment: ${timestamp} ${GITHUB_SHA}"
