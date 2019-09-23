@@ -1,0 +1,24 @@
+name: github pages
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@master
+    - name: build
+      uses: amfoss/website@master
+      if: github.event.deleted == false
+      with:
+        args: --gc --minify --cleanDestinationDir
+    - name: deploy
+      uses: amfoss/website@actions
+      if: success()
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./public
