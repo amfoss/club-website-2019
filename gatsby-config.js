@@ -60,8 +60,13 @@ module.exports = {
         shortname: `amfoss`
       }
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "CMS",
+        fieldName: "cms",
+        url: "https://api.amfoss.in",
+      },
+    },
   ],
 }
