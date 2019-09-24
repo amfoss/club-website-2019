@@ -2,13 +2,13 @@ const path = require("path")
 
 function createProfiles(result, createPage) {
   const ProfileTemplate = path.resolve(`src/templates/profileTemplate.js`)
-  const members = result.data.allMembersYaml.edges
-  members.forEach(({ node }) => {
+  const members = result.data.cms.users
+  members.forEach(({ user }) => {
     createPage({
-      path: "@" + node.username,
+      path: "@" + user.username,
       component: ProfileTemplate,
       context: {
-        username: node.username,
+        username: user.username,
       },
     })
   })
@@ -17,11 +17,9 @@ function createProfiles(result, createPage) {
 function graphqlForProfiles(graphql, createPage) {
   return graphql(`
     {
-      allMembersYaml(sort: { fields: firstName, order: ASC }) {
-        edges {
-          node {
-            username
-          }
+      cms{
+        users(sort: "username"){
+          username
         }
       }
     }
