@@ -12,7 +12,7 @@ export default class Members extends React.Component {
     super(props)
     this.state = {
       searchTerm: "",
-      filterRole: "active",
+      filterYear: "everyone",
     }
   }
 
@@ -29,12 +29,44 @@ export default class Members extends React.Component {
   memberFilter(event){
     this.goTop()
     this.setState({
-      filterRole: event.target.value,
+      filterYear: event.target.value,
     })
   }
 
   render() {
-    let users = this.props.data.cms.users
+    let filteredMembers = this.props.data.cms.users.filter(user => {
+      let qflag = 1
+      let rflag = 1
+      let query = this.state.searchTerm.toLowerCase()
+
+      if(query !== "") qflag = 0
+      // Search matches username
+      if(user.username.toLowerCase().startsWith(query)) qflag = 1
+      // Search matches firstname and lastname
+      if (user.firstName) {
+        user.firstName
+          .toLowerCase()
+          .split(" ")
+          .forEach(part => {
+            if (part.startsWith(query)) qflag = 1
+          })
+      }
+      if (user.lastName) {
+        user.lastName
+          .toLowerCase()
+          .split(" ")
+          .forEach(part => {
+            if (part.startsWith(query)) qflag = 1
+          })
+      }
+      if(this.state.filterYear !== "everyone"){
+        rflag = 0
+        if(this.state.filterYear === user.collegeProfile.admissionYear.toString()) rflag = 1
+      }
+      if(qflag && rflag) return 1
+    })
+    console.log(filteredMembers);
+    console.log(this.state.filterYear)
     return (
       <Layout>
         <SEO title="Members" />
@@ -47,7 +79,7 @@ export default class Members extends React.Component {
         <div className="row m-0 p-1">
           <div className="col-md-8 col-lg-9 p-2 order-2 order-md-1">
             <div className="row m-0 p-1 mb-4">
-              {users.map(user => (
+              {filteredMembers.map(user => (
                 user.collegeProfile.admissionYear < 2019 ?
                      (
                       <div
@@ -60,6 +92,7 @@ export default class Members extends React.Component {
                           lastName={user.lastName}
                           tag="Member"
                           avatar={user.profile.gravatar}
+                          githubUsername={user.profile.githubUsername}
                         />
                       </div>
                     ):null
@@ -81,15 +114,12 @@ export default class Members extends React.Component {
                 <hr />
               </div>
               <div className="mb-4 mx-2">
-                <div>Filter By Role</div>
-                <select className="bg-white p-2 w-100 mt-2" onChange={this.memberFilter.bind(this)} value={this.state.filterRole}>
-                  <option value="active">{this.state.filterRole === "active" ? 'Change Role' : ' Active' }</option>
-                  <option value="all">Everyone</option>
-                  <option value="Member">Members</option>
-                  <option value="Mentor">Mentors</option>
-                  <option value="Alumni">Alumni</option>
-                  <option value="Alumni Mentor">Alumni Mentors</option>
-                  <option value="Faculty Mentor">Faculty Mentors</option>
+                <div>Filter By Year</div>
+                <select className="bg-white p-2 w-100 mt-2" onChange={this.memberFilter.bind(this)} value={this.state.filterYear}>
+                  <option value="everyone">{this.state.filterYear === "Everyone" ? 'Change Year' : ' Everyone' }</option>
+                  <option value="2018">2018</option>
+                  <option value="2017">2017</option>
+                  <option value="2016">2016</option>
                 </select>
               </div>
             </div>
@@ -110,6 +140,7 @@ export const pageQuery = graphql`
               username
               profile
               {
+                  githubUsername
                   gravatar
                   tagline
               }

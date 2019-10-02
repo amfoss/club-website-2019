@@ -2,12 +2,10 @@ import PropTypes from "prop-types"
 import React from "react"
 import { Link } from "gatsby"
 
-import defaultAvatar from "../../images/defaults/avatar.png"
-
-const MemberCard = ({ username, firstName, lastName, avatar, tag, tagline }) => (
+const MemberCard = ({ username, firstName, lastName, avatar, tag, tagline, githubUsername }) => (
   <Link to={"/@" + username} className="member-card card">
     <img
-      src={avatar ? avatar : defaultAvatar}
+      src={githubUsername ?  `https://avatars.githubusercontent.com/${githubUsername}`: avatar}
       alt={firstName + " " + lastName + `'s photo`}
     />
     <div className={"role-tag " + tag}>{tag}</div>
@@ -24,7 +22,8 @@ MemberCard.propTypes = {
   lastName: PropTypes.string,
   avatar: PropTypes.string,
   tagline: PropTypes.string,
-  tag: PropTypes.string
+  tag: PropTypes.string,
+  githubUsername: PropTypes.string
 }
 
 MemberCard.defaultProps = {
@@ -33,7 +32,8 @@ MemberCard.defaultProps = {
   lastName: "",
   avatar: "",
   tagline: "",
-  tag: "Member"
+  tag: "Member",
+  githubUsername: ""
 }
 
 export default MemberCard

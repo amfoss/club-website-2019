@@ -55,6 +55,7 @@ export const pageQuery = graphql`
                   admissionYear
               }
               profile{
+                  githubUsername
                   tagline
                   gravatar
               }
