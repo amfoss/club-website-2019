@@ -28,6 +28,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-151582360-1",
+        head: true,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     {
