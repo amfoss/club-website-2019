@@ -4,7 +4,6 @@ import ListCard from "../theme/list-card"
 
 const AchievementList = ({ title, members, tagname }) => {
   let years = [...new Set( members.map(obj => obj.node.Year)) ]
-  years =  Array.from(years[0])
   const [year, setYear] = useState(years[0]);
   const profiles = getProfiles()
   let filtered = members.filter( member => member.node.Year == year)
