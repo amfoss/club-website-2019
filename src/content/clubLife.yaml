@@ -1,71 +1,46 @@
 - Title: Mentorship
   Content: !markdown |
-    Here at FOSS@Amrita, seniors guide juniors on their way in the club. It is a learning and development
-    partnership between someone with vast experience and someone who wants to learn. Mentoring others is one
-    of the most important parts of being in a community. This is an experience and a skill which cannot be
-    gained in a classroom. In FOSS@Amrita when you get enough experience, you will be assigned mentees -
-    people whom you have to train. You will be responsible for tracking their progress, ensuring that they
-    are doing what is best suited for them.
+    Here at amFOSS, seniors guide juniors on their way in the club. It is a learning and development partnership between someone with vast experience and someone who wants to learn. Mentoring others is one of the most important parts of being in a community - an experience and a skill which is difficult to gain in a typical classroom scenario. Mentors are responsible for tracking their progress, ensuring that they are doing what is best suited for them.
   Slider:
     - Image: ../images/photos/foss_mentor_1.jpg
     - Image: ../images/photos/foss_mentor_2.jpg
     - Image: ../images/photos/foss_mentor_3.jpg
 - Title: World of Opportunities
   Content: !markdown |
-    FOSS@Amritia provides you with a range of opportunities if you do well. You get several opportunities for
-    internships (sometimes even after the first semester itself), going to hackathons, getting funding for
-    travelling to conferences of various Open Source Organization to places like Paris, Tokyo, Singapore etc.
-    If you are interested in higher studies or applying for summer programs abroad, FOSS@Amrita helps
-    you build up a spectacular resume for all these applications.
+    There are umpteen number of opportunities out there in the field of Computer Science, and through amFOSS, one can get the right exposure to these opportunities based on the individual’s skillset. Everything from internships, hackathons, conferences, higher study programs and summer school programs - all are right at the tip of your fingers.
   Slider:
     - Image: ../images/photos/foss_world_1.jpg
     - Image: ../images/photos/foss_world_2.jpg
     - Image: ../images/photos/foss_world_3.jpg
 - Title: GSoC Training
   Content: !markdown |
-    Every year, Google conducts the Google Summer of Code, an international event which provides a platform
-    for students to contribute to Open Source Projects and each year here at FOSS@Amrita, we train students
-    and participate and have been quite successful so far, with over 35+ GSoCs. Students receive expert
-    mentorship from students who are experienced in the Open source world, right from basic E-mail and
-    IRC chatting ethics to helping with writing the GSoC project proposal.
+    Google Summer of Code is an annual program which provides a platform for students worldwide to contribute to Open Source Projects. Selected students have an opportunity to experience and learn the more practical aspects of software development like reading large code bases, programming using coding standards, using a Version Control System, communicating effectively via IRC & e-mail and following a deadline. At amFOSS, over the last 12 years, over 50+ students have been selected as GSoC scholars, with many selected as GSoC mentors. Students receive expert guidance from experienced developers in the open source world, right from basic email and IRC chat ethics to guidance in writing good proposals.
   Slider:
     - Image: ../images/photos/foss_gsoc_1.jpg
     - Image: ../images/photos/foss_gsoc_2.jpg
 - Title: FOSS Talks
   Content: !markdown |
-    FOSS Talks is a regular club event with the aim of getting students used to public speaking and getting
-    rid of stage fear. Each week, 3 students are chosen to talk on the topic they choose for 7 minutes.
+    FOSS Talks is a regular club event with the aim of getting students used to public speaking and eliminating stage fear. Each week, 3 students are chosen to speak on a topic they choose, for 7 minutes.
   Slider:
     - Image: ../images/photos/foss_talk_1.jpg
     - Image: ../images/photos/foss_talk_2.jpg
 - Title: FOSS Nights
   Content: !markdown |
-    FOSS Nights is a once-in-an-even-semester cultural event hosted all by the students themselves.
-    This is an event where members get to show off their non-technical skills. Right from the food which
-    is cooked that day to making all the necessary arrangements are all done by the members themselves.
-    This is a great opportunity for learning to work as a team. The members orchestrate the cultural
-    events with performances in dancing, singing, playing musical instruments etc.
+    amFOSS-bi0s Night is an annual cultural event hosted by the students of amFOSS and Team bi0s. This is an event where members get to show off their non-technical skills. Right from cooking food to making all the necessary arrangements, are all taken care by the members themselves. This is a great opportunity for learning to work as a team. The members orchestrate the cultural events with performances in dancing, singing, playing musical instruments, etc.
   Slider:
     - Image: ../images/photos/foss_night_1.jpg
     - Image: ../images/photos/foss_night_2.jpg
     - Image: ../images/photos/foss_night_3.jpg
 - Title: FOSS Play
   Content: !markdown |
-    FOSS Play is a regular sports event in which the members go out and play. Physical exercise
-    is an essential component of any student’s life and we here at FOSS@Amrita make sure
-    we don’t miss out on that. Football, cricket, badminton - you name it, we play it!
+    FOSS Play is a regular sports event in which the members go out and play. Physical exercise is an essential component of any student’s life and we here at amFOSS make sure we don’t miss out on that. Marathons, football, cricket, badminton - you name it, we play it!
   Slider:
     - Image: ../images/photos/foss_play_1.jpg
     - Image: ../images/photos/foss_play_2.jpg
     - Image: ../images/photos/foss_play_3.jpg
 - Title: Social Commitments
   Content: !markdown |
-    Being part of the Amrita University (under the Mata Amritanandamayi Math(an NGO with Special
-    Consultative Status to the UN) we get opportunities to lend hands in noble causes in times of dire
-    adversities. During the Kerala floods (2018) which shook the entire state, Amrita University under the
-    guidance of Mata Amritanandamayi set up a 24x7 Hour helpline for providing victim relief. We took part,
-    along with students of the college, running shifts day in and day out. Under the ABC (Amala Bharatam Campaign)
-    program by MAM, FOSS@Amrita recently also took part of a Clean Up drive conducted in the nearby area.
+    Being part of Amrita Vishwa Vidyapeetham (under the Mata Amritanandamayi Math, an NGO with Special Consultative Status to the UN) we get valuable opportunities to lend hands in noble causes in times of dire adversities. During the Kerala floods (2018) which shook the entire state, Amrita University under the guidance of Mata Amritanandamayi set up a 24x7 Hour helpline for providing victim relief. Our students were able to lend a hand in the noble cause, along with the entire college, running shifts day in and day out. Under the ABC (Amala Bharatam Campaign) program by MAM, our students had the opportunity to serve as part of a Clean Up drive conducted in the nearby area.
   Slider:
     - Image: ../images/photos/foss_social_1.jpg
     - Image: ../images/photos/foss_social_2.jpg
