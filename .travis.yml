@@ -5,4 +5,5 @@ cache:
   directories:
     - node_modules
 script:
+  - npm rebuild
   - npm run build
