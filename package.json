@@ -15,7 +15,7 @@
     "gatsby-plugin-offline": "^2.1.1",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.0.11",
-    "gatsby-plugin-sharp": "^2.0.37",
+    "gatsby-plugin-sharp": "^2.2.25",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.0.36",
     "gatsby-transformer-remark": "^2.3.12",
@@ -31,6 +31,7 @@
     "react-load-script": "0.0.6",
     "react-responsive-carousel": "^3.1.49",
     "react-typing-animation": "^1.6.2",
+    "sharp": "^0.23.3",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
