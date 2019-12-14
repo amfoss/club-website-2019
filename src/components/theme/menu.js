@@ -1,5 +1,5 @@
 import React from "react"
-import MenuItem from "./menu-item.js"
+import MenuItem from "./menuItem"
 
 import homeIcon from "../../images/icons/home.png"
 import aboutIcon from "../../images/icons/bulb.png"

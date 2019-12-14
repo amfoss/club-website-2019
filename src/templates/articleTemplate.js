@@ -6,7 +6,7 @@ import Disqus from 'gatsby-plugin-disqus'
 
 
 import avatar from "../images/defaults/avatar.png"
-import TitleBar from "../components/theme/title-bar"
+import TitleBar from "../components/theme/titleBar"
 
 export default function Template({ data: { markdownRemark } }) {
   return (

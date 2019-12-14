@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import avatar from "../images/defaults/avatar.png"
 import Layout from "../components/layout"
-import SocialIcon from "../components/theme/social-icon"
+import SocialIcon from "../components/theme/socialIcon"
 
 export default ({ data: { membersYaml } }) => {
   const member = membersYaml

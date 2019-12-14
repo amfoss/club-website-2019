@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import TitleBar from "../components/theme/title-bar"
-import NewsCard from "../components/news/news-card.js"
+import TitleBar from "../components/theme/titleBar"
+import NewsCard from "../components/news/newsCard"
 
 const News = ({
   data: {

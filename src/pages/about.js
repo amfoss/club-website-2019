@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import TitleBar from "../components/theme/title-bar"
+import TitleBar from "../components/theme/titleBar"
 import StorySections from "../components/about/storySections"
 
 const About = () => (

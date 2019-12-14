@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import getProfiles from "../theme/getProfiles"
-import ListCard from "../theme/list-card"
+import ListCard from "../theme/listCard"
 
 const AchievementList = ({ title, members, tagname }) => {
   let years = [...new Set( members.map(obj => obj.node.Year)) ]

@@ -7,7 +7,7 @@ import crowdIcon from "../images/icons/crowd.png"
 import portfolioIcon from "../images/icons/portfolio.png"
 import bulbIcon from "../images/icons/bulb.png"
 import MemberList from "../components/projects/membersList"
-import SocialIcon from "../components/theme/social-icon"
+import SocialIcon from "../components/theme/socialIcon"
 
 export default class ProjectTemplate extends React.Component {
   constructor(props) {

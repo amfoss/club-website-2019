@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import ListCard from "../theme/list-card"
+import ListCard from "../theme/listCard"
 
 export default () => {
   const data = useStaticQuery(graphql`

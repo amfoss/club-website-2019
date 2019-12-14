@@ -1,5 +1,5 @@
 import React from "react"
-import FooterNav from "./theme/footer-nav"
+import FooterNav from "./theme/footerNav"
 
 import amritaLogo from "../images/logos/amrita.png"
 import bi0sLogo from "../images/logos/bi0s.png"
