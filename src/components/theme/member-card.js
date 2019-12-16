@@ -4,7 +4,14 @@ import { Link } from "gatsby"
 
 import defaultAvatar from "../../images/defaults/avatar.png"
 
-const MemberCard = ({ username, firstName, lastName, avatar, tag, tagline }) => (
+const MemberCard = ({
+  username,
+  firstName,
+  lastName,
+  avatar,
+  tag,
+  tagline,
+}) => (
   <Link to={"/@" + username} className="member-card card">
     <img
       src={avatar ? avatar : defaultAvatar}
@@ -12,7 +19,9 @@ const MemberCard = ({ username, firstName, lastName, avatar, tag, tagline }) => 
     />
     <div className={"role-tag " + tag}>{tag}</div>
     <div>
-      <h6>{firstName} {lastName}</h6>
+      <h6>
+        {firstName} {lastName}
+      </h6>
       <sub>{tagline}</sub>
     </div>
   </Link>
@@ -24,7 +33,7 @@ MemberCard.propTypes = {
   lastName: PropTypes.string,
   avatar: PropTypes.string,
   tagline: PropTypes.string,
-  tag: PropTypes.string
+  tag: PropTypes.string,
 }
 
 MemberCard.defaultProps = {
@@ -33,7 +42,7 @@ MemberCard.defaultProps = {
   lastName: "",
   avatar: "",
   tagline: "",
-  tag: "Member"
+  tag: "Member",
 }
 
 export default MemberCard

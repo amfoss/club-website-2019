@@ -21,7 +21,11 @@ export default () => (
     `}
     render={data => (
       <div className="p-2">
-          <AchievementList title="Google Summer of Code" members={data.allGSoCYaml.edges} tagname="Org" />
+        <AchievementList
+          title="Google Summer of Code"
+          members={data.allGSoCYaml.edges}
+          tagname="Org"
+        />
       </div>
     )}
   />
