@@ -7,15 +7,14 @@ import HomeLanding from "../components/home/homeLanding"
 import WhyJoin from "../components/home/whyJoin"
 import AlumniSuccess from "../components/home/alumniSuccess"
 
-
 const IndexPage = () => (
   <Layout>
     <SEO title="India's Leading FOSS Club" />
     <HomeLanding />
-    <div style={{ background: "#ffe" }} >
-        <HomeSections />
-        <AlumniSuccess />
-        <WhyJoin />
+    <div style={{ background: "#ffe" }}>
+      <HomeSections />
+      <AlumniSuccess />
+      <WhyJoin />
     </div>
   </Layout>
 )

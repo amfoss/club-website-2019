@@ -5,12 +5,12 @@ import MemberCard from "../theme/member-card"
 const MemberList = ({ members }) => {
   return (
     <div className="row m-0 p-1 mb-4">
-      {members.members.map(member =>{
+      {members.members.map(member => {
         const profiles = getProfiles()
         let profile = profiles.find(
           profile => profile.node.username === member.user
         )
-        return profile ?
+        return profile ? (
           <div
             key={member.user}
             className="col-md-4 col-lg-3 col-xl-2 col-6 p-2"
@@ -26,7 +26,8 @@ const MemberList = ({ members }) => {
                   : null
               }
             />
-          </div>: null
+          </div>
+        ) : null
       })}
     </div>
   )

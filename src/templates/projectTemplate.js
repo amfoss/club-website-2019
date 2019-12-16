@@ -37,23 +37,27 @@ export default class ProjectTemplate extends React.Component {
 
   renderTab() {
     if (this.state.switchTab === "galleryTab") {
-      return <section className="my-4 container">
-        <div className="gallery">
-          <div className="row">
-            {this.props.data.projectsYaml.gallery.map(image => {
-              return(<div className="col-sm-6 project-image my-2" key={image.childImageSharp.resize.src}>
-                <img
-                src={
-                  image
-                    ? image.childImageSharp.resize.src
-                    : avatar
-                }
-                alt={image}
-                /></div>)
-            })}
+      return (
+        <section className="my-4 container">
+          <div className="gallery">
+            <div className="row">
+              {this.props.data.projectsYaml.gallery.map(image => {
+                return (
+                  <div
+                    className="col-sm-6 project-image my-2"
+                    key={image.childImageSharp.resize.src}
+                  >
+                    <img
+                      src={image ? image.childImageSharp.resize.src : avatar}
+                      alt={image}
+                    />
+                  </div>
+                )
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )
     }
     if (this.state.switchTab === "membersTab") {
       return (
@@ -64,7 +68,12 @@ export default class ProjectTemplate extends React.Component {
     } else {
       return (
         <section className="my-4 container">
-          <div className="card p-4"  dangerouslySetInnerHTML={{ __html: this.props.data.projectsYaml.description}} />
+          <div
+            className="card p-4"
+            dangerouslySetInnerHTML={{
+              __html: this.props.data.projectsYaml.description,
+            }}
+          />
         </section>
       )
     }
@@ -94,9 +103,18 @@ export default class ProjectTemplate extends React.Component {
                   <p>{this.props.data.projectsYaml.tagline}</p>
                   {this.props.data.projectsYaml.links ? (
                     <div className="social-links">
-                      <SocialIcon name="github" link={this.props.data.projectsYaml.links.github} />
-                      <SocialIcon name="website" link={this.props.data.projectsYaml.links.website} />
-                      <SocialIcon name="chatroom" link={this.props.data.projectsYaml.links.chatroom} />
+                      <SocialIcon
+                        name="github"
+                        link={this.props.data.projectsYaml.links.github}
+                      />
+                      <SocialIcon
+                        name="website"
+                        link={this.props.data.projectsYaml.links.website}
+                      />
+                      <SocialIcon
+                        name="chatroom"
+                        link={this.props.data.projectsYaml.links.chatroom}
+                      />
                     </div>
                   ) : null}
                 </div>
@@ -137,20 +155,20 @@ export const pageQuery = graphql`
   query($title: String!) {
     projectsYaml(title: { eq: $title }) {
       title
-      members{
+      members {
         user
         role
       }
       slug
       tagline
       gallery {
-        childImageSharp{
+        childImageSharp {
           resize(width: 500) {
             src
           }
         }
       }
-      links{
+      links {
         github
         website
         chatroom

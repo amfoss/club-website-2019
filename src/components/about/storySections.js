@@ -11,16 +11,13 @@ export default () => {
           Title
           Content
           Quote
-          childFileYaml
-            {
-              childImageSharp
-              {
-                fluid
-                {
-                  src
-                }
+          childFileYaml {
+            childImageSharp {
+              fluid {
+                src
               }
             }
+          }
         }
       }
     }
@@ -33,7 +30,9 @@ export default () => {
       section={node}
       title={node.Title}
       content={node.Content}
-      image={node.childFileYaml ? node.childFileYaml.childImageSharp.fluid.src : null}
+      image={
+        node.childFileYaml ? node.childFileYaml.childImageSharp.fluid.src : null
+      }
       quote={node.Quote}
     />
   ))
