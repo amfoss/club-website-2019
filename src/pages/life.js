@@ -2,8 +2,8 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import TitleBar from "../components/theme/title-bar"
-import ClubLife from "../components/clubLife/clublife"
+import TitleBar from "../components/theme/titleBar"
+import ClubLife from "../components/clubLife/clubLife"
 
 const Life = () => (
   <Layout>

@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import AchievementList from "./achievement-list"
+import AchievementList from "./achievementList"
 
 export default () => (
   <StaticQuery

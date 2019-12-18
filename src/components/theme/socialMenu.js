@@ -1,5 +1,5 @@
 import React from "react"
-import SocialIcon from "./social-icon"
+import SocialIcon from "./socialIcon"
 
 const SocialMenu = () => (
   <div className="social-menu">

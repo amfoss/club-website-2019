@@ -1,6 +1,6 @@
 import React from "react"
 import getProfiles from "../theme/getProfiles"
-import MemberCard from "../theme/member-card"
+import MemberCard from "../theme/memberCard"
 
 const MemberList = ({ members }) => {
   return (

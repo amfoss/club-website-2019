@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import SectionCard from "../theme/section-card"
+import SectionCard from "../theme/sectionCard"
 
 export default () => {
   const data = useStaticQuery(graphql`

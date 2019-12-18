@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import Menu from "./theme/menu"
-import SocialMenu from "./theme/social-menu"
+import SocialMenu from "./theme/socialMenu"
 import { StaticQuery, Link } from "gatsby"
 import classnames from "classnames"
 

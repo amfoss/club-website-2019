@@ -4,8 +4,8 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import MemberCard from "../components/theme/member-card.js"
-import TitleBar from "../components/theme/title-bar"
+import MemberCard from "../components/theme/memberCard"
+import TitleBar from "../components/theme/titleBar"
 
 export default class Members extends React.Component {
   constructor(props) {
