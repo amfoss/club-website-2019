@@ -1,18 +1,163 @@
-# This file is a template, and might need editing before it works on your project.
-image: node:latest
+image: node:13
 
-# This folder is cached between builds
-# http://docs.gitlab.com/ce/ci/yaml/README.html#cache
-cache:
-  paths:
-    - node_modules/
+stages:
+  - caching 
+  - build
+  - test
+  - deploy review
+  - deploy staging 
+  - test staging 
+  - deploy prod
+  - test prod
+  - pages
 
-pages:
+variables:
+  STAGING_DOMAIN: amfoss_in-staging.surge.sh
+  PROD_DOMAIN: amfoss_in.surge.sh
+
+caching:
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - ./node_modules
+    policy: push
   script:
     - npm install
-    - ./node_modules/.bin/gatsby build --prefix-paths
+    - echo ${CI_COMMIT_REF_SLUG}
+
+build-website:
+  stage: build
+  only:
+    - master
+    - merge_requests
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - ./node_modules
+  before_script:
+    - npm install -g gatsby-cli
+  script:
+    - echo ${CI_COMMIT_REF_SLUG}
+    - npm install 
+    - sed -i "s/%%VERSION%%/$CI_COMMIT_SHORT_SHA/" ./src/pages/index.js
+    - gatsby build
+  artifacts:
+    paths:
+      - ./public
+
+test artifact:
+  only:
+    - master
+  cache: {}
+  image: alpine
+  script:
+    - grep 'amfoss' ./public/index.html
+
+test site:
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - ./node_modules
+    policy: pull
+  before_script:
+    - npm install -g gatsby-cli
+  script:
+    - npm install
+    - gatsby serve &
+    - sleep 5
+    - curl -s http://localhost:9000
+
+# A BaseDeploy
+.deploy template: &deploy
+  environment:
+    url: http://$DOMAIN
+  before_script:
+    - npm install -g surge
+  script:
+    - surge --project ./public --domain $DOMAIN
+
+deploy review:
+  <<: *deploy
+  stage: deploy review
+  only:
+    - merge_requests
+  variables:
+    DOMAIN: amfoss-$CI_ENVIRONMENT_SLUG.surge.sh
+  environment:
+    name: review/$CI_COMMIT_REF_NAME.surge.sh
+    on_stop: stop review
+
+stop review:
+  stage: deploy review
+  only:
+    - merge_requests
+  variables:
+    GIT_STRATEGY: none
+  when: manual
+  environment:
+    name: review/$CI_COMMIT_REF_NAME.surge.sh
+    action: stop
+  script:
+    - npm install -g surge
+    - surge teardown amfoss-$CI_ENVIRONMENT_SLUG.surge.sh
+
+deploy staging:
+  <<: *deploy
+  except:
+    - schedules
+  stage: deploy staging
+  # Only triggers on master branch changes
+  only:
+    - master
+    - cicd
+  variables:
+    DOMAIN: $STAGING_DOMAIN
+  environment:
+    name: staging
+
+deploy prod:
+  <<: *deploy
+  when: manual
+  allow_failure: false
+  stage: deploy prod
+  only:
+    - master
+  variables:
+    DOMAIN: $PROD_DOMAIN
+  environment:
+    name: prod
+
+
+test staging:
+  except:
+    - schedules
+  image: alpine
+  stage: test staging
+  only:
+    - master
+    - cicd
+  script:
+    - apk add --no-cache curl grep
+    - curl -s http://$STAGING_DOMAIN 
+    - echo "Commit SHA:" "$CI_COMMIT_SHORT_SHA"
+
+test prod:
+  image: alpine
+  stage: test prod
+  only:
+    - master
+  script:
+    - apk add --no-cache curl grep
+    - curl -s http://$PROD_DOMAIN 
+    - echo "Commit SHA:" "$CI_COMMIT_SHORT_SHA"
+
+pages:
+  stage: pages
+  script:
+    - echo " Deploying Pages"
   artifacts:
     paths:
       - public
   only:
-    - master
+      - master
+  
