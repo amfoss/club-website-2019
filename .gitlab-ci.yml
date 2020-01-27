@@ -82,7 +82,7 @@ deploy review:
   only:
     - merge_requests
   variables:
-    DOMAIN: amfoss-$CI_ENVIRONMENT_SLUG.surge.sh
+    DOMAIN: amfoss-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA.surge.sh
   environment:
     name: review/$CI_COMMIT_REF_NAME.surge.sh
     on_stop: stop review
@@ -99,7 +99,7 @@ stop review:
     action: stop
   script:
     - npm install -g surge
-    - surge teardown amfoss-$CI_ENVIRONMENT_SLUG.surge.sh
+    - surge teardown amfoss-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA.surge.sh
 
 deploy staging:
   <<: *deploy
