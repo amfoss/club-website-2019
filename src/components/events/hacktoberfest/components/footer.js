@@ -1,10 +1,10 @@
 import React from "react"
-import Digitalocean from '../images/digitalocean.svg'
-import Dev from '../images/dev.svg'
-import Github from '../images/github.png'
+import Digitalocean from "../images/digitalocean.svg"
+import Dev from "../images/dev.svg"
+import Github from "../images/github.png"
 
 const Footer = () => {
-  return(
+  return (
     <>
       <h1 className="py-4 my-4 text-light text-center">#OctoberIsComing</h1>
       <div className="text-center text-light">Thank You</div>
@@ -17,7 +17,7 @@ const Footer = () => {
             <img className="px-2" src={Github} alt="Github" />
           </a>
           <a href="https://dev.to/">
-            <img className="px-2" src={Dev} alt="Dev"/>
+            <img className="px-2" src={Dev} alt="Dev" />
           </a>
         </div>
       </div>
