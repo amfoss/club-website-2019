@@ -1,10 +1,10 @@
 import React from "react"
-import Github from '../images/github.png'
+import Github from "../images/github.png"
 import MLH from "../../mlh-hack-day/images/mlh-logo-white.png"
 
 const Footer = () => {
-  return(
-    <section id= "footer">
+  return (
+    <section id="footer">
       <div className="py-4 text-center text-light">Thank You</div>
       <div id="footer-logos" className="row m-0">
         <div className="container d-flex justify-content-center">
