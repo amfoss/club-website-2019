@@ -26,14 +26,15 @@ class Header extends React.Component {
             <StaticQuery
               query={graphql`
                 query {
-                 allFile(filter: { name: { eq: "logo_alt_light"}, extension: { eq: "png"}})
-                  {
-                    nodes
-                    {
-                      childImageSharp
-                      {
-                        fluid
-                        {
+                  allFile(
+                    filter: {
+                      name: { eq: "logo_alt_light" }
+                      extension: { eq: "png" }
+                    }
+                  ) {
+                    nodes {
+                      childImageSharp {
+                        fluid {
                           src
                         }
                       }
@@ -42,7 +43,10 @@ class Header extends React.Component {
                 }
               `}
               render={data => (
-                <img src={data.allFile.nodes[0].childImageSharp.fluid.src} alt="AmFOSS" />
+                <img
+                  src={data.allFile.nodes[0].childImageSharp.fluid.src}
+                  alt="AmFOSS"
+                />
               )}
             />
           </Link>

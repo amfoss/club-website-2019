@@ -38,11 +38,11 @@ function SEO({ author, description, lang, meta, title, type, keywords }) {
         },
         {
           name: `keywords`,
-          content: keywords ? keywords : metaDescription
+          content: keywords ? keywords : metaDescription,
         },
         {
           name: `category`,
-          content: type
+          content: type,
         },
         {
           property: `og:title`,
@@ -73,9 +73,10 @@ function SEO({ author, description, lang, meta, title, type, keywords }) {
           content: metaDescription,
         },
         {
-          name: 'hosting-dcv',
-          content: '6e16d6248fca96228ab0494ed816bb59-501e7dcc94812d01473d63d948b9df96'
-        }
+          name: "hosting-dcv",
+          content:
+            "6e16d6248fca96228ab0494ed816bb59-501e7dcc94812d01473d63d948b9df96",
+        },
       ].concat(meta)}
     />
   )
@@ -87,7 +88,7 @@ SEO.defaultProps = {
   meta: [],
   description: ``,
   type: `website`,
-  keywords: ``
+  keywords: ``,
 }
 
 SEO.propTypes = {
