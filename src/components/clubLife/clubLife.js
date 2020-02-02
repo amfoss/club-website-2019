@@ -10,14 +10,10 @@ export default () => {
           id
           Title
           Content
-          Slider
-          {
-            Image
-            {
-              childImageSharp
-              {
-                fluid
-                {
+          Slider {
+            Image {
+              childImageSharp {
+                fluid {
                   src
                 }
               }
