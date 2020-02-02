@@ -8,7 +8,7 @@ function createProjectPages(result, createPage) {
       path: "/projects" + "/" + node.slug,
       component: ProjectTemplate,
       context: {
-        title: node.title
+        title: node.title,
       },
     })
   })
@@ -21,7 +21,7 @@ function graphqlForProjects(graphql, createPage) {
         edges {
           node {
             title
-            members{
+            members {
               user
               role
             }
