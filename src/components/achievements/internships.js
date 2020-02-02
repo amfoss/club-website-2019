@@ -21,7 +21,11 @@ export default () => (
     `}
     render={data => (
       <div className="p-2">
-        <AchievementList title="Internships"  members={data.allInternshipsYaml.edges} tagname="Company" />
+        <AchievementList
+          title="Internships"
+          members={data.allInternshipsYaml.edges}
+          tagname="Company"
+        />
       </div>
     )}
   />
