@@ -15,11 +15,10 @@ export default () => {
               id
               Text
               Icon {
-                 publicURL
+                publicURL
               }
             }
-            childrenHomeSectionsStatsYaml
-            {
+            childrenHomeSectionsStatsYaml {
               Text
               Num
             }

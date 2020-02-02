@@ -6,7 +6,6 @@ export default () => {
     <div className="card mx-sm-4 my-sm-4 px-4 py-3">
       <div id="Thanks" className="row">
         <div className="col-md-9">
-          
           <h2 className="text-left my-4">Thank You GitLab!</h2>
           <p>
             For enabling us to collaborate and develop using{" "}
@@ -16,8 +15,6 @@ export default () => {
               Gold Plan.
             </a>
           </p>
-          
-          
         </div>
 
         <div className="col-md-3">
@@ -26,7 +23,6 @@ export default () => {
           </a>
         </div>
       </div>
-      </div>
-    
+    </div>
   )
 }
