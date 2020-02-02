@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -11,9 +11,11 @@ const News = ({
     allMarkdownRemark: { edges },
   },
 }) => {
-  const [query, setQuery] = useState('');
-  const filter =  edges.filter(edge => {
-    if(edge.node.frontmatter.title.toLowerCase().startsWith(query.toLowerCase()))
+  const [query, setQuery] = useState("")
+  const filter = edges.filter(edge => {
+    if (
+      edge.node.frontmatter.title.toLowerCase().startsWith(query.toLowerCase())
+    )
       return 1
   })
   const Articles = filter.map(edge => (
@@ -31,7 +33,11 @@ const News = ({
           <div className="row mx-2 my-4">{Articles}</div>
         </div>
         <div className="col-md-4 col-lg-3 order-md-2 order-1 px-2 py-4">
-          <div className="card p-4 position-sticky" style={{ top: "1rem" }} id="filter-card">
+          <div
+            className="card p-4 position-sticky"
+            style={{ top: "1rem" }}
+            id="filter-card"
+          >
             <h5 className="my-3">Search & Filter</h5>
             <div className="mx-2">
               <div>Search by Name</div>
