@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `FOSS@Amrita (amFOSS) - Code | Share | Grow`,
     description: `A Student Community of Open Source Enthusiasts based in Amrita Vishwa Vidyapeetham, Amritapuri. We promote and contribute to FOSS, and mentor students for achieving excellence.`,
-    author: 'amfoss'
+    author: 'amfoss',
+    siteUrl: 'https://amfoss.in/'
   },
   plugins: [
     {
@@ -53,6 +54,7 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-nprogress`,
