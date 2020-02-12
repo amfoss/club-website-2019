@@ -63,18 +63,6 @@ const Header = () => {
       }
     }
 
-    function onMouseMove(e) {
-      mouse.x = e.clientX - 120
-      mouse.y = e.clientY - 120
-    }
-
-    function onTouchMove(e) {
-      if (e.touches.length > 0) {
-        mouse.x = e.touches[0].clientX
-        mouse.y = e.touches[0].clientY
-      }
-    }
-
     function onTouchEnd(e) {
       mouse.x = -9999
       mouse.y = -9999
@@ -114,8 +102,6 @@ const Header = () => {
     }
 
     window.addEventListener("resize", initScene)
-    window.addEventListener("mousemove", onMouseMove)
-    window.addEventListener("touchmove", onTouchMove)
     window.addEventListener("touchend", onTouchEnd)
     initScene()
     requestAnimationFrame(render)
