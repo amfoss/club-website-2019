@@ -39,22 +39,21 @@ const CarouselCard = () => {
         <div className="talks py-4 col-md-5">
           <h1>Talks</h1>
           <p>
-            Vijayan has been a tea-seller for over forty years, however, that
-            hasn't stopped him and his wife from touring almost every scenic
-            destination in India along with a whopping 16 other countries-
-            Britain, France, Austria, Egypt, UAE, the list goes on.
+            "amFOSS Open Talks" is a series of invited talks from people who
+            have gone out of the way of living the ordinary life.
+
+            It will host people from different walks of life who have set an
+            example for all of us to not just live but to live & inspire!
           </p>
           <p>
-            His tea-stall is his only source of income, something that has never
-            been an obstacle in fulfilling his dream of travelling all over the
-            world. "I got the obsession in traveling from my dad; he took me to
-            different places since I was 6 year old. We went to Madurai, Palani
-            and many other places. Those travel memories with my dad helped me
-            unleash my dreams", says Vijayan.
+            For the first-ever edition of the amFOSS Open Talks,
+            we have Mr. Vijayan and Mrs. Mohana, popularly known as the
+            ‘Tea Selling Couple’, who have been running the “Sree Balaji
+            Coffee House”, a tea shop in Ernakulam, Kochi for the last 40 years
+            and in this period, they have travelled to over 25 countries.
           </p>
           <p>
-            Some dreams are worth going all out for, and Vijayan's story sounds
-            like one of those few.
+            Do you want to hear their story?
           </p>
         </div>
       </div>
