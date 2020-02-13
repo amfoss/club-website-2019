@@ -69,6 +69,15 @@ module.exports = {
         shortname: `amfoss`
       }
     },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "CMS",
+        fieldName: "cms",
+        url: "https://api.amfoss.in",
+        refetchInterval: 60,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
