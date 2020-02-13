@@ -2,9 +2,9 @@ import React from "react"
 import dataFetch from "../../../../utils/dataFetch"
 
 const query = `
-mutation($formID: Int!, $hash: String!,$phone: String!, $response: Boolean!)
+mutation($formID: Int!, $hash: String!,$phone: String!, $response: Boolean!, $details: String!)
 {
-  submitRSVP(formID:$formID, hash: $hash, phone: $phone, response: $response)
+  submitRSVP(formID:$formID, hash: $hash, phone: $phone, response: $response, details:$details)
   {
     status
   }
@@ -20,14 +20,16 @@ class RSVPForm extends React.Component {
       loading: false,
       successText: "",
       errorText: "",
+      details: "",
     }
   }
   submit = async () => {
     const variables = {
-      formID: 2,
+      formID: 4,
       hash: this.props.hash,
       phone: this.state.phone,
       response: this.state.response,
+      details: this.state.details
     }
     const response = await dataFetch({ query, variables })
     if (Object.prototype.hasOwnProperty.call(response, "errors")) {
@@ -90,8 +92,9 @@ class RSVPForm extends React.Component {
                     placeholder="Enter Phone"
                     name="phoneno"
                     className="form-control"
+                    required
                     onChange={e =>
-                      this.setState({ phone: e.currentTarget.value })
+                      this.setState({ phone: e.currentTarget.value.trim() })
                     }
                   />
                 </div>
@@ -99,7 +102,7 @@ class RSVPForm extends React.Component {
                   <button
                     type="submit"
                     className="button btn-block px-4"
-                    style={{ backgroundColor: "white" }}
+                    style={{ backgroundColor: "white", color: "black" }}
                   >
                     Submit RSVP
                   </button>
