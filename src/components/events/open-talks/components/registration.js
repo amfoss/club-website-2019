@@ -73,6 +73,11 @@ const Registration = () => {
             <h1 className="my-4 text-light">
               Join <span>Us</span>
             </h1>
+            <div className="alert alert-warning">
+              If you are facing any technical issues, or if your friend didn't
+              recieve a confirmation email yet, please mail us at opentalks@amfoss.in.
+              We are sorry for any inconvenience caused.
+            </div>
             <p style={{ color: "red" }}>
               * Meetup only open for students of Amritapuri Campus
             </p>
