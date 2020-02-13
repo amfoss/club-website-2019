@@ -103,7 +103,7 @@ const Registration = () => {
                       placeholder="Enter Roll Number"
                       name="Roll No"
                       className="form-control"
-                      onChange={e => setRoll(e.target.value)}
+                      onChange={e => setRoll(e.target.value.trim())}
                     />
                   </div>
                 </div>
@@ -114,7 +114,7 @@ const Registration = () => {
                       placeholder="Enter Email"
                       name="email"
                       className="form-control"
-                      onChange={e => setEmail(e.target.value)}
+                      onChange={e => setEmail(e.target.value.trim())}
                     />
                   </div>
                 </div>
@@ -125,7 +125,7 @@ const Registration = () => {
                       placeholder="Enter Phone"
                       name="phoneno"
                       className="form-control"
-                      onChange={e => setPhone(e.target.value)}
+                      onChange={e => setPhone(e.target.value.trim())}
                     />
                   </div>
                 </div>
