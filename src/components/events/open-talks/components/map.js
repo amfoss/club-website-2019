@@ -14,8 +14,8 @@ const Map = () => {
         </div>
         <div className="col p-4">
           <h2>Venue</h2>
-          <h4>15th February, 5PM,</h4>
-          <h4>Amriteshwari Hall, Amrita School of Engineering,</h4>
+          <h4>15th February, 1PM,</h4>
+          <h4>Acharya Hall, Amrita School of Engineering,</h4>
           <h5>Amritapuri Campus,</h5>
           <h5>Vallickavu, Karunagapally,</h5>
           <div className="fs-6">Kerala, India - 690525</div>
