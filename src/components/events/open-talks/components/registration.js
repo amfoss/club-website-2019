@@ -31,7 +31,6 @@ const Registration = () => {
   const register = () => {
     const emailRegex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
     const phoneRegex = /^\d{10}$/
-    const rollRegex = /^AM[.]EN[.]U4(CSE|AIE|ECE|EAC|ELC|EEE|ME)[1][6-9][\d][\d][\d]$/
     if (
       name === "" ||
       roll === "" ||
@@ -47,11 +46,6 @@ const Registration = () => {
     } else if (phoneRegex.test(phone) === false) {
       setLoading(false)
       setErrorText("Enter Proper Phone No")
-    } else if (rollRegex.test(roll.toUpperCase()) === false) {
-      setErrorText(
-        "Enter Amrita Roll Number in proper format - AM.EN.U4XXX00000"
-      )
-      setLoading(false)
     } else {
       const json = { gender: gender, rollNo: roll }
       const variables = { name, email, phone, formData: JSON.stringify(json) }
