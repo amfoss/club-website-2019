@@ -29,7 +29,7 @@ const OpenTalks = () => {
           <Header />
           <CarouselCard />
           <Registration />
-          <Countdown deadline="February 15, 2020" />
+          <Countdown deadline="February 15, 2020 01:00 PM" />
           <Map />
         </>
       ) : (
