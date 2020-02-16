@@ -1,36 +1,34 @@
-- Title: Who are we?
+- Title: Who we are
   Image: !file ../images/illus/who_are_we.jpg
   Content: !markdown |
-    FOSS@Amrita (also known as amFOSS ) is a community of passionate college students,
-    who have come together for the cause of promoting and contributing to Free and Open
-    Source Software, whilst achieving excellence in the field of technology in their pursuit of knowledge.
+    FOSS@Amrita (also known as amFOSS) is a student community-based in Amrita Vishwa Vidyapeetham, Amritapuri
+    focused on contributing to Free and Open Source Software and mentoring students to achieve excellence in
+    various fields of Computer Science.
 
-    The club envisions to make its members competent to become the leaders of the future with
-    excellence in technical, creative, and intrapersonal skills, through making them learn how to learn,
-    by simulating a workspace like atmosphere inside the lab, and making them go through all challenges,
-    and setbacks they may face in the real world.
+    We envision students to excel and become the leaders of tomorrow by imbibing valuable skills relevant
+    in the 21st century which include technical but also creative and intrapersonal skills enabling
+    students to collaborate, exchange ideas, work together and solve real-life problems.
 
-    Founded in 2008, the club over the years has been renowned as one of the leading student clubs in India,
-    with about 500 active members. It has so far produced 30+ GSoCers, and established Amrita Vishwa Vidyapeetham,
-    Amritapuri Campus as globally 8th ranked in GSoC ranking. The club is run by the students themselves, with the
-    help of research scholars, alumni, and faculties.
+    Founded in 2006 by Vipin Pavithran, the mentor, the club over the years, has been one of the leading student clubs in
+    India, with over 70 active members. Students from amFOSS participate in many international student open-source programs
+    like the Google Summer of Code, Outreachy, Season of KDE, Rails Girls Summer of Code and so on, each year. The club
+    is run by the students themselves, under the guidance of Vipin Pavithran with the help of the club alumni
+    and supporting faculty.
 
-- Title: What we do?
+- Title: What we do
   Image: !file ../images/illus/what_we_do.png
   Content: !markdown |
-    The club operates by the principle of mentorship and family, where the senior members of the club individually
-    mentor the juniors, and the club as such acting as a family where the one helps the other out.
+    The club operates on the primary principle of mentorship where the senior members of the club individually
+    mentor juniors and the club as such acts as a community where each one helps the other one out.
 
-    The members contribute to Open Source projects of various popular open source organizations, work on developing
-    their own projects including the club projects aimed at solving real world problems, participate in GSoC, developer
-    meets, hackathons etc. The members also conduct workshops and technical fests to encourage others to work on open
-    source technologies.
+    The students contribute to open-source projects of various popular open-source organizations, work on
+    developing projects aimed at solving real-world problems, participate in open-source student programs,
+    attend national and international developer meets, conferences, hackathons and so on. The students also
+    conduct workshops and technical events to encourage others to learn and contribute to open-source.
 
-    The club also got specialised teams internally such as one focused on Android, Blockchain, IoT, Data Science,
-    Machine Learning, Problem-solving, UI/UX, and Web Development.
-
-    The club believes in the holistic development of its members, and the members besides seeking excellence in
-    technical skills, also engage in talks, debates, sports, cultural activities, yoga sessions etc.
+    The club believes in the holistic development of students and besides seeking excellence in
+    technical skills also engage in giving talks, conducting debates, taking part in sports and cultural activities including
+    yoga sessions, and so on.
   Points:
     - Text: [Mentor & train students, to take on the world]
       Icon: ../images/illus/mentor.svg
@@ -38,21 +36,22 @@
       Icon: ../images/illus/talk.svg
     - Text: [Contribute to Open Source, Projects & Communities]
       Icon: ../images/illus/code.svg
-- Title: What we have achieved?
+- Title: What we have achieved
   Image: !file ../images/illus/what_did_we_achieve.png
   Content: !markdown |
-    The club has become one of the forerunners in promoting, and contributing to open
-    source in the country, introducing over a hundred enthusiasts every year to the world
-    of Open source through the various activities it conducts.
+    The club has become one of the forerunners in contributing to open-source in the country, introducing
+    over a hundred enthusiasts every year to the world of Open-source through the club's various activities.
 
-    The club has produced 50+ GSoCers over the last 10 years, with about 15 developers getting selected every year.
-    The members have been actively taking part in international conferences, meetups, hackathons, as well as delivering
-    talks and presenting projects at various events.
+    Over the years, over 50 students from amFOSS have been a part of the Google Summer of Code program as participating students
+    and many have participated in the program as mentors, as well, pushing Amrita Viswa Vidyapeetham to 7th in the world in [global rankings of universities](https://opensource.googleblog.com/2019/09/google-summer-of-code-2019-statistics.html)
+    published by Google. Over 12 students from the club have also been participating in the Google Code-In program as mentors
+    and organisation administrators.
 
     Majority of the club alumni have been placed in core computer science companies such as Google, Microsoft, Intel,
-    IBM and VMWare. The active members also get selected for summer schools at global universities, and paid
-    internships at top companies. Some of our alumni are currently Phd. research scholars at various foreign
-    universities.
+    IBM and VMWare. Members have been getting selected for summer schools at global universities and paid
+    internships at top companies including the Ben Gurion University of the Negev, National Ilan University, University of Tel Aviv,
+    National University of Singapore. Some of our alumni are also currently PhD research scholars at various foreign universities
+    including the Singapore University of Technology and Design, Arizona State University and so on.
   Stats:
     - Num: "500+"
       Text: Students Trained
