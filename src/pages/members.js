@@ -62,7 +62,7 @@ export default class Members extends React.Component {
       if (this.state.filterYear !== "everyone") {
         rflag = 0
         if (
-          this.state.filterYear === user.collegeProfile.admissionYear.toString()
+          this.state.filterYear === user.profile.batch.toString()
         )
           rflag = 1
       }
@@ -91,7 +91,7 @@ export default class Members extends React.Component {
           <div className="col-md-8 col-lg-9 p-2 order-2 order-md-1">
             <div className="row m-0 p-1 mb-4">
               {filteredMembers.map(user =>
-                user.collegeProfile.admissionYear && user.isMembershipActive ? (
+                user.profile.batch ? (
                   <div
                     key={user.username}
                     className="col-6 col-md-6 col-lg-4 col-xl-3 p-2"
@@ -165,10 +165,7 @@ export const pageQuery = graphql`
           profilePic
           githubUsername
           tagline
-        }
-        collegeProfile {
-          admissionYear
-          branch
+          batch
         }
       }
     }

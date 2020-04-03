@@ -55,9 +55,6 @@ export const pageQuery = graphql`
         firstName
         lastName
         username
-        collegeProfile {
-          admissionYear
-        }
         profile {
           profilePic
           githubUsername
