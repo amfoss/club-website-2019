@@ -37,7 +37,8 @@
     "react-typing-animation": "^1.6.2",
     "sharp": "^0.23.3",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "isomorphic-fetch": "latest"
   },
   "devDependencies": {
     "prettier": "^1.17.1"

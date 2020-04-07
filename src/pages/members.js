@@ -6,6 +6,24 @@ import SEO from "../components/seo"
 
 import MemberCard from "../components/theme/memberCard"
 import TitleBar from "../components/theme/titleBar"
+import dataFetch from "../utils/dataFetch"
+
+
+const query = ` query {
+      activeUsers(sort: "username") {
+          firstName
+          lastName
+          username
+          isMembershipActive
+          profile {
+              displayInWebsite
+              profilePic
+              githubUsername
+              tagline
+              batch
+          }
+      }
+  }`
 
 export default class Members extends React.Component {
   constructor(props) {
@@ -13,8 +31,13 @@ export default class Members extends React.Component {
     this.state = {
       searchTerm: "",
       filterYear: "everyone",
+      data: [],
     }
   }
+
+  fetchData = async () => await dataFetch({ query });
+
+
 
   goTop = () => {
     window.scrollTo(0, 0)
@@ -33,8 +56,14 @@ export default class Members extends React.Component {
     })
   }
 
+  componentDidMount() {
+    this.fetchData().then(r => {
+      this.setState({ data: r.data.activeUsers})
+    })
+  }
+
   render() {
-    let filteredMembers = this.props.data.cms.activeUsers.filter(user => {
+    let filteredMembers = this.state.data.filter(user => {
       let qflag = 1
       let rflag = 1
       let query = this.state.searchTerm.toLowerCase()
@@ -91,7 +120,7 @@ export default class Members extends React.Component {
           <div className="col-md-8 col-lg-9 p-2 order-2 order-md-1">
             <div className="row m-0 p-1 mb-4">
               {filteredMembers.map(user =>
-                user.profile.batch ? (
+                user.profile.batch && user.profile.displayInWebsite ? (
                   <div
                     key={user.username}
                     className="col-6 col-md-6 col-lg-4 col-xl-3 p-2"
@@ -152,22 +181,3 @@ export default class Members extends React.Component {
     )
   }
 }
-
-export const pageQuery = graphql`
-  query {
-    cms {
-      activeUsers(sort: "username") {
-        firstName
-        lastName
-        username
-        isMembershipActive
-        profile {
-          profilePic
-          githubUsername
-          tagline
-          batch
-        }
-      }
-    }
-  }
-`
