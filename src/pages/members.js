@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -7,6 +6,7 @@ import SEO from "../components/seo"
 import MemberCard from "../components/theme/memberCard"
 import TitleBar from "../components/theme/titleBar"
 import dataFetch from "../utils/dataFetch"
+import ReactLoading from "react-loading";
 
 
 const query = ` query {
@@ -16,6 +16,7 @@ const query = ` query {
           username
           isMembershipActive
           profile {
+              role
               displayInWebsite
               profilePic
               githubUsername
@@ -32,12 +33,11 @@ export default class Members extends React.Component {
       searchTerm: "",
       filterYear: "everyone",
       data: [],
+      loaded: false
     }
   }
 
   fetchData = async () => await dataFetch({ query });
-
-
 
   goTop = () => {
     window.scrollTo(0, 0)
@@ -58,7 +58,10 @@ export default class Members extends React.Component {
 
   componentDidMount() {
     this.fetchData().then(r => {
-      this.setState({ data: r.data.activeUsers})
+      this.setState({
+        data: r.data.activeUsers,
+        loaded: true
+      })
     })
   }
 
@@ -119,23 +122,25 @@ export default class Members extends React.Component {
         <div className="row m-0 p-1">
           <div className="col-md-8 col-lg-9 p-2 order-2 order-md-1">
             <div className="row m-0 p-1 mb-4">
-              {filteredMembers.map(user =>
-                user.profile.batch && user.profile.displayInWebsite ? (
-                  <div
-                    key={user.username}
-                    className="col-6 col-md-6 col-lg-4 col-xl-3 p-2"
-                  >
-                    <MemberCard
-                      username={user.username}
-                      firstName={user.firstName}
-                      lastName={user.lastName}
-                      tag="Member"
-                      profilePic={user.profile.profilePic}
-                      githubUsername={user.profile.githubUsername}
-                    />
-                  </div>
-                ) : null
-              )}
+              {this.state.loaded ?
+                filteredMembers.map(user =>
+                  user.profile.batch && user.profile.displayInWebsite ? (
+                    <div
+                      key={user.username}
+                      className="col-6 col-md-6 col-lg-4 col-xl-3 p-2"
+                    >
+                      <MemberCard
+                        username={user.username}
+                        firstName={user.firstName}
+                        lastName={user.lastName}
+                        tag={user.profile.role}
+                        profilePic={user.profile.profilePic}
+                        githubUsername={user.profile.githubUsername}
+                      />
+                    </div>
+                  ) : null
+                ): <ReactLoading type="spinningBubbles" color="#000" />
+              }
             </div>
           </div>
           <div className="col-md-4 col-lg-3 order-md-2 order-1 px-2 py-4">
