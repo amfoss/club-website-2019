@@ -82,7 +82,11 @@ export default class ProjectTemplate extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title={this.props.data.projectsYaml.title} />
+        <SEO
+          title={this.props.data.projectsYaml.title}
+          description={this.props.data.projectsYaml.description}
+          slug={this.props.data.projectsYaml.slug}
+        />
         <div className="project">
           <section id="cover">
             <div className="container">

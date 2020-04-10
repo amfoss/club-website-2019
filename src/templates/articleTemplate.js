@@ -12,6 +12,7 @@ export default function Template({ data: { markdownRemark } }) {
     <Layout>
       <SEO
         title={markdownRemark.frontmatter.title}
+        slug={markdownRemark.frontmatter.slug}
         description={markdownRemark.frontmatter.description}
         author={markdownRemark.frontmatter.author}
         keywords={
