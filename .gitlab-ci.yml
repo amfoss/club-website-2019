@@ -2,6 +2,7 @@ image: registry.gitlab.com/amfoss/website:latest
 
 stages:
   - caching 
+  - lint check
   - build
   - test
   - deploy review
@@ -24,6 +25,15 @@ caching:
   script:
     - npm install
     - echo ${CI_COMMIT_REF_SLUG}
+
+lint-check:
+  stage: lint check
+  only:
+    - merge_requests
+  before_script:
+    - npm install prettier
+  script:
+    - npm run lint-check
 
 build-website:
   stage: build
