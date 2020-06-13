@@ -1,11 +1,11 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Disqus from "gatsby-plugin-disqus"
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import Disqus from 'gatsby-plugin-disqus';
 
-import avatar from "../images/defaults/avatar.png"
-import TitleBar from "../components/theme/titleBar"
+import avatar from '../images/defaults/avatar.png';
+import TitleBar from '../components/theme/titleBar';
 
 export default function Template({ data: { markdownRemark } }) {
   return (
@@ -17,7 +17,7 @@ export default function Template({ data: { markdownRemark } }) {
         author={markdownRemark.frontmatter.author}
         keywords={
           markdownRemark.frontmatter.tags
-            ? markdownRemark.frontmatter.tags.join(", ")
+            ? markdownRemark.frontmatter.tags.join(', ')
             : null
         }
         type="article"
@@ -45,7 +45,7 @@ export default function Template({ data: { markdownRemark } }) {
               <h6>@{markdownRemark.frontmatter.author}</h6>
               <div>
                 {markdownRemark.frontmatter.categories.map((cat, id) => (
-                  <div key={id} className={"tag mt-4 " + cat}>
+                  <div key={id} className={'tag mt-4 ' + cat}>
                     {cat}
                   </div>
                 ))}
@@ -67,7 +67,7 @@ export default function Template({ data: { markdownRemark } }) {
         />
       </div>
     </Layout>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -88,4 +88,4 @@ export const pageQuery = graphql`
       html
     }
   }
-`
+`;

@@ -1,22 +1,22 @@
-import PropTypes from "prop-types"
-import React from "react"
-import Menu from "./theme/menu"
-import SocialMenu from "./theme/socialMenu"
-import { StaticQuery, Link } from "gatsby"
-import classnames from "classnames"
+import PropTypes from 'prop-types';
+import React from 'react';
+import Menu from './theme/menu';
+import SocialMenu from './theme/socialMenu';
+import { StaticQuery, Link } from 'gatsby';
+import classnames from 'classnames';
 
 class Header extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       showSidebar: false,
-    }
+    };
   }
 
   showSidebar = () => {
-    const current = this.state.showSidebar
-    this.setState({ showSidebar: !current })
-  }
+    const current = this.state.showSidebar;
+    this.setState({ showSidebar: !current });
+  };
 
   render() {
     return (
@@ -42,7 +42,7 @@ class Header extends React.Component {
                   }
                 }
               `}
-              render={data => (
+              render={(data) => (
                 <img
                   src={data.allFile.nodes[0].childImageSharp.fluid.src}
                   alt="AmFOSS"
@@ -60,7 +60,7 @@ class Header extends React.Component {
             )}
           />
         </div>
-        <div id="sidebar" className={this.state.showSidebar ? "show" : "hide"}>
+        <div id="sidebar" className={this.state.showSidebar ? 'show' : 'hide'}>
           <div>
             <Link to="/">
               <div className="logo" />
@@ -70,16 +70,16 @@ class Header extends React.Component {
           </div>
         </div>
       </header>
-    )
+    );
   }
 }
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
 
-export default Header
+export default Header;

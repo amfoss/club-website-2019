@@ -1,19 +1,19 @@
-const path = require("path")
+const path = require('path');
 
 function createArticles(result, createPage) {
-  const ArticleTemplate = path.resolve(`src/templates/articleTemplate.js`)
-  const articles = result.data.allMarkdownRemark.edges
+  const ArticleTemplate = path.resolve(`src/templates/articleTemplate.js`);
+  const articles = result.data.allMarkdownRemark.edges;
   articles.forEach(({ node }) => {
     createPage({
-      path: "news/" + node.frontmatter.slug,
+      path: 'news/' + node.frontmatter.slug,
       component: ArticleTemplate,
       context: {
         author: node.frontmatter.author,
         slug: node.frontmatter.slug,
         id: node.id,
       },
-    })
-  })
+    });
+  });
 }
 
 function graphqlForNews(graphql, createPage) {
@@ -41,12 +41,12 @@ function graphqlForNews(graphql, createPage) {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
-      throw result.errors
+      throw result.errors;
     }
-    createArticles(result, createPage)
-  })
+    createArticles(result, createPage);
+  });
 }
 
-exports.graphqlForNews = graphqlForNews
+exports.graphqlForNews = graphqlForNews;

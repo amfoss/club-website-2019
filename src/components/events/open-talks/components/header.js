@@ -1,7 +1,7 @@
-import React, { useEffect } from "react"
-import amFOSSLogo from "../../../../../src/images/amfoss_logo.png"
-import amritaLogo from "../../../../../src/images/amrita_logo.png"
-import HeaderImage from "../images/header.png"
+import React, { useEffect } from 'react';
+import amFOSSLogo from '../../../../../src/images/amfoss_logo.png';
+import amritaLogo from '../../../../../src/images/amrita_logo.png';
+import HeaderImage from '../images/header.png';
 
 const Header = () => {
   return (
@@ -23,7 +23,7 @@ const Header = () => {
           <div className="row m-0 w-100 p-4 px-5">
             <div className="col-sm-2" />
             <div className="col-sm-8">
-              <img src={HeaderImage} style={{width: "100%"}} />
+              <img src={HeaderImage} style={{ width: '100%' }} />
             </div>
             <div className="col-sm-12 py-5">
               <div className="d-flex align-items-center text-lg-left text-center justify-content-center h-100">
@@ -32,13 +32,10 @@ const Header = () => {
                     February 15th 2020
                   </h3>
                   <div className="text-center">
-                    <button
-                      className="button"
-                      style={{ backgroundColor: "white" }}
-                    >
+                    <button className="button" style={{ backgroundColor: 'white' }}>
                       <a
                         href="#registration-form"
-                        style={{ color: "black", textDecoration: "none" }}
+                        style={{ color: 'black', textDecoration: 'none' }}
                       >
                         REGISTER NOW
                       </a>
@@ -51,7 +48,7 @@ const Header = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

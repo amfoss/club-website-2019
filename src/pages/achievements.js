@@ -1,13 +1,13 @@
-import React from "react"
+import React from 'react';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import TitleBar from "../components/theme/titleBar"
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import TitleBar from '../components/theme/titleBar';
 
-import GSoC from "../components/achievements/gsoc"
-import Internship from "../components/achievements/internships"
-import Talks from "../components/achievements/talks"
-import SummerSchool from "../components/achievements/summerSchool"
+import GSoC from '../components/achievements/gsoc';
+import Internship from '../components/achievements/internships';
+import Talks from '../components/achievements/talks';
+import SummerSchool from '../components/achievements/summerSchool';
 
 const Achievements = () => (
   <Layout>
@@ -26,6 +26,6 @@ const Achievements = () => (
       </div>
     </div>
   </Layout>
-)
+);
 
-export default Achievements
+export default Achievements;

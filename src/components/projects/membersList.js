@@ -1,20 +1,17 @@
-import React from "react"
-import getProfiles from "../theme/getProfiles"
-import MemberCard from "../theme/memberCard"
+import React from 'react';
+import getProfiles from '../theme/getProfiles';
+import MemberCard from '../theme/memberCard';
 
 const MemberList = ({ members }) => {
   return (
     <div className="row m-0 p-1 mb-4">
-      {members.members.map(member => {
-        const profiles = getProfiles()
+      {members.members.map((member) => {
+        const profiles = getProfiles();
         let profile = profiles.find(
-          profile => profile.node.username === member.user
-        )
+          (profile) => profile.node.username === member.user
+        );
         return profile ? (
-          <div
-            key={member.user}
-            className="col-md-4 col-lg-3 col-xl-2 col-6 p-2"
-          >
+          <div key={member.user} className="col-md-4 col-lg-3 col-xl-2 col-6 p-2">
             <MemberCard
               username={profile.node.username}
               firstName={profile.node.firstName}
@@ -27,9 +24,9 @@ const MemberList = ({ members }) => {
               }
             />
           </div>
-        ) : null
+        ) : null;
       })}
     </div>
-  )
-}
-export default MemberList
+  );
+};
+export default MemberList;

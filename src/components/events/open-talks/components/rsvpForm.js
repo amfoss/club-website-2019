@@ -1,5 +1,5 @@
-import React from "react"
-import dataFetch from "../../../../utils/dataFetch"
+import React from 'react';
+import dataFetch from '../../../../utils/dataFetch';
 
 const query = `
 mutation($formID: Int!, $hash: String!,$phone: String!, $response: Boolean!, $details: String!)
@@ -9,19 +9,19 @@ mutation($formID: Int!, $hash: String!,$phone: String!, $response: Boolean!, $de
     status
   }
 }
-`
+`;
 
 class RSVPForm extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      phone: "",
+      phone: '',
       response: true,
       loading: false,
-      successText: "",
-      errorText: "",
-      details: "",
-    }
+      successText: '',
+      errorText: '',
+      details: '',
+    };
   }
   submit = async () => {
     const variables = {
@@ -29,24 +29,24 @@ class RSVPForm extends React.Component {
       hash: this.props.hash,
       phone: this.state.phone,
       response: this.state.response,
-      details: this.state.details
-    }
-    const response = await dataFetch({ query, variables })
-    if (Object.prototype.hasOwnProperty.call(response, "errors")) {
-      this.setState({ loading: false, errorText: response.errors[0].message })
+      details: this.state.details,
+    };
+    const response = await dataFetch({ query, variables });
+    if (Object.prototype.hasOwnProperty.call(response, 'errors')) {
+      this.setState({ loading: false, errorText: response.errors[0].message });
     } else {
       this.setState({
         successText: response.data.submitRSVP.status,
-        errorText: "",
-      })
+        errorText: '',
+      });
     }
-  }
+  };
 
   render() {
     return (
       <div
         className="d-flex m-0 text-light align-items-center justify-content-center"
-        style={{ minHeight: "100vh", backgroundColor: "black" }}
+        style={{ minHeight: '100vh', backgroundColor: 'black' }}
       >
         <div className="p-4">
           <h1>RSVP for Open Talks 2020, Amritapuri</h1>
@@ -55,15 +55,15 @@ class RSVPForm extends React.Component {
             amFOSS.
           </p>
           <div className="alert alert-warning">
-            If you are facing any technical issues, or if your friend didn't
-            recieve a confirmation email yet, please ping +91 6303207870 on
+            If you are facing any technical issues, or if your friend didn't recieve
+            a confirmation email yet, please ping +91 6303207870 on
             Telegram/WhatsApp. We are sorry for any inconvenience caused.
           </div>
           {!this.state.loading ? (
             <form
-              onSubmit={e => {
-                this.setState({ loading: true })
-                this.submit()
+              onSubmit={(e) => {
+                this.setState({ loading: true });
+                this.submit();
               }}
               className="form-group"
             >
@@ -72,9 +72,9 @@ class RSVPForm extends React.Component {
                   <label>Will you be attending in the event?</label>
                   <select
                     className="form-control"
-                    onChange={e =>
+                    onChange={(e) =>
                       this.setState({
-                        response: e.currentTarget.value === "true",
+                        response: e.currentTarget.value === 'true',
                       })
                     }
                   >
@@ -93,7 +93,7 @@ class RSVPForm extends React.Component {
                     name="phoneno"
                     className="form-control"
                     required
-                    onChange={e =>
+                    onChange={(e) =>
                       this.setState({ phone: e.currentTarget.value.trim() })
                     }
                   />
@@ -102,22 +102,21 @@ class RSVPForm extends React.Component {
                   <button
                     type="submit"
                     className="button btn-block px-4"
-                    style={{ backgroundColor: "white", color: "black" }}
+                    style={{ backgroundColor: 'white', color: 'black' }}
                   >
                     Submit RSVP
                   </button>
                 </div>
               </div>
             </form>
-          ) : this.state.successText !== "" ? (
+          ) : this.state.successText !== '' ? (
             <div className="alert alert-success">
-              Thank you! Please inform your friends too about submitting their
-              RSVP.
+              Thank you! Please inform your friends too about submitting their RSVP.
             </div>
           ) : (
             <div className="alert alert-warning">Submitting. Please Wait</div>
           )}
-          {this.state.errorText !== "" ? (
+          {this.state.errorText !== '' ? (
             <div
               className="w-100 w-100 text-center m-2 alert alert-danger"
               role="alert"
@@ -127,8 +126,8 @@ class RSVPForm extends React.Component {
           ) : null}
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default RSVPForm
+export default RSVPForm;

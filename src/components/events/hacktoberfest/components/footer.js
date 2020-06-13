@@ -1,7 +1,7 @@
-import React from "react"
-import Digitalocean from "../images/digitalocean.svg"
-import Dev from "../images/dev.svg"
-import Github from "../images/github.png"
+import React from 'react';
+import Digitalocean from '../images/digitalocean.svg';
+import Dev from '../images/dev.svg';
+import Github from '../images/github.png';
 
 const Footer = () => {
   return (
@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

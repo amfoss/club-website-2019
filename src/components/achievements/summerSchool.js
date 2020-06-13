@@ -1,6 +1,6 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import AchievementList from "./achievementList"
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import AchievementList from './achievementList';
 
 export default () => (
   <StaticQuery
@@ -19,7 +19,7 @@ export default () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <div className="p-2">
         <AchievementList
           title="Summer School"
@@ -29,4 +29,4 @@ export default () => (
       </div>
     )}
   />
-)
+);

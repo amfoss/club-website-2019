@@ -3,7 +3,7 @@ module.exports = {
     title: `FOSS@Amrita (amFOSS) - Code | Share | Grow`,
     description: `A Student Community of Open Source Enthusiasts based in Amrita Vishwa Vidyapeetham, Amritapuri. We promote and contribute to FOSS, and mentor students for achieving excellence.`,
     author: 'amfoss',
-    siteUrl: 'https://amfoss.in/'
+    siteUrl: 'https://amfoss.in/',
   },
   plugins: [
     {
@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-143287306-2",
+        trackingId: 'UA-143287306-2',
         head: true,
       },
     },
@@ -71,15 +71,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `amfoss`
-      }
+        shortname: `amfoss`,
+      },
     },
     {
-      resolve: "gatsby-source-graphql",
+      resolve: 'gatsby-source-graphql',
       options: {
-        typeName: "CMS",
-        fieldName: "cms",
-        url: "https://api.amfoss.in",
+        typeName: 'CMS',
+        fieldName: 'cms',
+        url: 'https://api.amfoss.in',
         refetchInterval: 60,
       },
     },
@@ -87,4 +87,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

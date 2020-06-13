@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 const FooterNav = () => (
   <div id="footer-nav">
@@ -33,9 +33,7 @@ const FooterNav = () => (
               <a href="https://join.amfoss.in/">How to Join?</a>
             </li>
             <li>
-              <a href="https://github.com/amfoss/vidyaratna">
-                Learning Resources
-              </a>
+              <a href="https://github.com/amfoss/vidyaratna">Learning Resources</a>
             </li>
             <li>
               <a href="https://github.com/amfoss/workshops">
@@ -72,9 +70,7 @@ const FooterNav = () => (
               <a href="/about#social-initiatives">Social Initiatives</a>
             </li>
             <li>
-              <a href="https://github.com/amfoss/workshops">
-                Events & Workshops
-              </a>
+              <a href="https://github.com/amfoss/workshops">Events & Workshops</a>
             </li>
             <li>
               <a href="/news">Press & Media</a>
@@ -94,10 +90,7 @@ const FooterNav = () => (
               <i className="fa fa-envelope" /> Email
             </h6>
             <p>
-              <a href="mailto:amritapurifoss@gmail.com">
-                {" "}
-                amritapurifoss@gmail.com
-              </a>
+              <a href="mailto:amritapurifoss@gmail.com"> amritapurifoss@gmail.com</a>
             </p>
             <h6>
               <i className="fa fa-location-arrow" /> Address
@@ -113,6 +106,6 @@ const FooterNav = () => (
       </div>
     </div>
   </div>
-)
+);
 
-export default FooterNav
+export default FooterNav;

@@ -1,13 +1,12 @@
-import React from "react"
+import React from 'react';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
-import MemberCard from "../components/theme/memberCard"
-import TitleBar from "../components/theme/titleBar"
-import dataFetch from "../utils/dataFetch"
-import ReactLoading from "react-loading";
-
+import MemberCard from '../components/theme/memberCard';
+import TitleBar from '../components/theme/titleBar';
+import dataFetch from '../utils/dataFetch';
+import ReactLoading from 'react-loading';
 
 const query = ` query {
       activeUsers(sort: "username") {
@@ -24,106 +23,103 @@ const query = ` query {
               batch
           }
       }
-  }`
+  }`;
 
 export default class Members extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      searchTerm: "",
-      filterYear: "everyone",
+      searchTerm: '',
+      filterYear: 'everyone',
       data: [],
-      loaded: false
-    }
+      loaded: false,
+    };
   }
 
   fetchData = async () => await dataFetch({ query });
 
   goTop = () => {
-    window.scrollTo(0, 0)
-  }
+    window.scrollTo(0, 0);
+  };
 
   handleSearch(event) {
-    this.goTop()
+    this.goTop();
     this.setState({
       searchTerm: event.target.value,
-    })
+    });
   }
   memberFilter(event) {
-    this.goTop()
+    this.goTop();
     this.setState({
       filterYear: event.target.value,
-    })
+    });
   }
 
   componentDidMount() {
-    this.fetchData().then(r => {
+    this.fetchData().then((r) => {
       this.setState({
         data: r.data.activeUsers,
-        loaded: true
-      })
-    })
+        loaded: true,
+      });
+    });
   }
 
   render() {
-    let filteredMembers = this.state.data.filter(user => {
-      let qflag = 1
-      let rflag = 1
-      let query = this.state.searchTerm.toLowerCase()
+    let filteredMembers = this.state.data.filter((user) => {
+      let qflag = 1;
+      let rflag = 1;
+      let query = this.state.searchTerm.toLowerCase();
 
-      if (query !== "") qflag = 0
+      if (query !== '') qflag = 0;
       // Search matches username
-      if (user.username.toLowerCase().startsWith(query)) qflag = 1
+      if (user.username.toLowerCase().startsWith(query)) qflag = 1;
       // Search matches firstname and lastname
       if (user.firstName) {
         user.firstName
           .toLowerCase()
-          .split(" ")
-          .forEach(part => {
-            if (part.startsWith(query)) qflag = 1
-          })
+          .split(' ')
+          .forEach((part) => {
+            if (part.startsWith(query)) qflag = 1;
+          });
       }
       if (user.lastName) {
         user.lastName
           .toLowerCase()
-          .split(" ")
-          .forEach(part => {
-            if (part.startsWith(query)) qflag = 1
-          })
+          .split(' ')
+          .forEach((part) => {
+            if (part.startsWith(query)) qflag = 1;
+          });
       }
-      if (this.state.filterYear !== "everyone") {
-        rflag = 0
-        if (
-          this.state.filterYear === user.profile.batch.toString()
-        )
-          rflag = 1
+      if (this.state.filterYear !== 'everyone') {
+        rflag = 0;
+        if (this.state.filterYear === user.profile.batch.toString()) rflag = 1;
       }
-      if (qflag && rflag) return 1
-    })
+      if (qflag && rflag) return 1;
+    });
     return (
       <Layout>
         <SEO title="Members" />
         <TitleBar title="Members" id="members" />
         <a
           style={{
-            position: "fixed",
-            right: "1rem",
-            bottom: "1rem",
-            backgroundColor: "#ffc107",
-            borderRadius: "100vh",
-            fontSize: "1.2rem",
+            position: 'fixed',
+            right: '1rem',
+            bottom: '1rem',
+            backgroundColor: '#ffc107',
+            borderRadius: '100vh',
+            fontSize: '1.2rem',
             zIndex: 5000,
           }}
           onClick={() => {
-            this.goTop()
+            this.goTop();
           }}
           className="fas fa-angle-up p-3"
         />
         <div className="row m-0 p-1">
           <div className="col-md-8 col-lg-9 p-2 order-2 order-md-1">
             <div className="row m-0 p-1 mb-4">
-              {this.state.loaded ?
-                filteredMembers.map(user =>
+              {this.state.loaded ? (
+                filteredMembers.map((user) =>
                   user.profile.batch && user.profile.displayInWebsite ? (
                     <div
                       key={user.username}
@@ -139,14 +135,16 @@ export default class Members extends React.Component {
                       />
                     </div>
                   ) : null
-                ): <ReactLoading type="spinningBubbles" color="#000" />
-              }
+                )
+              ) : (
+                <ReactLoading type="spinningBubbles" color="#000" />
+              )}
             </div>
           </div>
           <div className="col-md-4 col-lg-3 order-md-2 order-1 px-2 py-4">
             <div
               className="card p-4 position-sticky"
-              style={{ top: "1rem" }}
+              style={{ top: '1rem' }}
               id="filter-card"
             >
               <h5 className="my-3">Search & Filter</h5>
@@ -169,9 +167,9 @@ export default class Members extends React.Component {
                   value={this.state.filterYear}
                 >
                   <option value="everyone">
-                    {this.state.filterYear === "Everyone"
-                      ? "Change Year"
-                      : " Everyone"}
+                    {this.state.filterYear === 'Everyone'
+                      ? 'Change Year'
+                      : ' Everyone'}
                   </option>
                   <option value="2019">2019</option>
                   <option value="2018">2018</option>
@@ -183,6 +181,6 @@ export default class Members extends React.Component {
           </div>
         </div>
       </Layout>
-    )
+    );
   }
 }

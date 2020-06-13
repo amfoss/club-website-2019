@@ -1,27 +1,27 @@
-import React, { useState } from "react"
+import React, { useState } from 'react';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
-import { graphql } from "gatsby"
+import { graphql } from 'gatsby';
 
-import ProjectCard from "../components/projects/projectCard"
-import TitleBar from "../components/theme/titleBar"
+import ProjectCard from '../components/projects/projectCard';
+import TitleBar from '../components/theme/titleBar';
 
 const Project = ({
   data: {
     allProjectsYaml: { edges },
   },
 }) => {
-  const [query, setQuery] = useState("")
-  const filter = edges.filter(edge => {
-    if (edge.node.title.toLowerCase().startsWith(query.toLowerCase())) return 1
-  })
-  const Projects = filter.map(edge => (
+  const [query, setQuery] = useState('');
+  const filter = edges.filter((edge) => {
+    if (edge.node.title.toLowerCase().startsWith(query.toLowerCase())) return 1;
+  });
+  const Projects = filter.map((edge) => (
     <div key={edge.node.id} className="col-xl-5 col-md-10 col-sm-6 pb-4">
       <ProjectCard project={edge.node} />
     </div>
-  ))
+  ));
 
   return (
     <Layout>
@@ -34,7 +34,7 @@ const Project = ({
         <div className="col-md-4 col-lg-3 order-md-2 order-1 px-2 py-4">
           <div
             className="card p-4 position-sticky"
-            style={{ top: "1rem" }}
+            style={{ top: '1rem' }}
             id="filter-card"
           >
             <h5 className="my-3">Search & Filter</h5>
@@ -45,7 +45,7 @@ const Project = ({
                 type="text"
                 className="form w-100 p-2 mt-2"
                 placeholder="Search Here"
-                onChange={e => setQuery(e.target.value)}
+                onChange={(e) => setQuery(e.target.value)}
               />
               <hr />
             </div>
@@ -53,9 +53,9 @@ const Project = ({
         </div>
       </div>
     </Layout>
-  )
-}
-export default Project
+  );
+};
+export default Project;
 
 export const pageQuery = graphql`
   query {
@@ -88,4 +88,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

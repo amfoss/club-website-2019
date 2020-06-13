@@ -1,6 +1,6 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import SectionCard from "../theme/sectionCard"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import SectionCard from '../theme/sectionCard';
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -33,7 +33,7 @@ export default () => {
         }
       }
     }
-  `)
+  `);
 
   return data.allHomeSectionsYaml.edges.map((edge, i) => (
     <SectionCard
@@ -46,5 +46,5 @@ export default () => {
       points={edge.node.childrenHomeSectionsPointsYaml}
       stats={edge.node.childrenHomeSectionsStatsYaml}
     />
-  ))
-}
+  ));
+};

@@ -1,17 +1,17 @@
-const path = require("path")
+const path = require('path');
 
 function createProjectPages(result, createPage) {
-  const ProjectTemplate = path.resolve(`src/templates/projectTemplate.js`)
-  const projects = result.data.allProjectsYaml.edges
+  const ProjectTemplate = path.resolve(`src/templates/projectTemplate.js`);
+  const projects = result.data.allProjectsYaml.edges;
   projects.forEach(({ node }) => {
     createPage({
-      path: "/projects" + "/" + node.slug,
+      path: '/projects' + '/' + node.slug,
       component: ProjectTemplate,
       context: {
         title: node.title,
       },
-    })
-  })
+    });
+  });
 }
 
 function graphqlForProjects(graphql, createPage) {
@@ -30,12 +30,12 @@ function graphqlForProjects(graphql, createPage) {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
-      throw result.errors
+      throw result.errors;
     }
-    createProjectPages(result, createPage)
-  })
+    createProjectPages(result, createPage);
+  });
 }
 
-exports.graphqlForProjects = graphqlForProjects
+exports.graphqlForProjects = graphqlForProjects;

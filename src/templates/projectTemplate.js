@@ -1,47 +1,47 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import avatar from "../images/defaults/avatar.png"
-import crowdIcon from "../images/icons/crowd.png"
-import portfolioIcon from "../images/icons/portfolio.png"
-import bulbIcon from "../images/icons/bulb.png"
-import MemberList from "../components/projects/membersList"
-import SocialIcon from "../components/theme/socialIcon"
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import avatar from '../images/defaults/avatar.png';
+import crowdIcon from '../images/icons/crowd.png';
+import portfolioIcon from '../images/icons/portfolio.png';
+import bulbIcon from '../images/icons/bulb.png';
+import MemberList from '../components/projects/membersList';
+import SocialIcon from '../components/theme/socialIcon';
 
 export default class ProjectTemplate extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       switchTab: null,
-    }
+    };
   }
 
   handleDescriptionClick() {
     this.setState({
-      switchTab: "descriptionTab",
-    })
+      switchTab: 'descriptionTab',
+    });
   }
 
   handleGalleryClick() {
     this.setState({
-      switchTab: "galleryTab",
-    })
+      switchTab: 'galleryTab',
+    });
   }
 
   handleMembersClick() {
     this.setState({
-      switchTab: "membersTab",
-    })
+      switchTab: 'membersTab',
+    });
   }
 
   renderTab() {
-    if (this.state.switchTab === "galleryTab") {
+    if (this.state.switchTab === 'galleryTab') {
       return (
         <section className="my-4 container">
           <div className="gallery">
             <div className="row">
-              {this.props.data.projectsYaml.gallery.map(image => {
+              {this.props.data.projectsYaml.gallery.map((image) => {
                 return (
                   <div
                     className="col-sm-6 project-image my-2"
@@ -52,19 +52,19 @@ export default class ProjectTemplate extends React.Component {
                       alt={image}
                     />
                   </div>
-                )
+                );
               })}
             </div>
           </div>
         </section>
-      )
+      );
     }
-    if (this.state.switchTab === "membersTab") {
+    if (this.state.switchTab === 'membersTab') {
       return (
         <section className="my-4">
           <MemberList members={this.props.data.projectsYaml} />
         </section>
-      )
+      );
     } else {
       return (
         <section className="my-4 container">
@@ -75,7 +75,7 @@ export default class ProjectTemplate extends React.Component {
             }}
           />
         </section>
-      )
+      );
     }
   }
 
@@ -95,8 +95,8 @@ export default class ProjectTemplate extends React.Component {
                   <img
                     src={
                       this.props.data.projectsYaml.cover
-                        ? this.props.data.projectsYaml.cover.childImageSharp
-                            .resize.src
+                        ? this.props.data.projectsYaml.cover.childImageSharp.resize
+                            .src
                         : avatar
                     }
                     alt={this.props.data.projectsYaml.slug + `'s image`}
@@ -151,7 +151,7 @@ export default class ProjectTemplate extends React.Component {
           {this.renderTab()}
         </div>
       </Layout>
-    )
+    );
   }
 }
 
@@ -187,4 +187,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

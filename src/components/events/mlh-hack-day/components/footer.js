@@ -1,6 +1,6 @@
-import React from "react"
-import Github from "../images/github.png"
-import MLH from "../../mlh-hack-day/images/mlh-logo-white.png"
+import React from 'react';
+import Github from '../images/github.png';
+import MLH from '../../mlh-hack-day/images/mlh-logo-white.png';
 
 const Footer = () => {
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

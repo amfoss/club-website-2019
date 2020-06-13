@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from "react"
-import "./styles/style.sass"
+import React, { useState, useEffect } from 'react';
+import './styles/style.sass';
 
-import Header from "./components/header"
-import Map from "./components/map"
-import SEO from "../../../components/seo"
-import Countdown from "./components/countdown"
-import Registration from "./components/registration"
-import Footer from "./components/footer"
-import RSVPForm from "./components/rsvpForm"
-import LearnMore from "./components/learnmore"
+import Header from './components/header';
+import Map from './components/map';
+import SEO from '../../../components/seo';
+import Countdown from './components/countdown';
+import Registration from './components/registration';
+import Footer from './components/footer';
+import RSVPForm from './components/rsvpForm';
+import LearnMore from './components/learnmore';
 
 const Hacktoberfest = () => {
-  const [hash, setHash] = useState("")
-  const [queryLoaded, setQueryLoaded] = useState(false)
+  const [hash, setHash] = useState('');
+  const [queryLoaded, setQueryLoaded] = useState(false);
 
   useEffect(() => {
     if (!queryLoaded) {
-      const query = window.location.search.substring(1)
-      const queryHash = query.split("=")
-      setHash(queryHash[1])
-      setQueryLoaded(true)
+      const query = window.location.search.substring(1);
+      const queryHash = query.split('=');
+      setHash(queryHash[1]);
+      setQueryLoaded(true);
     }
-  })
+  });
 
-  console.log(hash)
+  console.log(hash);
 
   return (
     <section id="hacktoberfest">
@@ -41,7 +41,7 @@ const Hacktoberfest = () => {
         <RSVPForm hash={hash} />
       )}
     </section>
-  )
-}
+  );
+};
 
-export default Hacktoberfest
+export default Hacktoberfest;

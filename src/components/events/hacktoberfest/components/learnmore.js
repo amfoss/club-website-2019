@@ -1,5 +1,5 @@
-import React from "react"
-import DigitalOcean from "../../hacktoberfest/images/hacktoberdigital.svg"
+import React from 'react';
+import DigitalOcean from '../../hacktoberfest/images/hacktoberdigital.svg';
 
 const LearnMore = () => {
   return (
@@ -14,14 +14,14 @@ const LearnMore = () => {
             promoting and supporting Open Source collaboration. It's all about
             encouraging meaningful contributions to open source.
             <br />
-            Join Hacktoberfest meetup hosted by amFOSS on 9th and 10th of
-            October and don't miss this oppurtunity to get a{" "}
+            Join Hacktoberfest meetup hosted by amFOSS on 9th and 10th of October and
+            don't miss this oppurtunity to get a{' '}
             <span>limited edition T-shirt!</span>
           </p>
           <button className="button">
             <a
               href="https://hacktoberfest.digitalocean.com/"
-              style={{ color: "black", textDecoration: "none" }}
+              style={{ color: 'black', textDecoration: 'none' }}
             >
               LEARN MORE!
             </a>
@@ -29,7 +29,7 @@ const LearnMore = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default LearnMore
+export default LearnMore;

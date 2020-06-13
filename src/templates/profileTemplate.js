@@ -1,14 +1,14 @@
-import React from "react"
-import { graphql } from "gatsby"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
-import Avatar from "../images/defaults/avatar.png"
+import React from 'react';
+import { graphql } from 'gatsby';
+import SEO from '../components/seo';
+import Layout from '../components/layout';
+import Avatar from '../images/defaults/avatar.png';
 
 export default ({ data: { cms } }) => {
-  const member = cms.user
+  const member = cms.user;
   return (
     <Layout>
-      <SEO title={member.firstName + " " + member.lastName} />
+      <SEO title={member.firstName + ' ' + member.lastName} />
       <section id="cover">
         <div className="container d-md-flex justify-content-center">
           <>
@@ -21,7 +21,7 @@ export default ({ data: { cms } }) => {
                     ? `https://avatars.githubusercontent.com/${member.profile.githubUsername}`
                     : Avatar
                 }
-                alt={member.firstName + " " + member.lastName + `'s photo`}
+                alt={member.firstName + ' ' + member.lastName + `'s photo`}
                 id="profile-pic"
                 className="rounded-circle"
               />
@@ -29,9 +29,7 @@ export default ({ data: { cms } }) => {
             <div className="ml-4">
               <div className="name text-left">
                 <div
-                  className={
-                    "d-inline-block text-left role-tag my-4 " + member.role
-                  }
+                  className={'d-inline-block text-left role-tag my-4 ' + member.role}
                 >
                   {member.role}
                 </div>
@@ -45,8 +43,8 @@ export default ({ data: { cms } }) => {
         </div>
       </section>
     </Layout>
-  )
-}
+  );
+};
 
 export const pageQuery = graphql`
   query($username: String!) {
@@ -63,4 +61,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

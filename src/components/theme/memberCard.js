@@ -1,17 +1,30 @@
-import PropTypes from "prop-types"
-import React from "react"
-import { Link } from "gatsby"
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Link } from 'gatsby';
 
-import defaultAvatar from "../../images/defaults/avatar.png"
+import defaultAvatar from '../../images/defaults/avatar.png';
 
-const MemberCard = ({ username, firstName, lastName, tag, tagline, githubUsername, profilePic }) => (
-  <Link to={"/@" + username} className="member-card card">
+const MemberCard = ({
+  username,
+  firstName,
+  lastName,
+  tag,
+  tagline,
+  githubUsername,
+  profilePic,
+}) => (
+  <Link to={'/@' + username} className="member-card card">
     <img
-      src={profilePic ? `https://api.amfoss.in/${profilePic}`:
-        githubUsername ?  `https://avatars.githubusercontent.com/${githubUsername}`: defaultAvatar}
-      alt={firstName + " " + lastName + `'s photo`}
+      src={
+        profilePic
+          ? `https://api.amfoss.in/${profilePic}`
+          : githubUsername
+          ? `https://avatars.githubusercontent.com/${githubUsername}`
+          : defaultAvatar
+      }
+      alt={firstName + ' ' + lastName + `'s photo`}
     />
-    <div className={"role-tag " + tag}>{tag}</div>
+    <div className={'role-tag ' + tag}>{tag}</div>
     <div>
       <h6>
         {firstName} {lastName}
@@ -19,7 +32,7 @@ const MemberCard = ({ username, firstName, lastName, tag, tagline, githubUsernam
       <sub>{tagline}</sub>
     </div>
   </Link>
-)
+);
 
 MemberCard.propTypes = {
   username: PropTypes.string,
@@ -28,17 +41,17 @@ MemberCard.propTypes = {
   avatar: PropTypes.string,
   tagline: PropTypes.string,
   tag: PropTypes.string,
-  githubUsername: PropTypes.string
-}
+  githubUsername: PropTypes.string,
+};
 
 MemberCard.defaultProps = {
-  username: "",
-  firstName: "",
-  lastName: "",
-  avatar: "",
-  tagline: "",
-  tag: "Member",
-  githubUsername: ""
-}
+  username: '',
+  firstName: '',
+  lastName: '',
+  avatar: '',
+  tagline: '',
+  tag: 'Member',
+  githubUsername: '',
+};
 
-export default MemberCard
+export default MemberCard;

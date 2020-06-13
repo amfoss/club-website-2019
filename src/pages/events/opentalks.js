@@ -1,8 +1,6 @@
-import React from "react"
-import OpenTalks from "../../components/events/open-talks"
+import React from 'react';
+import OpenTalks from '../../components/events/open-talks';
 
-const Events = () => (
-  <OpenTalks/>
-)
+const Events = () => <OpenTalks />;
 
-export default Events
+export default Events;

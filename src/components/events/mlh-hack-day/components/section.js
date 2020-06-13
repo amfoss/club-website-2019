@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 const section = ({ align, background, title, content, counters }) => {
   return (
@@ -10,11 +10,11 @@ const section = ({ align, background, title, content, counters }) => {
       <div>{content}</div>
       {counters.length > 0 ? (
         <div className="row m-0 section-counters">
-          {counters.map(e => (
+          {counters.map((e) => (
             <div className="col-md-3">
               <div className="big-text">
                 {e.value}
-                {e.plus ? "+" : null}
+                {e.plus ? '+' : null}
               </div>
               <div>{e.text}</div>
             </div>
@@ -22,7 +22,7 @@ const section = ({ align, background, title, content, counters }) => {
         </div>
       ) : null}
     </div>
-  )
-}
+  );
+};
 
-export default section
+export default section;

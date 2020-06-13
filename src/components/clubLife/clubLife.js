@@ -1,6 +1,6 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import SectionCard from "../theme/sectionCard"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import SectionCard from '../theme/sectionCard';
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -22,7 +22,7 @@ export default () => {
         }
       }
     }
-  `)
+  `);
 
   return data.allClubLifeYaml.nodes.map((node, i) => (
     <SectionCard
@@ -33,5 +33,5 @@ export default () => {
       content={node.Content}
       slider={node.Slider}
     />
-  ))
-}
+  ));
+};

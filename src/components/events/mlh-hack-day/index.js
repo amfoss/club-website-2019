@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from "react"
-import SEO from "../../../components/seo"
-import Header from "./components/header"
-import Registration from "./components/registration"
-import "./styles/style.sass"
-import Countdown from "./components/countdown"
-import RSVPForm from "./components/rsvpForm"
-import Footer from "./components/footer"
+import React, { useState, useEffect } from 'react';
+import SEO from '../../../components/seo';
+import Header from './components/header';
+import Registration from './components/registration';
+import './styles/style.sass';
+import Countdown from './components/countdown';
+import RSVPForm from './components/rsvpForm';
+import Footer from './components/footer';
 
 const MLH = () => {
-  const [hash, setHash] = useState("")
-  const [queryLoaded, setQueryLoaded] = useState(false)
+  const [hash, setHash] = useState('');
+  const [queryLoaded, setQueryLoaded] = useState(false);
 
   useEffect(() => {
     if (!queryLoaded) {
-      const query = window.location.search.substring(1)
-      const queryHash = query.split("=")
-      setHash(queryHash[1])
-      setQueryLoaded(true)
+      const query = window.location.search.substring(1);
+      const queryHash = query.split('=');
+      setHash(queryHash[1]);
+      setQueryLoaded(true);
     }
-  })
+  });
 
   return (
     <div id="mlh-landing">
@@ -34,7 +34,7 @@ const MLH = () => {
         <RSVPForm hash={hash} />
       )}
     </div>
-  )
-}
+  );
+};
 
-export default MLH
+export default MLH;

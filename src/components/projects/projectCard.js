@@ -1,11 +1,11 @@
-import PropTypes from "prop-types"
-import React from "react"
-import { Link } from "gatsby"
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Link } from 'gatsby';
 
-import avatar from "../../images/defaults/avatar.png"
+import avatar from '../../images/defaults/avatar.png';
 
 const ProjectCard = ({ project }) => (
-  <Link to={"/projects/" + project.slug} className="card no-decoration h-100">
+  <Link to={'/projects/' + project.slug} className="card no-decoration h-100">
     <img
       className="cover"
       src={project.cover ? project.cover.childImageSharp.resize.src : avatar}
@@ -16,14 +16,14 @@ const ProjectCard = ({ project }) => (
       <div dangerouslySetInnerHTML={{ __html: project.description }} />
     </div>
   </Link>
-)
+);
 
 ProjectCard.propTypes = {
   project: PropTypes.any,
-}
+};
 
 ProjectCard.defaultProps = {
   project: null,
-}
+};
 
-export default ProjectCard
+export default ProjectCard;

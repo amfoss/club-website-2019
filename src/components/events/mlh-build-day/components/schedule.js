@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 const Schedule = () => {
   return (
@@ -48,7 +48,7 @@ const Schedule = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Schedule
+export default Schedule;

@@ -1,8 +1,8 @@
-import React from "react"
+import React from 'react';
 
 const Map = () => {
   return (
-    <section id="venue-details" style={{ backgroundColor: "black" }}>
+    <section id="venue-details" style={{ backgroundColor: 'black' }}>
       <div className="row m-0 w-100">
         <div className="col-lg-8 order-2 p-4">
           <iframe
@@ -22,7 +22,7 @@ const Map = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Map
+export default Map;

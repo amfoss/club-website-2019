@@ -1,9 +1,9 @@
-import React from "react"
+import React from 'react';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import TitleBar from "../components/theme/titleBar"
-import StorySections from "../components/about/storySections"
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import TitleBar from '../components/theme/titleBar';
+import StorySections from '../components/about/storySections';
 
 const About = () => (
   <Layout>
@@ -12,6 +12,6 @@ const About = () => (
     <h2 className="mt-4 ml-4">Our Story</h2>
     <StorySections />
   </Layout>
-)
+);
 
-export default About
+export default About;

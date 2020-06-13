@@ -1,8 +1,8 @@
-import React from "react"
-import FooterNav from "./theme/footerNav"
+import React from 'react';
+import FooterNav from './theme/footerNav';
 
-import amritaLogo from "../images/logos/amrita.png"
-import bi0sLogo from "../images/logos/bi0s.png"
+import amritaLogo from '../images/logos/amrita.png';
+import bi0sLogo from '../images/logos/bi0s.png';
 
 const Footer = () => (
   <footer>
@@ -18,8 +18,7 @@ const Footer = () => (
       </div>
       <div className="col-lg-4 p-2">
         <div className="w-100">
-          &copy; Team amFOSS 2007-{new Date().getFullYear()}. All Rights
-          Reserved.
+          &copy; Team amFOSS 2007-{new Date().getFullYear()}. All Rights Reserved.
         </div>
       </div>
       <div className="col-lg-3 p-2">
@@ -31,6 +30,6 @@ const Footer = () => (
       </div>
     </div>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;

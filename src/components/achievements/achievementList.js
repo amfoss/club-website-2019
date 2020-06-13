@@ -1,12 +1,12 @@
-import React, { useState } from "react"
-import getProfiles from "../theme/getProfiles"
-import ListCard from "../theme/listCard"
+import React, { useState } from 'react';
+import getProfiles from '../theme/getProfiles';
+import ListCard from '../theme/listCard';
 
 const AchievementList = ({ title, members, tagname }) => {
-  let years = [...new Set(members.map(obj => obj.node.Year))]
-  const [year, setYear] = useState(years[0])
-  const profiles = getProfiles()
-  let filtered = members.filter(member => member.node.Year == year)
+  let years = [...new Set(members.map((obj) => obj.node.Year))];
+  const [year, setYear] = useState(years[0]);
+  const profiles = getProfiles();
+  let filtered = members.filter((member) => member.node.Year == year);
   return (
     <div className="list-card card">
       <div className="list-heading d-flex">
@@ -14,7 +14,7 @@ const AchievementList = ({ title, members, tagname }) => {
         <div className="w-25">
           <select
             name="years"
-            onChange={event => setYear(event.target.value)}
+            onChange={(event) => setYear(event.target.value)}
             value={year}
           >
             {years.map((year, key) => (
@@ -25,11 +25,11 @@ const AchievementList = ({ title, members, tagname }) => {
           </select>
         </div>
       </div>
-      {filtered.map(member => {
+      {filtered.map((member) => {
         let profile = profiles.find(
-          profile => profile.node.username === member.node.Member
-        )
-        const tagline = member.node[tagname]
+          (profile) => profile.node.username === member.node.Member
+        );
+        const tagline = member.node[tagname];
         return profile ? (
           <ListCard
             key={member.node.id}
@@ -43,10 +43,10 @@ const AchievementList = ({ title, members, tagname }) => {
                 : null
             }
           />
-        ) : null
+        ) : null;
       })}
     </div>
-  )
-}
+  );
+};
 
-export default AchievementList
+export default AchievementList;

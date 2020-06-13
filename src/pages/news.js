@@ -1,28 +1,26 @@
-import React, { useState } from "react"
-import { graphql } from "gatsby"
+import React, { useState } from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import TitleBar from "../components/theme/titleBar"
-import NewsCard from "../components/news/newsCard"
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import TitleBar from '../components/theme/titleBar';
+import NewsCard from '../components/news/newsCard';
 
 const News = ({
   data: {
     allMarkdownRemark: { edges },
   },
 }) => {
-  const [query, setQuery] = useState("")
-  const filter = edges.filter(edge => {
-    if (
-      edge.node.frontmatter.title.toLowerCase().startsWith(query.toLowerCase())
-    )
-      return 1
-  })
-  const Articles = filter.map(edge => (
+  const [query, setQuery] = useState('');
+  const filter = edges.filter((edge) => {
+    if (edge.node.frontmatter.title.toLowerCase().startsWith(query.toLowerCase()))
+      return 1;
+  });
+  const Articles = filter.map((edge) => (
     <div key={edge.node.id} className="p-2">
       <NewsCard article={edge.node.frontmatter} />
     </div>
-  ))
+  ));
 
   return (
     <Layout>
@@ -35,7 +33,7 @@ const News = ({
         <div className="col-md-4 col-lg-3 order-md-2 order-1 px-2 py-4">
           <div
             className="card p-4 position-sticky"
-            style={{ top: "1rem" }}
+            style={{ top: '1rem' }}
             id="filter-card"
           >
             <h5 className="my-3">Search & Filter</h5>
@@ -46,7 +44,7 @@ const News = ({
                 type="text"
                 className="form w-100 p-2 mt-2"
                 placeholder="Search Here"
-                onChange={e => setQuery(e.target.value)}
+                onChange={(e) => setQuery(e.target.value)}
               />
               <hr />
             </div>
@@ -54,10 +52,10 @@ const News = ({
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default News
+export default News;
 
 export const pageQuery = graphql`
   query {
@@ -85,4 +83,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

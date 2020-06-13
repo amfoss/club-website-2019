@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from 'gatsby';
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -20,6 +20,6 @@ export default () => {
         }
       }
     }
-  `)
-  return data.allMembersYaml.edges
-}
+  `);
+  return data.allMembersYaml.edges;
+};

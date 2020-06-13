@@ -1,8 +1,8 @@
-import React from "react"
-import amFOSSLogo from "../../../../../src/images/amfoss_logo.png"
-import amritaLogo from "../../../../../src/images/amrita_logo.png"
-import LocalHackDay from "../../../events/mlh-hack-day/images/localhackday.svg"
-import Particles from "react-particles-js"
+import React from 'react';
+import amFOSSLogo from '../../../../../src/images/amfoss_logo.png';
+import amritaLogo from '../../../../../src/images/amrita_logo.png';
+import LocalHackDay from '../../../events/mlh-hack-day/images/localhackday.svg';
+import Particles from 'react-particles-js';
 
 const Header = () => {
   return (
@@ -32,19 +32,19 @@ const Header = () => {
               move: {
                 random: true,
                 speed: 3,
-                direction: "down",
-                out_mode: "out",
+                direction: 'down',
+                out_mode: 'out',
               },
             },
             interactivity: {
               events: {
                 onhover: {
                   enable: true,
-                  mode: "bubble",
+                  mode: 'bubble',
                 },
                 onclick: {
                   enable: true,
-                  mode: "repulse",
+                  mode: 'repulse',
                 },
               },
               modes: {
@@ -92,7 +92,7 @@ const Header = () => {
                     <button className="button">
                       <a
                         href="#registration-form"
-                        style={{ color: "black", textDecoration: "none" }}
+                        style={{ color: 'black', textDecoration: 'none' }}
                       >
                         REGISTER NOW
                       </a>
@@ -105,7 +105,7 @@ const Header = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

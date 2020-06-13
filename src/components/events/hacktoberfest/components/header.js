@@ -1,11 +1,11 @@
-import React from "react"
-import hacktoberfest19logo from "../../hacktoberfest/images/hacktoberfest19.png"
-import hacktoberfest19Art1 from "../../hacktoberfest/images/hacktoberfest_art_1.png"
-import hacktoberfest19Art2 from "../../hacktoberfest/images/hacktoberfest_art_2.png"
-import amFOSSLogo from "../../../../../src/images/amfoss_logo.png"
-import amritaLogo from "../../../../../src/images/amrita_logo.png"
+import React from 'react';
+import hacktoberfest19logo from '../../hacktoberfest/images/hacktoberfest19.png';
+import hacktoberfest19Art1 from '../../hacktoberfest/images/hacktoberfest_art_1.png';
+import hacktoberfest19Art2 from '../../hacktoberfest/images/hacktoberfest_art_2.png';
+import amFOSSLogo from '../../../../../src/images/amfoss_logo.png';
+import amritaLogo from '../../../../../src/images/amrita_logo.png';
 
-import Particles from "react-particles-js"
+import Particles from 'react-particles-js';
 
 const Header = () => {
   return (
@@ -35,19 +35,19 @@ const Header = () => {
               move: {
                 random: true,
                 speed: 3,
-                direction: "down",
-                out_mode: "out",
+                direction: 'down',
+                out_mode: 'out',
               },
             },
             interactivity: {
               events: {
                 onhover: {
                   enable: true,
-                  mode: "bubble",
+                  mode: 'bubble',
                 },
                 onclick: {
                   enable: true,
-                  mode: "repulse",
+                  mode: 'repulse',
                 },
               },
               modes: {
@@ -92,7 +92,7 @@ const Header = () => {
                   <button className="button">
                     <a
                       href="#registration-form"
-                      style={{ color: "black", textDecoration: "none" }}
+                      style={{ color: 'black', textDecoration: 'none' }}
                     >
                       REGISTER NOW
                     </a>
@@ -104,7 +104,7 @@ const Header = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

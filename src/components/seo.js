@@ -1,7 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({ author, description, lang, meta, title, type, keywords, slug }) {
   const { site } = useStaticQuery(
@@ -17,9 +17,9 @@ function SEO({ author, description, lang, meta, title, type, keywords, slug }) {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
   const url = `${site.siteMetadata.siteUrl}/news/${slug}`;
   const metaImage = `${url}/seo.jpg`;
 
@@ -76,26 +76,28 @@ function SEO({ author, description, lang, meta, title, type, keywords, slug }) {
           content: metaDescription,
         },
         {
-          name: "hosting-dcv",
+          name: 'hosting-dcv',
           content:
-            "6e16d6248fca96228ab0494ed816bb59-501e7dcc94812d01473d63d948b9df96",
+            '6e16d6248fca96228ab0494ed816bb59-501e7dcc94812d01473d63d948b9df96',
         },
-      ].concat(
-        metaImage
-          ? [
-            {
-              property: 'og:image',
-              content: metaImage,
-            },
-            {
-              name: 'twitter:image',
-              content: metaImage,
-            },
-          ]
-          : []
-      ).concat(meta)}
+      ]
+        .concat(
+          metaImage
+            ? [
+                {
+                  property: 'og:image',
+                  content: metaImage,
+                },
+                {
+                  name: 'twitter:image',
+                  content: metaImage,
+                },
+              ]
+            : []
+        )
+        .concat(meta)}
     />
-  )
+  );
 }
 
 SEO.defaultProps = {
@@ -105,7 +107,7 @@ SEO.defaultProps = {
   description: ``,
   type: `website`,
   keywords: ``,
-}
+};
 
 SEO.propTypes = {
   author: PropTypes.string,
@@ -116,6 +118,6 @@ SEO.propTypes = {
   type: PropTypes.string,
   keywords: PropTypes.string,
   image: PropTypes.string,
-}
+};
 
-export default SEO
+export default SEO;

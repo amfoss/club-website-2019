@@ -1,5 +1,5 @@
-import React from "react"
-import SocialIcon from "./socialIcon"
+import React from 'react';
+import SocialIcon from './socialIcon';
 
 const SocialMenu = () => (
   <div className="social-menu">
@@ -9,6 +9,6 @@ const SocialMenu = () => (
     <SocialIcon name="instagram" link="https://instagram.com/amfoss.in" />
     <SocialIcon name="linkedin" link="https://linkedin.com/company/amfoss" />
   </div>
-)
+);
 
-export default SocialMenu
+export default SocialMenu;

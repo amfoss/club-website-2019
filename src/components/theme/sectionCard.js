@@ -1,13 +1,13 @@
-import React from "react"
-import classnames from "classnames"
-import PropTypes from "prop-types"
-import "react-responsive-carousel/lib/styles/carousel.min.css"
-import { Carousel } from "react-responsive-carousel"
+import React from 'react';
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 
-const SectionPoints = points => {
+const SectionPoints = (points) => {
   return (
     <div className="row m-0 points my-4">
-      {points.map(point => (
+      {points.map((point) => (
         <div key={point.id} className="col-md-4 p-2">
           <div className="card px-2 py-4 h-100 d-flex align-items-center">
             <div>
@@ -26,13 +26,13 @@ const SectionPoints = points => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-const SectionStats = stats => {
+const SectionStats = (stats) => {
   return (
     <div className="row m-0 points my-4">
-      {stats.map(point => (
+      {stats.map((point) => (
         <div className="col-6 col-md-4 col-lg-3 p-2">
           <div className="stats-card card px-2 h-100">
             <h6>{point.Num}</h6>
@@ -41,8 +41,8 @@ const SectionStats = stats => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
 const CardSlider = ({ slider, title }) => {
   return (
@@ -61,13 +61,13 @@ const CardSlider = ({ slider, title }) => {
             <img
               key={i}
               src={slide.Image.childImageSharp.fluid.src}
-              alt={"Photos of " + title}
+              alt={'Photos of ' + title}
             />
           ))
         : null}
     </Carousel>
-  )
-}
+  );
+};
 const SectionCard = ({
   index,
   title,
@@ -118,7 +118,7 @@ const SectionCard = ({
     {points && points.length ? SectionPoints(points) : null}
     {stats && stats.length ? SectionStats(stats) : null}
   </div>
-)
+);
 
 SectionCard.propTypes = {
   index: PropTypes.number,
@@ -129,17 +129,17 @@ SectionCard.propTypes = {
   stats: PropTypes.any,
   quote: PropTypes.string,
   slider: PropTypes.any,
-}
+};
 
 SectionCard.defaultProps = {
   section: null,
   index: 1,
-  title: "",
-  content: "",
+  title: '',
+  content: '',
   image: null,
   points: null,
   quote: null,
   slider: null,
-}
+};
 
-export default SectionCard
+export default SectionCard;
