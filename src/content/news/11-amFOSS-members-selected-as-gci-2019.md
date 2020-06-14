@@ -6,6 +6,7 @@ cover: ./covers/gci.png
 date: "2019-12-08"
 categories: ["Club Achievement"]
 tags: ["google", "google-code-in", "mentor"]
+pinned: true
 description: "11 amFOSS members selected as GCI 2019 mentors"
 ---
 

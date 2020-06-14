@@ -23,35 +23,30 @@ export default function Template({ data: { markdownRemark } }) {
         type="article"
       />
       <TitleBar title={markdownRemark.frontmatter.title} type="h3" />
-      <div className="row mx-0 my-4">
+      <div className="row mx-2 my-4">
         <div className="col-md-9 order-2 order-md-1">
-          <div
-            className="card p-4 content-text-size"
-            dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+          <img
+            className="w-100 post-cover mb-2"
+            src={markdownRemark.frontmatter.cover.publicURL}
+            alt={markdownRemark.frontmatter.slug + `'s image`}
           />
         </div>
         <div className="col-md-3 order-1 mb-4 order-md-2">
-          <div className="card">
-            <img
-              className="w-100 cover"
-              src={
-                markdownRemark.frontmatter.cover
-                  ? markdownRemark.frontmatter.cover.publicURL
-                  : avatar
-              }
-              alt={markdownRemark.frontmatter.slug + `'s image`}
-            />
-            <div className="m-4">
-              <h6>@{markdownRemark.frontmatter.author}</h6>
+          <div className="card-no-hover p-2">
+            <div>
+              {markdownRemark.frontmatter.categories.map((cat, id) => (
+                <div key={id} className={'tag mt-2 ' + cat}>
+                  {cat}
+                </div>
+              ))}
+            </div>
+            <div>
+              <i className="fa fa-calendar-alt ml-4" />{' '}
+              {markdownRemark.frontmatter.date}
+            </div>
+            <div className="mx-4 mb-3">
               <div>
-                {markdownRemark.frontmatter.categories.map((cat, id) => (
-                  <div key={id} className={'tag mt-4 ' + cat}>
-                    {cat}
-                  </div>
-                ))}
-              </div>
-              <div>
-                <h6>Tags</h6>
+                <h6 className="mt-2">Tags</h6>
                 {markdownRemark.frontmatter.tags.map((cat, id) => (
                   <li key={id}>{cat}</li>
                 ))}
@@ -59,6 +54,12 @@ export default function Template({ data: { markdownRemark } }) {
             </div>
           </div>
         </div>
+      </div>
+      <div className="mx-4">
+        <div
+          className="card-no-hover p-4 content-text-size"
+          dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+        />
       </div>
       <div className="p-2">
         <Disqus

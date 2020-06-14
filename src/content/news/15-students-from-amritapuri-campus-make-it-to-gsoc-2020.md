@@ -6,6 +6,7 @@ cover: ./covers/gsoc-2020.png
 date: "2020-05-04"
 categories: ["Club Achievement"]
 tags: ["gsoc", "google", "summer-of-code"]
+pinned: true
 description: "15 Students from Amrita Vishwa Vidyapeetham, Amritapuri Campus selected for Google Summer of Code 2020 Program."
 ---
 
