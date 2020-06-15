@@ -32,7 +32,7 @@ const Project = () => {
   }, [data]);
 
   const filter = data.filter((project) => {
-    if (project.name.toLowerCase().startsWith(query.toLowerCase())) return 1;
+    if (project.name.toLowerCase().indexOf(query.toLowerCase()) !== -1) return 1;
   });
   const Projects = filter.map((project) => (
     <div key={project.name} className="col-xl-5 col-md-10 col-sm-6 pb-4">
