@@ -2,13 +2,13 @@ const path = require('path');
 
 function createProjectPages(result, createPage) {
   const ProjectTemplate = path.resolve(`src/templates/projectTemplate.js`);
-  const projects = result.data.allProjectsYaml.edges;
-  projects.forEach(({ node }) => {
+  const projects = result.data.cms.projects;
+  projects.map((project) => {
     createPage({
-      path: '/projects' + '/' + node.slug,
+      path: '/projects' + '/' + project.slug,
       component: ProjectTemplate,
       context: {
-        title: node.title,
+        slug: project.slug,
       },
     });
   });
@@ -17,16 +17,9 @@ function createProjectPages(result, createPage) {
 function graphqlForProjects(graphql, createPage) {
   return graphql(`
     {
-      allProjectsYaml(sort: { fields: slug, order: ASC }) {
-        edges {
-          node {
-            title
-            members {
-              user
-              role
-            }
-            slug
-          }
+      cms {
+        projects {
+          slug
         }
       }
     }

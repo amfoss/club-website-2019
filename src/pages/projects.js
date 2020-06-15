@@ -1,25 +1,42 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-import { graphql } from 'gatsby';
-
 import ProjectCard from '../components/projects/projectCard';
 import TitleBar from '../components/theme/titleBar';
+import dataFetch from '../utils/dataFetch';
+import ReactLoading from 'react-loading';
 
-const Project = ({
-  data: {
-    allProjectsYaml: { edges },
-  },
-}) => {
+const projectsQuery = ` query {
+    projects{
+      name
+      slug
+      featured
+      tagline
+      cover
+    }
+  }`;
+
+const Project = () => {
+  const [isLoading, setLoading] = useState(false);
   const [query, setQuery] = useState('');
-  const filter = edges.filter((edge) => {
-    if (edge.node.title.toLowerCase().startsWith(query.toLowerCase())) return 1;
+  const [data, setData] = useState([]);
+
+  const fetchData = async () => await dataFetch({ query: projectsQuery });
+  useEffect(() => {
+    fetchData().then((r) => {
+      setData(r.data.projects);
+      setLoading(true);
+    });
+  }, [data]);
+
+  const filter = data.filter((project) => {
+    if (project.name.toLowerCase().startsWith(query.toLowerCase())) return 1;
   });
-  const Projects = filter.map((edge) => (
-    <div key={edge.node.id} className="col-xl-5 col-md-10 col-sm-6 pb-4">
-      <ProjectCard project={edge.node} />
+  const Projects = filter.map((project) => (
+    <div key={project.name} className="col-xl-5 col-md-10 col-sm-6 pb-4">
+      <ProjectCard project={project} />
     </div>
   ));
 
@@ -29,7 +46,13 @@ const Project = ({
       <TitleBar title="Projects" />
       <div className="row m-0 p-1">
         <div className="col-md-8 col-lg-9 p-2 order-2 order-md-1">
-          <div className="row mx-2 my-4">{Projects}</div>
+          <div className="row mx-2 my-4">
+            {isLoading ? (
+              Projects
+            ) : (
+              <ReactLoading type="spinningBubbles" color="#000" />
+            )}
+          </div>
         </div>
         <div className="col-md-4 col-lg-3 order-md-2 order-1 px-2 py-4">
           <div
@@ -56,36 +79,3 @@ const Project = ({
   );
 };
 export default Project;
-
-export const pageQuery = graphql`
-  query {
-    allProjectsYaml {
-      edges {
-        node {
-          id
-          title
-          members {
-            user
-            role
-          }
-          gallery {
-            childImageSharp {
-              resize(width: 500) {
-                src
-              }
-            }
-          }
-          slug
-          description
-          cover {
-            childImageSharp {
-              resize(width: 500) {
-                src
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
