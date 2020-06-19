@@ -109,12 +109,18 @@ h6
 .no-decoration:hover
   text-decoration: none!important
 
+.post-header
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+
 .post-cover
   box-shadow: 8px 10px 20px 0 rgba(46, 61, 73, 0.15)
   border-radius: 0.6vh
   width: 100%
-  height: 60vh
   object-fit: cover
+  max-height: 500px
+  height: 100%
 
 .post-card
   color: black
@@ -136,6 +142,13 @@ h6
       position: absolute
       margin-left: 3vh
       bottom: 3vh
+
+.loading
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
 
 .tag
   padding: 0.2rem 1rem
@@ -159,7 +172,6 @@ h6
   box-shadow: 4px 5px 10px 0 rgba(46, 61, 73, 0.15)
   outline: none
   color: black
-
 
 .project-card
   display: block

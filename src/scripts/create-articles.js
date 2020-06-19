@@ -2,15 +2,13 @@ const path = require('path');
 
 function createArticles(result, createPage) {
   const ArticleTemplate = path.resolve(`src/templates/articleTemplate.js`);
-  const articles = result.data.allMarkdownRemark.edges;
-  articles.forEach(({ node }) => {
+  const articles = result.data.cms.news;
+  articles.map((article) => {
     createPage({
-      path: 'news/' + node.frontmatter.slug,
+      path: 'news/' + article.slug,
       component: ArticleTemplate,
       context: {
-        author: node.frontmatter.author,
-        slug: node.frontmatter.slug,
-        id: node.id,
+        slug: article.slug,
       },
     });
   });
@@ -19,25 +17,9 @@ function createArticles(result, createPage) {
 function graphqlForNews(graphql, createPage) {
   return graphql(`
     {
-      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
-        edges {
-          node {
-            id
-            frontmatter {
-              title
-              author
-              tags
-              slug
-              date(formatString: "DD MMMM, YYYY")
-              cover {
-                childImageSharp {
-                  resize(width: 150) {
-                    src
-                  }
-                }
-              }
-            }
-          }
+      cms {
+        news {
+          slug
         }
       }
     }
