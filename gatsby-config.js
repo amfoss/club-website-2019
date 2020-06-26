@@ -30,10 +30,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-plausible`,
       options: {
-        trackingId: 'UA-143287306-2',
-        head: true,
+        domain: `amfoss.in`,
       },
     },
     `gatsby-transformer-sharp`,
