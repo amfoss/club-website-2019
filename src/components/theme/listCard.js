@@ -4,7 +4,17 @@ import { Link } from 'gatsby';
 
 import defaultAvatar from '../../images/defaults/avatar.png';
 
-const ListCard = ({ username, firstName, lastName, avatar, tagline, title, icon }) =>
+const ListCard = ({
+  username,
+  firstName,
+  lastName,
+  avatar,
+  tagline,
+  title,
+  icon,
+  isHTML,
+  link,
+}) =>
   username ? (
     <Link to={'/@' + username} className="card">
       <div className="d-flex">
@@ -28,14 +38,28 @@ const ListCard = ({ username, firstName, lastName, avatar, tagline, title, icon 
   ) : (
     <div className="card px-4 pt-4 pb-2 h-100 text-center my-2">
       <div className="mt-2">
-        <img
-          src={icon ? icon : null}
-          alt={title}
-          style={{ width: '15vmax', maxWidth: '100%', minWidth: '180px' }}
-        />
+        {!link ? (
+          <img
+            src={icon ? icon : null}
+            alt={title}
+            style={{ width: '15vmax', maxWidth: '100%', minWidth: '180px' }}
+          />
+        ) : (
+          <a href={link}>
+            <img
+              src={icon ? icon : null}
+              alt={title}
+              style={{ width: '15vmax', maxWidth: '100%', minWidth: '180px' }}
+            />
+          </a>
+        )}
       </div>
       <h5 className="mt-4">{title}</h5>
-      <div className="list-tagline">{tagline}</div>
+      {!isHTML ? (
+        <div className="list-tagline">{tagline}</div>
+      ) : (
+        <div dangerouslySetInnerHTML={{ __html: tagline }} />
+      )}
     </div>
   );
 
@@ -45,6 +69,7 @@ ListCard.propTypes = {
   lastName: PropTypes.string,
   avatar: PropTypes.string,
   tagline: PropTypes.string,
+  isHTML: PropTypes.bool,
 };
 
 ListCard.defaultProps = {
@@ -53,6 +78,7 @@ ListCard.defaultProps = {
   lastName: '',
   avatar: '',
   tagline: '',
+  isHTML: false,
 };
 
 export default ListCard;

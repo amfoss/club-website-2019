@@ -1,0 +1,19 @@
+- Name: GitLab
+  Icon: ../images/gitlab.png
+  Link: https://gitlab.com/
+  Details: !markdown
+     For providing us with an exclusive plan, we thank the GitLab community for 
+     their help and support.
+     [code.amfoss.in](https://code.amfoss.in/)
+- Name: GitBook
+  Icon: ../images/gitbook.png
+  Link: https://gitbook.com/
+  Details: !markdown
+    For providing us with documentation capabilities,
+    we thank the GitBook team for their help and support. [know.amfoss.in](https://know.amfoss.in)
+- Name: Plausible
+  Icon: ../images/plausible.png
+  Link: https://plausible.io/
+  Details: !markdown
+    For providing us with analytics capabilities,
+    we thank the Plausible team for their support and collaboration.

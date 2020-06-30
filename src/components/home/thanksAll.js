@@ -1,28 +1,51 @@
 import React from 'react';
-import gitlab from '../../images/gitlab-icon.svg';
+import { useStaticQuery, graphql } from 'gatsby';
+import ListCard from '../theme/listCard';
 
 export default () => {
-  return (
-    <div className="card mx-sm-4 my-sm-4 px-4 py-3">
-      <div id="Thanks" className="row">
-        <div className="col-md-9">
-          <h2 className="text-left my-4">Thank You GitLab!</h2>
-          <p>
-            For enabling us to collaborate and develop using{' '}
-            <a href="https://code.amfoss.in">code.amfoss.in</a>, we thank GitLab for
-            generously providing us with the GitLab{' '}
-            <a href="https://about.gitlab.com/pricing/gitlab-com/feature-comparison/">
-              Gold Plan.
-            </a>
-          </p>
-        </div>
+  const data = useStaticQuery(graphql`
+    query {
+      allThankYouYaml {
+        edges {
+          node {
+            id
+            Name
+            Details
+            Link
+            Icon {
+              childImageSharp {
+                resize {
+                  src
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
 
-        <div className="col-md-3">
-          <a href="https://gitlab.com/">
-            <img src={gitlab}></img>
-          </a>
-        </div>
+  return (
+    <section id="thank-you" className="m-4">
+      <h2 className="text-center m-2">Thank you for your help and support.</h2>
+      <div className="row m-0">
+        {data.allThankYouYaml.edges.map((edge) => (
+          <div
+            id="thank-you"
+            className="col-sm-12 col-md-4 col-xl-4 p-2"
+            key={edge.node.id}
+          >
+            <ListCard
+              key={edge.node.id}
+              title={edge.node.Name}
+              tagline={edge.node.Details}
+              icon={edge.node.Icon.childImageSharp.resize.src}
+              link={edge.node.Link}
+              isHTML={true}
+            />
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
