@@ -8,6 +8,7 @@ import achievementsIcon from '../../images/icons/crown.png';
 import membersIcon from '../../images/icons/coworking.png';
 import ProjectsIcon from '../../images/icons/project.png';
 import blogIcon from '../../images/icons/blog.png';
+import newsIcon from '../../images/icons/newsArt.png';
 
 const Menu = () => (
   <div className="menu">
@@ -17,7 +18,8 @@ const Menu = () => (
     <MenuItem name="Achievements" link="/achievements" icon={achievementsIcon} />
     <MenuItem name="Members" link="/members" icon={membersIcon} />
     <MenuItem name="Projects" link="/projects" icon={ProjectsIcon} />
-    <MenuItem name="News" link="/news" icon={blogIcon} />
+    <MenuItem name="News" link="/news" icon={newsIcon} />
+    <MenuItem name="Blog" link="/blog" icon={blogIcon} />
   </div>
 );
 
