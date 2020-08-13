@@ -127,7 +127,6 @@ deploy staging:
 
 deploy prod:
   <<: *deploy
-  when: manual
   allow_failure: false
   stage: deploy prod
   only:
