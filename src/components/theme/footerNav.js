@@ -64,7 +64,7 @@ const FooterNav = () => (
           <h4>The Club</h4>
           <ul>
             <li>
-              <a href="http://blog.amfoss.in">amFOSS Blog</a>
+              <a href="http://amfoss.in/blog">amFOSS Blog</a>
             </li>
             <li>
               <a href="/about#social-initiatives">Social Initiatives</a>
@@ -78,19 +78,30 @@ const FooterNav = () => (
           </ul>
         </div>
       </div>
-      <div id="contact-details" className="col-lg-2 col-6 d-flex p-2">
+      <div id="contact-details" className="d-flex flex-column">
         <div id="contact">
           <h4>Contact Us</h4>
           <div className="footer-contact">
             <h6>
               <i className="fa fa-comments" /> IRC Chat
             </h6>
-            <p>#amfoss on Freenode.</p>
+            <p>
+              #amfoss on <a href="https://webchat.freenode.net/">Freenode.</a>
+            </p>
             <h6>
               <i className="fa fa-envelope" /> Email
             </h6>
             <p>
+              Email:{' '}
               <a href="mailto:amritapurifoss@gmail.com"> amritapurifoss@gmail.com</a>
+              <br />
+              To Contact Administrator:{' '}
+              <a href="mailto:admin@amfoss.in">admin@amfoss.in</a>
+              <br />
+              For General Queries:{' '}
+              <a href="mailto:hello@amfoss.in">hello@amfoss.in</a>
+              <br />
+              For Support: <a href="mailto:support@amfoss.in">support@amfoss.in</a>
             </p>
             <h6>
               <i className="fa fa-location-arrow" /> Address
