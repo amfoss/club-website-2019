@@ -20,8 +20,7 @@ function SEO({ author, description, lang, meta, title, type, keywords, slug }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const url = `${site.siteMetadata.siteUrl}/news/${slug}`;
-  const metaImage = `${url}/seo.jpg`;
+  const metaImage = `${site.siteMetadata.siteUrl}/${type}/${slug}/seo.jpg`;
 
   return (
     <Helmet

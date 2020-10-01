@@ -27,7 +27,7 @@
     "gatsby-yaml-full-file": "^0.1.0",
     "gatsby-yaml-full-markdown": "^0.1.0",
     "isomorphic-fetch": "latest",
-    "jimp": "^0.10.1",
+    "jimp": "^0.10.3",
     "node-sass": "^4.12.0",
     "path": "^0.12.7",
     "prop-types": "^15.7.2",

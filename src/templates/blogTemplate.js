@@ -50,7 +50,7 @@ export default function BlogTemplate(props) {
         description={data.description}
         author={data.author.fullName}
         keywords={data.tags ? data.tags.join(', ') : null}
-        type="article"
+        type="blog"
       />
       <TitleBar title={data.title} type="h3" />
       <div className="row mx-2 my-4">

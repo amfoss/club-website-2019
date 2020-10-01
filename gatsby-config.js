@@ -38,9 +38,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: ['gatsby-plugin-social-banner'],
-      },
     },
     {
       resolve: `gatsby-source-filesystem`,
