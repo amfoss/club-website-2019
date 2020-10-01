@@ -107,14 +107,14 @@ const SectionCard = ({
           className={index % 2 === 0 ? 1 : 2}
           dangerouslySetInnerHTML={{ __html: content }}
         />
+        {quote ? (
+          <React.Fragment>
+            <hr />
+            <div className="quote">{quote}</div>
+          </React.Fragment>
+        ) : null}
       </div>
     </div>
-    {quote ? (
-      <React.Fragment>
-        <hr />
-        <div className="quote">{quote}</div>
-      </React.Fragment>
-    ) : null}
     {points && points.length ? SectionPoints(points) : null}
     {stats && stats.length ? SectionStats(stats) : null}
   </div>
