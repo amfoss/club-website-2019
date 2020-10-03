@@ -6,6 +6,7 @@ import dataFetch from '../utils/dataFetch';
 import TitleBar from '../components/theme/titleBar';
 import dateFormat from 'dateformat';
 import Loading from '../components/theme/loading';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const query = `query ($slug: String!){
   blog(slug: $slug){
@@ -30,6 +31,18 @@ export default function BlogTemplate(props) {
   const variables = { slug: props.pageContext.slug };
   const fetchData = async () => await dataFetch({ query, variables });
 
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            siteUrl
+          }
+        }
+      }
+    `
+  );
+
   const disqusConfig = {
     url: `${'https://amfoss.in' + props.pathname}`,
   };
@@ -50,7 +63,7 @@ export default function BlogTemplate(props) {
         description={data.description}
         author={data.author.fullName}
         keywords={data.tags ? data.tags.join(', ') : null}
-        type="blog"
+        image={`${site.siteMetadata.siteUrl}/news/${data.slug}/seo.jpg`}
       />
       <TitleBar title={data.title} type="h3" />
       <div className="row mx-2 my-4">

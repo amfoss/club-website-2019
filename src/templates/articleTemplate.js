@@ -6,6 +6,7 @@ import dataFetch from '../utils/dataFetch';
 import TitleBar from '../components/theme/titleBar';
 import dateFormat from 'dateformat';
 import Loading from '../components/theme/loading';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const query = `query ($slug: String!){
   getNews(slug: $slug){
@@ -33,6 +34,18 @@ export default function ArticleTemplate(props) {
   const variables = { slug: props.pageContext.slug };
   const fetchData = async () => await dataFetch({ query, variables });
 
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            siteUrl
+          }
+        }
+      }
+    `
+  );
+
   const disqusConfig = {
     url: `${'https://amfoss.in' + props.pathname}`,
   };
@@ -50,11 +63,10 @@ export default function ArticleTemplate(props) {
       <SEO
         title={data.title}
         slug={data.slug}
-        image={`news/${data.slug}/seo.jpg`}
         description={data.description}
         author={data.author.fullName}
         keywords={data.tags ? data.tags.join(', ') : null}
-        type="news"
+        image={`${site.siteMetadata.siteUrl}/news/${data.slug}/seo.jpg`}
       />
       <TitleBar title={data.title} type="h3" />
       <div className="row mx-2 my-4">
