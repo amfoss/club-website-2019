@@ -2,14 +2,14 @@ import React from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import TitleBar from '../components/theme/titleBar';
+import img404 from '../images/illus/404_stuart.png';
 
 const NotFoundPage = () => (
   <Layout>
     <SEO title="404 - Page not Found" />
-    <div className="full-page-cover">
-      <h1>404</h1>
-      <h2>This page was removed, renamed, or doesn't exist.</h2>
-    </div>
+    <TitleBar title="This page does not exist" />
+    <img src={img404} class="img-fluid mx-auto d-block m-4 p-4" alt="404" />
   </Layout>
 );
 
