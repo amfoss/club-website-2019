@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import SEOImage from '../images/logos/amfoss_seo.png';
 
-function SEO({ author, description, lang, meta, image, title, type, keywords }) {
+function SEO({ description, lang, meta, image, title, keywords }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -20,6 +21,7 @@ function SEO({ author, description, lang, meta, image, title, type, keywords }) 
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const metaImage = image ? image : SEOImage;
 
   return (
     <Helmet
@@ -30,24 +32,16 @@ function SEO({ author, description, lang, meta, image, title, type, keywords }) 
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
-          name: `author`,
-          content: author,
-        },
-        {
           name: `description`,
           content: metaDescription,
         },
         {
-          name: `keywords`,
-          content: keywords ? keywords : metaDescription,
-        },
-        {
-          name: `category`,
-          content: type,
-        },
-        {
           property: `og:title`,
           content: title,
+        },
+        {
+          property: `og:url`,
+          content: site.siteMetadata.siteUrl,
         },
         {
           property: `og:description`,
@@ -55,15 +49,11 @@ function SEO({ author, description, lang, meta, image, title, type, keywords }) 
         },
         {
           property: `og:type`,
-          content: type,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`,
+          content: `website`,
         },
         {
           name: `twitter:creator`,
-          content: author ? author : site.siteMetadata.author,
+          content: `@${site.siteMetadata.author}`,
         },
         {
           name: `twitter:title`,
@@ -73,24 +63,44 @@ function SEO({ author, description, lang, meta, image, title, type, keywords }) 
           name: `twitter:description`,
           content: metaDescription,
         },
-        {
-          name: 'hosting-dcv',
-          content:
-            '6e16d6248fca96228ab0494ed816bb59-501e7dcc94812d01473d63d948b9df96',
-        },
       ]
         .concat(
-          image
+          metaImage
             ? [
                 {
-                  property: 'og:image',
-                  content: image,
+                  property: `og:image`,
+                  content: metaImage,
                 },
                 {
-                  name: 'twitter:image',
-                  content: image,
+                  property: `og:image:alt`,
+                  content: title,
+                },
+                {
+                  property: 'og:image:width',
+                  content: metaImage.width,
+                },
+                {
+                  property: 'og:image:height',
+                  content: metaImage.height,
+                },
+                {
+                  name: `twitter:card`,
+                  content: `summary_large_image`,
                 },
               ]
+            : [
+                {
+                  name: `twitter:card`,
+                  content: `summary`,
+                },
+              ]
+        )
+        .concat(
+          keywords.length > 0
+            ? {
+                name: `keywords`,
+                content: keywords,
+              }
             : []
         )
         .concat(meta)}
@@ -99,22 +109,18 @@ function SEO({ author, description, lang, meta, image, title, type, keywords }) 
 }
 
 SEO.defaultProps = {
-  author: ``,
   lang: `en`,
   meta: [],
   description: ``,
-  type: `website`,
   keywords: ``,
   image: ``,
 };
 
 SEO.propTypes = {
-  author: PropTypes.string,
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-  type: PropTypes.string,
   keywords: PropTypes.string,
   image: PropTypes.string,
 };

@@ -61,7 +61,6 @@ export default function BlogTemplate(props) {
         title={data.title}
         slug={data.slug}
         description={data.description}
-        author={data.author.fullName}
         keywords={data.tags ? data.tags.join(', ') : null}
         image={`${site.siteMetadata.siteUrl}/news/${data.slug}/seo.jpg`}
       />
