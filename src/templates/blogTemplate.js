@@ -96,7 +96,7 @@ export default function BlogTemplate(props) {
       </div>
       <div className="mx-4">
         <div
-          className="card-no-hover p-4 content-text-size"
+          className="card-no-hover blog-content p-4 content-text-size"
           dangerouslySetInnerHTML={{ __html: data.description }}
         />
       </div>
