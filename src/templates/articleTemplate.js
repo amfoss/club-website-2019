@@ -46,10 +46,6 @@ export default function ArticleTemplate(props) {
     `
   );
 
-  const disqusConfig = {
-    url: `${'https://amfoss.in' + props.pathname}`,
-  };
-
   useEffect(() => {
     !isLoading &&
       fetchData().then((r) => {
@@ -58,14 +54,20 @@ export default function ArticleTemplate(props) {
       });
   }, [data, isLoading]);
 
+  const disqusConfig = {
+    url: `${'https://amfoss.in/news/' + props.pageContext.slug}`,
+    identifier: data.slug,
+    title: data.title,
+  };
+
   return isLoading ? (
     <Layout>
       <SEO
         title={data.title}
         slug={data.slug}
-        description={data.description}
+        description={data.description.substring(3, 155)}
         keywords={data.tags ? data.tags.join(', ') : null}
-        image={`${site.siteMetadata.siteUrl}/news/${data.slug}/seo.jpg`}
+        image={`https://amfoss.in/news/${data.slug}/seo.jpg`}
       />
       <TitleBar title={data.title} type="h3" />
       <div className="row mx-2 my-4">

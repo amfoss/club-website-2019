@@ -68,6 +68,14 @@ function SEO({ description, lang, meta, image, title, keywords }) {
           metaImage
             ? [
                 {
+                  property: `twitter:image`,
+                  content: metaImage,
+                },
+                {
+                  property: `twitter:image:alt`,
+                  content: title,
+                },
+                {
                   property: `og:image`,
                   content: metaImage,
                 },
