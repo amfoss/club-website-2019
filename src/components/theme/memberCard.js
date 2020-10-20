@@ -13,7 +13,7 @@ const MemberCard = ({
   githubUsername,
   profilePic,
 }) => (
-  <Link className="member-card card">
+  <Link to={'/@' + username} className="member-card card">
     <img
       src={
         profilePic

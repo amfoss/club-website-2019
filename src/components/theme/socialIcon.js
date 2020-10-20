@@ -8,6 +8,8 @@ import linkedin from '../../images/icons/linkedin.png';
 import github from '../../images/icons/github.png';
 import website from '../../images/icons/website.png';
 import chatroom from '../../images/icons/chatroom.png';
+import gitlab from '../../images/icons/gitlab.png';
+import gmail from '../../images/icons/gmail.png';
 
 const SocialIcon = ({ name, link }) =>
   link ? (
@@ -19,6 +21,8 @@ const SocialIcon = ({ name, link }) =>
       {name === 'github' ? <img src={github} alt={name} /> : null}
       {name === 'website' ? <img src={website} alt={name} /> : null}
       {name === 'chatroom' ? <img src={chatroom} alt={name} /> : null}
+      {name === 'gitlab' ? <img src={gitlab} alt={name} /> : null}
+      {name === 'gmail' ? <img src={gmail} alt={name} /> : null}
     </a>
   ) : null;
 
@@ -31,6 +35,8 @@ SocialIcon.propTypes = {
     'github',
     'website',
     'chatroom',
+    'gmail',
+    'gitlab',
     'web',
   ]),
   link: PropTypes.string,
