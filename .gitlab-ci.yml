@@ -4,19 +4,16 @@ stages:
   - caching 
   - lint check
   - build
-  - test
   - deploy review
   - deploy staging 
   - test staging 
-  - deploy prod
-  - test prod
   - pages
 
 variables:
   STAGING_DOMAIN: amfoss_in-staging.surge.sh
-  PROD_DOMAIN: amfoss_in.surge.sh
 
 caching:
+  stage: caching
   cache:
     key: ${CI_COMMIT_REF_SLUG}
     paths:
@@ -54,28 +51,6 @@ build-website:
   artifacts:
     paths:
       - ./public
-
-test artifact:
-  only:
-    - master
-  cache: {}
-  image: alpine
-  script:
-    - grep 'amfoss' ./public/index.html
-
-test site:
-  cache:
-    key: ${CI_COMMIT_REF_SLUG}
-    paths:
-      - ./node_modules
-    policy: pull
-  before_script:
-    - npm install -g gatsby-cli
-  script:
-    - npm install
-    - gatsby serve &
-    - sleep 5
-    - curl -s http://localhost:9000
 
 # A BaseDeploy
 .deploy template: &deploy
@@ -125,18 +100,6 @@ deploy staging:
   environment:
     name: staging
 
-deploy prod:
-  <<: *deploy
-  allow_failure: false
-  stage: deploy prod
-  only:
-    - master
-  variables:
-    DOMAIN: $PROD_DOMAIN
-  environment:
-    name: prod
-
-
 test staging:
   except:
     - schedules
@@ -150,16 +113,6 @@ test staging:
     - curl -s http://$STAGING_DOMAIN 
     - echo "Commit SHA:" "$CI_COMMIT_SHORT_SHA"
 
-test prod:
-  image: alpine
-  stage: test prod
-  only:
-    - master
-  script:
-    - apk add --no-cache curl grep
-    - curl -s http://$PROD_DOMAIN 
-    - echo "Commit SHA:" "$CI_COMMIT_SHORT_SHA"
-
 pages:
   stage: pages
   script:
@@ -169,4 +122,3 @@ pages:
       - public
   only:
       - master
-  
