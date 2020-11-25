@@ -4,7 +4,7 @@ import Menu from './theme/menu';
 import SocialMenu from './theme/socialMenu';
 import Link from 'next/link';
 import classnames from 'classnames';
-import amFOSSLogo from '../../public/logo_light.png';
+import amFOSSLogo from '../public/logo_light.png';
 
 const styling = {
   backgroundImage: `url('../../logo_light.png')`,

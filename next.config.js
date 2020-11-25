@@ -12,6 +12,7 @@ module.exports = {
     author: 'amfoss',
     siteUrl: 'https://amfoss.in/',
   },
+  trailingSlash: true,
 };
 module.exports = withCSS(
   withSass({

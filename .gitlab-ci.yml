@@ -46,7 +46,6 @@ build-website:
   script:
     - echo ${CI_COMMIT_REF_SLUG}
     - npm install 
-    - sed -i "s/%%VERSION%%/$CI_COMMIT_SHORT_SHA/" ./src/pages/index.js
     - npm run export
     - rm -rf public
     - mv out public

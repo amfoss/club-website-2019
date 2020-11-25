@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import TitleBar from '../components/theme/titleBar';
-import NewsCard from '../components/news/newsCard';
-import dataFetch from '../utils/dataFetch';
+import Layout from '../../components/layout';
+import SEO from '../../components/seo';
+import TitleBar from '../../components/theme/titleBar';
+import NewsCard from '../../components/news/newsCard';
+import dataFetch from '../../utils/dataFetch';
 import ReactLoading from 'react-loading';
 
 const newsQuery = ` {
@@ -20,7 +20,7 @@ const newsQuery = ` {
   }
 }`;
 
-const News = () => {
+const Index = () => {
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [query, setQuery] = useState('');
@@ -127,4 +127,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default Index;

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Link from 'next/link';
 
-import defaultAvatar from '../../../public/defaults/avatar.png';
+import defaultAvatar from '../../public/defaults/avatar.png';
 
 const MemberCard = ({
   username,

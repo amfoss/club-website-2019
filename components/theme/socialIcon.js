@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import facebook from '../../../public/icons/facebook.png';
-import instagram from '../../../public/icons/instagram.png';
-import twitter from '../../../public/icons/twitter.png';
-import linkedin from '../../../public/icons/linkedin.png';
-import github from '../../../public/icons/github.png';
-import website from '../../../public/icons/website.png';
-import chatroom from '../../../public/icons/chatroom.png';
-import gitlab from '../../../public/icons/gitlab.png';
-import gmail from '../../../public/icons/gmail.png';
+import facebook from '../../public/icons/facebook.png';
+import instagram from '../../public/icons/instagram.png';
+import twitter from '../../public/icons/twitter.png';
+import linkedin from '../../public/icons/linkedin.png';
+import github from '../../public/icons/github.png';
+import website from '../../public/icons/website.png';
+import chatroom from '../../public/icons/chatroom.png';
+import gitlab from '../../public/icons/gitlab.png';
+import gmail from '../../public/icons/gmail.png';
 
 const SocialIcon = ({ name, link }) =>
   link ? (

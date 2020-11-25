@@ -1,15 +1,15 @@
 import React from 'react';
 import MenuItem from './menuItem';
 import Link from 'next/link';
-import homeIcon from '../../../public/icons/home.png';
-import aboutIcon from '../../../public/icons/bulb.png';
-import lifeIcon from '../../../public/icons/mentorship.png';
-import achievementsIcon from '../../../public/icons/crown.png';
-import membersIcon from '../../../public/icons/coworking.png';
-import ProjectsIcon from '../../../public/icons/project.png';
-import blogIcon from '../../../public/icons/blog.png';
-import newsIcon from '../../../public/icons/newsArt.png';
-import crowdsIcon from '../../../public/icons/crowd.png';
+import homeIcon from '../../public/icons/home.png';
+import aboutIcon from '../../public/icons/bulb.png';
+import lifeIcon from '../../public/icons/mentorship.png';
+import achievementsIcon from '../../public/icons/crown.png';
+import membersIcon from '../../public/icons/coworking.png';
+import ProjectsIcon from '../../public/icons/project.png';
+import blogIcon from '../../public/icons/blog.png';
+import newsIcon from '../../public/icons/newsArt.png';
+import crowdsIcon from '../../public/icons/crowd.png';
 
 const Menu = () => (
   <div className="menu">

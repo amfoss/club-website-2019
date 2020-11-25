@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import TitleBar from '../components/theme/titleBar';
-import BlogCard from '../components/blog/blogCard';
-import dataFetch from '../utils/dataFetch';
+import Layout from '../../components/layout';
+import SEO from '../../components/seo';
+import TitleBar from '../../components/theme/titleBar';
+import BlogCard from '../../components/blog/blogCard';
+import dataFetch from '../../utils/dataFetch';
 import ReactLoading from 'react-loading';
 
 const blogsQuery = ` {

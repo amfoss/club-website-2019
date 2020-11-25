@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import config from '../../config.yml';
+import config from '../config.yml';
 
 export default function SEO({ description, title }) {
   const siteTitle = 'FOSS@Amrita (amFOSS) - Code | Share | Grow';

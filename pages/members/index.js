@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../../components/layout';
+import SEO from '../../components/seo';
 
-import MemberCard from '../components/theme/memberCard';
-import TitleBar from '../components/theme/titleBar';
-import dataFetch from '../utils/dataFetch';
+import MemberCard from '../../components/theme/memberCard';
+import TitleBar from '../../components/theme/titleBar';
+import dataFetch from '../../utils/dataFetch';
 import ReactLoading from 'react-loading';
 
 const query = ` query {
@@ -25,7 +25,7 @@ const query = ` query {
       }
   }`;
 
-export default class Members extends React.Component {
+export default class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

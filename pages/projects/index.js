@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../../components/layout';
+import SEO from '../../components/seo';
 
-import ProjectCard from '../components/projects/projectCard';
-import TitleBar from '../components/theme/titleBar';
-import dataFetch from '../utils/dataFetch';
+import ProjectCard from '../../components/projects/projectCard';
+import TitleBar from '../../components/theme/titleBar';
+import dataFetch from '../../utils/dataFetch';
 import ReactLoading from 'react-loading';
 
 const projectsQuery = ` query {

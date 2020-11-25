@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ListCard from '../theme/listCard';
-import defaultAvatar from '../../../public/defaults/avatar.png';
+import defaultAvatar from '../../public/defaults/avatar.png';
 
 const AchievementList = ({ title, achievements }) => {
   let years = [...new Set(achievements.map((obj) => obj.year))];
