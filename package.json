@@ -1,5 +1,5 @@
 {
-  "name": "nextj-website",
+  "name": "amfoss-website",
   "version": "0.1.0",
   "description": "React Based Website of FOSS@Amrtia powered by NextJS",
   "private": false,
@@ -8,6 +8,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "export": "npm run build && next export",
     "format": "prettier --write '**/*.js'",
     "lint-check": "prettier --check '**/*.js'"
   },
