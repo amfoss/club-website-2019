@@ -2,9 +2,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Menu from './theme/menu';
 import SocialMenu from './theme/socialMenu';
-import { StaticQuery, Link } from 'gatsby';
+import Link from 'next/link';
 import classnames from 'classnames';
+import amFOSSLogo from '../../public/logo_light.png';
 
+const styling = {
+  backgroundImage: `url('../../logo_light.png')`,
+};
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -22,37 +26,9 @@ class Header extends React.Component {
     return (
       <header>
         <div id="topbar">
-          <Link to="/">
-            <StaticQuery
-              query={graphql`
-                query {
-                  allFile(
-                    filter: {
-                      name: { eq: "logo_alt_light" }
-                      extension: { eq: "png" }
-                    }
-                  ) {
-                    nodes {
-                      childImageSharp {
-                        fluid {
-                          src
-                        }
-                      }
-                    }
-                  }
-                }
-              `}
-              render={(data) => (
-                <img
-                  src={data.allFile.nodes[0].childImageSharp.fluid.src}
-                  alt="AmFOSS"
-                />
-              )}
-            />
-          </Link>
+          <img src={amFOSSLogo} alt="amFOSS" />
           <i
             tabIndex="0"
-            role="link"
             onClick={this.showSidebar}
             className={classnames(
               `fas`,
@@ -62,8 +38,8 @@ class Header extends React.Component {
         </div>
         <div id="sidebar" className={this.state.showSidebar ? 'show' : 'hide'}>
           <div>
-            <Link to="/">
-              <div className="logo" />
+            <Link href="/">
+              <div className="logo" style={styling} />
             </Link>
             <Menu />
             <SocialMenu />
@@ -73,13 +49,5 @@ class Header extends React.Component {
     );
   }
 }
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
-};
 
 export default Header;

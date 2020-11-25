@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../styles/style.sass';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import HomeSections from '../components/home/homeSections';

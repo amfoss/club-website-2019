@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 
-import defaultAvatar from '../../images/defaults/avatar.png';
+import defaultAvatar from '../../../public/defaults/avatar.png';
 
 const MemberCard = ({
   username,
@@ -13,25 +13,28 @@ const MemberCard = ({
   githubUsername,
   profilePic,
 }) => (
-  <Link to={'/@' + username} className="member-card card">
-    <img
-      src={
-        profilePic
-          ? `https://api.amfoss.in/${profilePic}`
-          : githubUsername
-          ? `https://avatars.githubusercontent.com/${githubUsername}`
-          : defaultAvatar
-      }
-      alt={firstName + ' ' + lastName + `'s photo`}
-    />
-    <div className={'role-tag ' + tag}>{tag}</div>
-    <div>
-      <h6>
-        {firstName} {lastName}
-      </h6>
-      <sub>{tagline}</sub>
-    </div>
-  </Link>
+  <div className="member-card card">
+    <a href={'members/' + username}>
+      <img
+        src={
+          profilePic
+            ? `https://api.amfoss.in/${profilePic}`
+            : githubUsername
+            ? `https://avatars.githubusercontent.com/${githubUsername}`
+            : defaultAvatar
+        }
+        alt={firstName + ' ' + lastName + `'s photo`}
+      />
+      <div className={'role-tag ' + tag}>{tag}</div>
+      <div>
+        {' '}
+        <h6>
+          {firstName} {lastName}
+        </h6>
+        <sub>{tagline}</sub>
+      </div>
+    </a>
+  </div>
 );
 
 MemberCard.propTypes = {

@@ -1,30 +1,8 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import SectionCard from '../theme/sectionCard';
-
+import json from '../../content/clubLife.json';
 export default () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allClubLifeYaml {
-        nodes {
-          id
-          Title
-          Content
-          Slider {
-            Image {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  return data.allClubLifeYaml.nodes.map((node, i) => (
+  return json.map((node, i) => (
     <SectionCard
       key={node.id}
       index={i}

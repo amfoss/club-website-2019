@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import TitleBar from '../components/theme/titleBar';
-import img404 from '../images/illus/404_stuart.png';
+import img404 from '../../public/illus/404_stuart.png';
 
 const NotFoundPage = () => (
   <Layout>

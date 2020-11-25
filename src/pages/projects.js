@@ -25,10 +25,11 @@ const Project = () => {
 
   const fetchData = async () => await dataFetch({ query: projectsQuery });
   useEffect(() => {
-    fetchData().then((r) => {
-      setData(r.data.projects);
-      setLoading(true);
-    });
+    !isLoading &&
+      fetchData().then((r) => {
+        setData(r.data.projects);
+        setLoading(true);
+      });
   }, [data]);
 
   const filter = data.filter((project) => {

@@ -2,87 +2,77 @@ import React, { useEffect, useState } from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import TitleBar from '../components/theme/titleBar';
-import BlogCard from '../components/blog/blogCard';
+import EventsCard from '../components/events/eventsCard';
 import dataFetch from '../utils/dataFetch';
 import ReactLoading from 'react-loading';
 
-const blogsQuery = ` {
-  blogs{
+const eventsQuery = ` {
+  events{
     title
     slug
-    author{
-      firstName
-    }
     date
-    cover
-    tags{
-      name
+    content
+    eventType
+    album{
+        photos{
+            image
+        }
     }
-    featured 
-    description
   }
 }`;
-const News = () => {
+
+const Events = () => {
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [query, setQuery] = useState('');
   const [filterType, setFilterType] = useState('all');
 
-  const fetchData = async () => await dataFetch({ query: blogsQuery });
+  const fetchData = async () => await dataFetch({ query: eventsQuery });
   useEffect(() => {
     !isLoading &&
       fetchData().then((r) => {
-        setData(r.data.blogs);
+        setData(r.data.events);
         setLoading(true);
       });
   }, [data]);
 
-  const filter = data.filter((blog) => {
+  const filter = data.filter((events) => {
     let queryFlag = 1;
     let filterFlag = 1;
 
     if (query !== '') {
       queryFlag = 0;
       if (
-        blog.title.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
-        blog.description.toLowerCase().indexOf(query.toLowerCase()) !== -1
+        events.title.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
+        events.content.toLowerCase().indexOf(query.toLowerCase()) !== -1
       )
         queryFlag = 1;
     }
     if (filterType !== 'all') {
       filterFlag = 0;
-      if (blog.category.name === filterType) filterFlag = 1;
+      if (events.eventType === filterType) filterFlag = 1;
     }
     if (queryFlag && filterFlag) return 1;
   });
 
-  const Articles = [];
-  const Featured = [];
-  filter.map((blog) => {
-    blog.featured
-      ? Featured.push(
-          <div key={blog.title} className="col-sm-12 col-md-6 p-3">
-            <BlogCard article={blog} featured={blog.featured} />
-          </div>
-        )
-      : Articles.push(
-          <div key={blog.title} className="col-sm-12 col-md-6 p-3">
-            <BlogCard article={blog} featured={blog.featured} />
-          </div>
-        );
+  const Events = [];
+  filter.map((events) => {
+    Events.push(
+      <div key={events.title} className="col-sm-12 col-md-6 p-3">
+        <EventsCard event={events} />
+      </div>
+    );
   });
+
   return (
     <Layout>
-      <SEO title="Blog" />
-      <TitleBar title="Blog" />
+      <SEO title="Events" />
+      <TitleBar title="Events" />
       <div className="row m-0 p-1">
         <div className="col-md-8 col-lg-9 p-2 order-2 order-md-1">
           <div className="row m-0">
             {isLoading ? (
-              <React.Fragment>
-                {Featured}
-                {Articles}
-              </React.Fragment>
+              <React.Fragment>{Events}</React.Fragment>
             ) : (
               <ReactLoading type="spinningBubbles" color="#000" />
             )}
@@ -94,7 +84,7 @@ const News = () => {
             style={{ top: '1rem' }}
             id="filter-card"
           >
-            <h5 className="my-3">Search</h5>
+            <h5 className="my-3">Search & Filter</h5>
             <div className="mx-2">
               <div>Search by Name</div>
               <input
@@ -106,6 +96,21 @@ const News = () => {
               />
               <hr />
             </div>
+            <div className="mb-4 mx-2">
+              <div>Filter By Type</div>
+              <select
+                className="bg-white p-2 w-100 mt-2"
+                onChange={(e) => setFilterType(e.target.value)}
+                value={filterType}
+              >
+                <option value="all">
+                  {filterType === 'all' ? 'Change Type' : ' All'}
+                </option>
+                <option value="OpenTalks">OpenTalks</option>
+                <option value="Meetup">Meetup</option>
+                <option value="BootCamp">BootCamp</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
@@ -113,4 +118,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default Events;

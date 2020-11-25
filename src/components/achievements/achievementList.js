@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import getProfiles from '../theme/getProfiles';
 import ListCard from '../theme/listCard';
+import defaultAvatar from '../../../public/defaults/avatar.png';
 
-const AchievementList = ({ title, members, tagname }) => {
-  let years = [...new Set(members.map((obj) => obj.node.Year))];
+const AchievementList = ({ title, achievements }) => {
+  let years = [...new Set(achievements.map((obj) => obj.year))];
   const [year, setYear] = useState(years[0]);
-  const profiles = getProfiles();
-  let filtered = members.filter((member) => member.node.Year == year);
+  let filtered = achievements.filter((achievement) => achievement.year == year);
+
   return (
     <div className="list-card card">
       <div className="list-heading d-flex">
@@ -25,25 +25,21 @@ const AchievementList = ({ title, members, tagname }) => {
           </select>
         </div>
       </div>
-      {filtered.map((member) => {
-        let profile = profiles.find(
-          (profile) => profile.node.username === member.node.Member
-        );
-        const tagline = member.node[tagname];
-        return profile ? (
+      {filtered.map((achievement) => {
+        return (
           <ListCard
-            key={member.node.id}
-            username={profile.node.username}
-            firstName={profile.node.firstName}
-            lastName={profile.node.lastName}
-            tagline={tagline}
+            key={achievement.user.username}
+            username={achievement.user.username}
+            firstName={achievement.user.firstName}
+            lastName={achievement.user.lastName}
+            tagline={achievement.title}
             avatar={
-              profile.node.avatar
-                ? profile.node.avatar.childImageSharp.resize.src
-                : null
+              achievement.user.profile.profilePic
+                ? `https://api.amfoss.in/${achievement.user.profile.profilePic}`
+                : defaultAvatar
             }
           />
-        ) : null;
+        );
       })}
     </div>
   );

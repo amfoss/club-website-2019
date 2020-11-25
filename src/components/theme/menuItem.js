@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 
 const MenuItem = ({ name, link, icon }) => (
-  <Link to={link} className="menu-item">
+  <div className="menu-item">
     {icon !== '' ? <img src={icon} alt={name} /> : null}
     {name}
-  </Link>
+  </div>
 );
 
 MenuItem.propTypes = {

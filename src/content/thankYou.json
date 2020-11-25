@@ -1,0 +1,20 @@
+[
+  {
+    "Name": "GitLab",
+    "Icon": "gitlab.png",
+    "Link": "https://gitlab.com/",
+    "Details": "For providing us with an exclusive plan, we thank the GitLab community for their help and support.<a href= https://code.amfoss.in/> code.amfoss.in</a>"
+  },
+  {
+    "Name": "GitBook",
+    "Icon": "gitbook.png",
+    "Link": "https://gitbook.com/",
+    "Details": "For providing us with documentation capabilities, we thank the GitBook team for their help and support.<a href= https://know.amfoss.in> know.amfoss.in</a>"
+  },
+  {
+    "Name": "Plausible",
+    "Icon": "plausible.png",
+    "Link": "https://plausible.io/",
+    "Details": "For providing us with analytics capabilities, we thank the Plausible team for their support and collaboration."
+  }
+]

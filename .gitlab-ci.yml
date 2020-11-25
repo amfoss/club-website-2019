@@ -42,15 +42,15 @@ build-website:
     paths:
       - ./node_modules
   before_script:
-    - npm install -g gatsby-cli
+    - npm install next
   script:
     - echo ${CI_COMMIT_REF_SLUG}
     - npm install 
     - sed -i "s/%%VERSION%%/$CI_COMMIT_SHORT_SHA/" ./src/pages/index.js
-    - gatsby build
+    - npm run build
   artifacts:
     paths:
-      - ./public
+      - ./next
 
 # A BaseDeploy
 .deploy template: &deploy
@@ -98,6 +98,7 @@ deploy staging:
   variables:
     DOMAIN: $STAGING_DOMAIN
   environment:
+
     name: staging
 
 test staging:
@@ -122,3 +123,4 @@ pages:
       - public
   only:
       - master
+

@@ -1,36 +1,18 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import ListCard from '../theme/listCard';
-
+import json from '../../content/whyJoin.json';
 export default () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allWhyJoinYaml {
-        edges {
-          node {
-            id
-            Reason
-            Explanation
-            Icon {
-              publicURL
-            }
-          }
-        }
-      }
-    }
-  `);
-
   return (
     <div id="cta-section">
       <h2 className="text-center my-4">Why Join Us?</h2>
       <div className="row m-0">
-        {data.allWhyJoinYaml.edges.map((edge, i) => (
-          <div id="why-join" className="col-md-6 col-xl-3 p-2" key={edge.node.id}>
+        {json.map((edge, i) => (
+          <div id="why-join" className="col-md-6 col-xl-3 p-2" key={edge.id}>
             <ListCard
-              key={edge.node.id}
-              title={edge.node.Reason}
-              tagline={edge.node.Explanation}
-              icon={edge.node.Icon.publicURL}
+              key={edge.id}
+              title={edge.Reason}
+              tagline={edge.Explanation}
+              icon={edge.Icon}
             />
           </div>
         ))}

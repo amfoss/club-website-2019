@@ -1,0 +1,61 @@
+[
+  {
+    "title":"Who we are",
+    "image": "illus/who_are_we.jpg",
+    "content": "FOSS@Amrita (also known as amFOSS) is a student community-based in Amrita Vishwa Vidyapeetham, Amritapuri focused on contributing to Free and Open Source Software and mentoring students to achieve excellence in various fields of Computer Science.<br><br> We envision students to excel and become the leaders of tomorrow by imbibing valuable skills relevant in the 21st century which include technical but also creative and intrapersonal skills enabling students to collaborate, exchange ideas, work together and solve real-life problems. <br><br> Founded in 2006 by Vipin Pavithran, the mentor, the club over the years, has been one of the leading student clubs in India, with over 70 active members. Students from amFOSS participate in many international student open-source programs like the Google Summer of Code, Outreachy, Season of KDE, Rails Girls Summer of Code and so on, each year. The club is run by the students themselves, under the guidance of Vipin Pavithran with the help of the club alumni and supporting faculty."
+  },
+  {
+    "title":"What we do",
+    "image":"illus/what_we_do.png",
+    "content":"The club operates on the primary principle of mentorship where the senior members of the club individually mentor juniors and the club as such acts as a community where each one helps the other one out.<br> <br> The students contribute to open-source projects of various popular open-source organizations, work ondeveloping projects aimed at solving real-world problems, participate in open-source student programs,attend national and international developer meets, conferences, hackathons and so on. The students also conduct workshops and technical events to encourage others to learn and contribute to open-source.<br> <br> The club believes in the holistic development of students and besides seeking excellence in technical skills also engage in giving talks, conducting debates, taking part in sports and cultural activities including yoga sessions, and so on.",
+    "Points":
+    [
+      {
+        "Text": [
+          "Mentor & train students",
+          "to take on the world"
+        ],
+        "Icon": "illus/mentor.svg"
+      },
+      {
+        "Text": [
+          "Promote Open Source",
+          "and Computer Science"
+        ],
+        "Icon": "illus/talk.svg"
+      },
+      {
+        "Text": [
+          "Contribute to Open Source",
+          "Projects & Communities"
+        ],
+        "Icon": "illus/code.svg"
+      }
+    ]
+
+  },
+  {
+    "title":"What we have achieved",
+    "image":"illus/what_did_we_achieve.png",
+    "content":"The club has become one of the forerunners in contributing to open-source in the country, introducing over a hundred enthusiasts every year to the world of Open-source through the club's various activities. <br> <br>Over the years, over 50 students from amFOSS have been a part of the Google Summer of Code program as participating students and many have participated in the program as mentors, as well, pushing Amrita Viswa Vidyapeetham to 7th in the world in <a href=https://opensource.googleblog.com/2019/09/google-summer-of-code-2019-statistics.html>global rankings of universities</a> published by Google. Over 12 students from the club have also been participating in the Google Code-In program as mentors and organisation administrators. <br> <br>Majority of the club alumni have been placed in core computer science companies such as Google, Microsoft, Intel, IBM and VMWare. Members have been getting selected for summer schools at global universities and paid internships at top companies including the Ben Gurion University of the Negev, National Ilan University, University of Tel Aviv, National University of Singapore. Some of our alumni are also currently PhD research scholars at various foreign universities including the Singapore University of Technology and Design, Arizona State University and so on.",
+    "Stats": [
+      {
+        "Num": "500+",
+        "Text": "Students Trained"
+      },
+      {
+        "Num": "50+",
+        "Text": "GSoC Students"
+      },
+      {
+        "Num": "100+",
+        "Text": "Alumni in Core CS Jobs"
+      },
+      {
+        "Num": "50+",
+        "Text": "Working in Startups"
+      }
+    ]
+
+  }
+]

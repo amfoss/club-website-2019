@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 
-import defaultAvatar from '../../images/defaults/avatar.png';
+import defaultAvatar from '../../../public/defaults/avatar.png';
 
 const ListCard = ({
   username,
@@ -16,7 +16,7 @@ const ListCard = ({
   link,
 }) =>
   username ? (
-    <Link to={'/@' + username} className="card">
+    <div className="card">
       <div className="d-flex">
         <div className="p-0">
           <img
@@ -34,7 +34,7 @@ const ListCard = ({
           </div>
         </div>
       </div>
-    </Link>
+    </div>
   ) : (
     <div className="card px-4 pt-4 pb-2 h-100 text-center my-2">
       <div className="mt-2">

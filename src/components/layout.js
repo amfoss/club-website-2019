@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import Header from './header';
 import Footer from './footer';
-import '../styles/style.sass';
 
 const Layout = ({ children }) => (
   <div>

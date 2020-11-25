@@ -1,50 +1,16 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import SectionCard from '../theme/sectionCard';
-
+import json from '../../content/homeSections.json';
 export default () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allHomeSectionsYaml {
-        edges {
-          node {
-            id
-            Title
-            Content
-            childrenHomeSectionsPointsYaml {
-              id
-              Text
-              Icon {
-                publicURL
-              }
-            }
-            childrenHomeSectionsStatsYaml {
-              Text
-              Num
-            }
-            childFileYaml {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  return data.allHomeSectionsYaml.edges.map((edge, i) => (
+  return json.map((edge, i) => (
     <SectionCard
-      key={edge.node.id}
+      key={edge.id}
       index={i}
-      section={edge.node}
-      title={edge.node.Title}
-      content={edge.node.Content}
-      image={edge.node.childFileYaml.childImageSharp.fluid.src}
-      points={edge.node.childrenHomeSectionsPointsYaml}
-      stats={edge.node.childrenHomeSectionsStatsYaml}
+      title={edge.title}
+      image={edge.image}
+      content={edge.content}
+      points={edge.Points}
+      stats={edge.Stats}
     />
   ));
 };

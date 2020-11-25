@@ -1,38 +1,15 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import SectionCard from '../theme/sectionCard';
-
+import json from '../../content/story.json';
 export default () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allStoryYaml {
-        nodes {
-          id
-          Title
-          Content
-          Quote
-          childFileYaml {
-            childImageSharp {
-              fluid {
-                src
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  return data.allStoryYaml.nodes.map((node, i) => (
+  return json.map((node, i) => (
     <SectionCard
       key={node.id}
       index={i}
       section={node}
       title={node.Title}
       content={node.Content}
-      image={
-        node.childFileYaml ? node.childFileYaml.childImageSharp.fluid.src : null
-      }
+      image={node.Image}
       quote={node.Quote}
     />
   ));

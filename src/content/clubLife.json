@@ -1,0 +1,113 @@
+[
+  {
+     "Title": "Mentorship",
+     "Content":"At amFOSS, the bond between juniors and seniors forms the backbone of our community where juniors receive individual mentorship by seniors and alumni. Mentors guide and track a mentee’s technical progress, aptitude and everything in between, in an atmosphere ideal for growth - of mutual trust and understanding.",
+     "Slider": [
+        {
+           "Image": "photos/foss_mentor_1.jpg"
+        },
+        {
+           "Image": "photos/foss_mentor_2.jpg"
+        },
+        {
+           "Image": "photos/foss_mentor_3.jpg"
+        }
+     ]
+  },
+  {
+     "Title": "The Lab",
+     "Content": "The Lab is where everything-amFOSS happens. Situated on the ground floor of the Engineering Block (S013), this is where you will first meet your fellow club members, spend time working after class hours and do everything club-related including talks, debates and sessions. The Lab provides a conducive atmosphere to work, discuss and collaborate, available to members after class hours until 10 PM.     ",
+     "Slider": [
+        {
+           "Image": "photos/foss_gsoc_1.jpg"
+        },
+        {
+           "Image": "photos/foss_gsoc_2.jpg"
+        }
+     ]
+  },
+  {
+     "Title": "The world of Open Source",
+     "Content": "FOSS or Free and Open Source Software (FOSS) started as a movement in the 1980s. FOSS is built by a community who care deeply about the freedom of users giving them the freedom to edit, modify, and reuse code. FOSS, in the present world, makes up an essential part of professional software development. In amFOSS, you learn and experience firsthand - how to contribute code, interact with open source communities and participate in open source student programs like the Google Summer of Code, Linux Foundation’s CommunityBridge Mentorship and so on.",
+     "Slider": [
+        {
+           "Image": "photos/foss_opensource_2.png"
+        },
+        {
+           "Image": "photos/foss_opensource_3.png"
+        }
+     ]
+  },
+  {
+     "Title": "And a world of opportunities",
+     "Content": "Build your skill set, gain exposure and discover opportunities to do what you love in Computer Science. Everything from internships in international organisations and universities, higher studies and summer school programs to international competitions, hackathons and conferences in the field of your interest - be it Mobile/Desktop/Web App Development or in niches like Machine Learning, Computer Graphics, etc - are all at your fingertips.",
+     "Slider": [
+        {
+           "Image": "photos/foss_world_1.jpg"
+        },
+        {
+           "Image": "photos/foss_world_2.jpg"
+        },
+        {
+           "Image": "photos/foss_world_3.jpg"
+        }
+     ]
+  },
+  {
+     "Title": "Talks & Debates",
+     "Content":"Talks and debates are weekly club events, conducted with the aim of getting students used to public speaking, eliminating stage fear, improving critical thinking and group participation. Every week, members speak, discuss and debate on topics ranging from startups and dream jobs to pressing societal issues.",
+     "Slider": [
+        {
+           "Image": "photos/foss_talk_1.jpg"
+        },
+        {
+           "Image": "photos/foss_talk_2.jpg"
+        }
+     ]
+  },
+  {
+     "Title": "Cultural Night",
+     "Content": "amFOSS-bi0s Night is an annual cultural event hosted with our sister club, [Team bi0s](https://bi0s.in). Members get to show off their non-technical skills - everything from cooking the food and making all the necessary arrangements - are taken care of by the members themselves. The experience of conducting an event provides an opportunity to get everyone together to work as a team and the members orchestrate the cultural events with performances in dancing, singing, playing musical instruments, etc.",
+     "Slider": [
+        {
+           "Image": "photos/foss_night_1.jpg"
+        },
+        {
+           "Image": "photos/foss_night_2.jpg"
+        },
+        {
+           "Image": "photos/foss_night_3.jpg"
+        }
+     ]
+  },
+  {
+     "Title": "Sports and games",
+     "Content": "amFOSS Play is a biweekly event where members participate in sports activities. Physical exercise is an essential component of a student’s life and we make sure not to miss out on that. Marathons, football, cricket, badminton - you name it, we play it!",
+     "Slider": [
+        {
+           "Image": "photos/foss_play_1.jpg"
+        },
+        {
+           "Image": "photos/foss_play_2.jpg"
+        },
+        {
+           "Image": "photos/foss_play_3.jpg"
+        }
+     ]
+  },
+  {
+     "Title": "Social Commitments",
+     "Content": "Being a part of [Amrita Vishwa Vidyapeetham](https://amrita.edu) (under the Mata Amritanandamayi Math, an NGO with Special Consultative Status to the UN) we get valuable opportunities to lend hands in noble causes in times of dire adversities. During the Kerala floods (2018) which shook the entire state, Amrita University under the guidance of Mata Amritanandamayi set up a 24x7 Hour helpline for providing victim relief. Our students were able to lend a hand in this noble cause, along with the students of the entire college, running shifts day in and day out. Under the ABC (Amala Bharatam Campaign) program by MAM, clean up drives are regularly conducted in and around the University and Kollam where our students have had the opportunity to take part in.",
+     "Slider": [
+        {
+           "Image": "photos/foss_social_1.jpg"
+        },
+        {
+           "Image": "photos/foss_social_2.jpg"
+        },
+        {
+           "Image": "photos/foss_social_3.jpg"
+        }
+     ]
+  }
+]

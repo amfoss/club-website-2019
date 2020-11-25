@@ -1,25 +1,59 @@
 import React from 'react';
 import MenuItem from './menuItem';
-
-import homeIcon from '../../images/icons/home.png';
-import aboutIcon from '../../images/icons/bulb.png';
-import lifeIcon from '../../images/icons/mentorship.png';
-import achievementsIcon from '../../images/icons/crown.png';
-import membersIcon from '../../images/icons/coworking.png';
-import ProjectsIcon from '../../images/icons/project.png';
-import blogIcon from '../../images/icons/blog.png';
-import newsIcon from '../../images/icons/newsArt.png';
+import Link from 'next/link';
+import homeIcon from '../../../public/icons/home.png';
+import aboutIcon from '../../../public/icons/bulb.png';
+import lifeIcon from '../../../public/icons/mentorship.png';
+import achievementsIcon from '../../../public/icons/crown.png';
+import membersIcon from '../../../public/icons/coworking.png';
+import ProjectsIcon from '../../../public/icons/project.png';
+import blogIcon from '../../../public/icons/blog.png';
+import newsIcon from '../../../public/icons/newsArt.png';
+import crowdsIcon from '../../../public/icons/crowd.png';
 
 const Menu = () => (
   <div className="menu">
-    <MenuItem name="Home" link="/" icon={homeIcon} />
-    <MenuItem name="About" link="/about" icon={aboutIcon} />
-    <MenuItem name="Life in Club" link="/life" icon={lifeIcon} />
-    <MenuItem name="Achievements" link="/achievements" icon={achievementsIcon} />
-    <MenuItem name="Members" link="/members" icon={membersIcon} />
-    <MenuItem name="Projects" link="/projects" icon={ProjectsIcon} />
-    <MenuItem name="News" link="/news" icon={newsIcon} />
-    <MenuItem name="Blog" link="/blog" icon={blogIcon} />
+    <Link href="/">
+      <a>
+        <MenuItem name="Home" icon={homeIcon} />
+      </a>
+    </Link>
+    <Link href="/about">
+      <a>
+        <MenuItem name="About" icon={aboutIcon} />
+      </a>
+    </Link>
+    <Link href="/life">
+      <a>
+        <MenuItem name="Life in Club" icon={lifeIcon} />
+      </a>
+    </Link>
+    <Link href="/achievements">
+      <a>
+        <MenuItem name="Achievements" icon={achievementsIcon} />
+      </a>
+    </Link>
+    <Link href="/members">
+      <a>
+        <MenuItem name="Members" icon={membersIcon} />
+      </a>
+    </Link>
+    <Link href="/projects">
+      <a>
+        <MenuItem name="Projects" icon={ProjectsIcon} />
+      </a>
+    </Link>
+    {/*<Link href = "/events"><a><MenuItem name="Events" icon={crowdsIcon} /></a></Link>*/}
+    <Link href="/news">
+      <a>
+        <MenuItem name="News" icon={newsIcon} />
+      </a>
+    </Link>
+    <Link href="/blog">
+      <a>
+        <MenuItem name="Blog" icon={blogIcon} />
+      </a>
+    </Link>
   </div>
 );
 

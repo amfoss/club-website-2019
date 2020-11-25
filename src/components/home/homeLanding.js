@@ -2,26 +2,12 @@ import React from 'react';
 import Typing from 'react-typing-animation';
 
 export default () => {
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     cover: allFile(filter: { name: { eq: "cover"}, extension: { eq: "jpg"}})
-  //     {
-  //       nodes
-  //       {
-  //         childImageSharp
-  //         {
-  //           fluid
-  //           {
-  //             src
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
+  const styling = {
+    backgroundImage: `url('../../photos/cover.jpg')`,
+  };
 
   return (
-    <div id="home-landing">
+    <div id="home-landing" style={styling}>
       <div className="overlay">
         <div id="landing-btn">
           <a

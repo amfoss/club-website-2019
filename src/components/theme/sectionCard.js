@@ -12,10 +12,7 @@ const SectionPoints = (points) => {
           <div className="card px-2 py-4 h-100 d-flex align-items-center">
             <div>
               <div className="mx-2 mb-4">
-                <img
-                  src={point.Icon.publicURL}
-                  alt={point.Text[0] + point.Text[1]}
-                />
+                <img src={point.Icon} alt={point.Text[0] + point.Text[1]} />
               </div>
               <h5 className="mb-0">
                 {point.Text[0]}
@@ -58,11 +55,7 @@ const CardSlider = ({ slider, title }) => {
     >
       {slider.length
         ? slider.map((slide, i) => (
-            <img
-              key={i}
-              src={slide.Image.childImageSharp.fluid.src}
-              alt={'Photos of ' + title}
-            />
+            <img key={i} src={slide.Image} alt={'Photos of ' + title} />
           ))
         : null}
     </Carousel>

@@ -1,8 +1,8 @@
 import React from 'react';
 import FooterNav from './theme/footerNav';
 
-import amritaLogo from '../images/logos/amrita.png';
-import bi0sLogo from '../images/logos/bi0s.png';
+import amritaLogo from '../../public/logos/amrita.png';
+import bi0sLogo from '../../public/logos/bi0s.png';
 
 const Footer = () => (
   <footer>
