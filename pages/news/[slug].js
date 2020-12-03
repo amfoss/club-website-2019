@@ -46,7 +46,7 @@ const ArticleTemplate = (props) => {
   }, [router.query.slug]);
 
   const disqusConfig = {
-    url: "https://amfoss.in/news/' + {props.slug}",
+    url: 'https://amfoss.in/news/' + props.slug,
     identifier: data.slug,
     title: data.title,
   };
@@ -96,7 +96,7 @@ const ArticleTemplate = (props) => {
         />
       </div>
       <div className="p-2">
-        <DiscussionEmbed config={disqusConfig} />
+        <DiscussionEmbed shortname='amfoss' config={disqusConfig} />
       </div>
     </Layout>
   ) : (
