@@ -96,7 +96,7 @@ const ArticleTemplate = (props) => {
         />
       </div>
       <div className="p-2">
-        <DiscussionEmbed shortname='amfoss' config={disqusConfig} />
+        <DiscussionEmbed shortname="amfoss" config={disqusConfig} />
       </div>
     </Layout>
   ) : (
