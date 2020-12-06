@@ -60,6 +60,7 @@ export default function SEO({ description, title }) {
   return (
     <Head>
       <title>{`${title} | ${siteTitle}`}</title>
+      <link rel="shortcut icon" href="favicon.png" />
       {metaData.map(({ name, content }, i) => (
         <meta key={i} name={name} content={content} />
       ))}
