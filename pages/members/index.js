@@ -13,7 +13,6 @@ const query = ` query {
           firstName
           lastName
           username
-          isMembershipActive
           profile {
               role
               displayInWebsite

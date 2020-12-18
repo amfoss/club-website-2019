@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import SEO from '../../components/seo';
-import Layout from '../../components/layout';
-import Avatar from '../../public/defaults/avatar.png';
-import dataFetch from '../../utils/dataFetch';
-import Loading from '../../components/theme/loading';
-import SocialIcon from '../../components/theme/socialIcon';
-import langIcon from '../../public/icons/language.png';
-import profileIcon from '../../public/icons/profile.png';
-import blogIcon from '../../public/icons/blog.png';
+import SEO from '../components/seo';
+import Layout from '../components/layout';
+import Avatar from '../public/defaults/avatar.png';
+import dataFetch from '../utils/dataFetch';
+import Loading from '../components/theme/loading';
+import SocialIcon from '../components/theme/socialIcon';
+import langIcon from '../public/icons/language.png';
+import profileIcon from '../public/icons/profile.png';
+import blogIcon from '../public/icons/blog.png';
 import dateFormat from 'dateformat';
 import Link from 'next/link';
-import NotFoundPage from '../404';
+import NotFoundPage from './404';
 
 import { useRouter } from 'next/router';
 
@@ -21,7 +21,7 @@ const query = `
     lastName
     username
     email
-    isMembershipActive
+    isVerified
     profile {
       profilePic
       githubUsername
@@ -60,14 +60,14 @@ const ProfileTemplate = (props) => {
   const fetchData = async (variables) => await dataFetch({ query, variables });
 
   useEffect(() => {
-    if (router.query.username != null) {
-      const variables = { username: username };
+    if (username != null) {
+      const variables = { username: username.substring(1) };
       fetchData(variables).then((r) => {
         setData(r.data.user);
         setLoading(true);
       });
     }
-  }, [router.query.username]);
+  }, [username]);
 
   const renderTab = () => {
     if (tab === 'about') {
@@ -139,7 +139,7 @@ const ProfileTemplate = (props) => {
   };
 
   return isLoading ? (
-    data.isMembershipActive ? (
+    data.isVerified ? (
       <Layout>
         <section className="profile">
           <SEO title={data.firstName + ' ' + data.lastName} />

@@ -14,7 +14,7 @@ const MemberCard = ({
   profilePic,
 }) => (
   <div className="member-card card">
-    <a href={'members/' + username}>
+    <a href={'@' + username}>
       <img
         src={
           profilePic
