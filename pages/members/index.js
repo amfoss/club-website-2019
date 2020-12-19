@@ -30,6 +30,7 @@ export default class Index extends React.Component {
     this.state = {
       searchTerm: '',
       filterYear: 'everyone',
+      filterRole: 'everyone',
       data: [],
       loaded: false,
     };
@@ -54,6 +55,13 @@ export default class Index extends React.Component {
     });
   }
 
+  memberRoleFilter(event) {
+    this.goTop();
+    this.setState({
+      filterRole: event.target.value,
+    });
+  }
+
   componentDidMount() {
     this.fetchData().then((r) => {
       this.setState({
@@ -66,6 +74,7 @@ export default class Index extends React.Component {
   render() {
     let filteredMembers = this.state.data.filter((user) => {
       let qflag = 1;
+      let yflag = 1;
       let rflag = 1;
       let query = this.state.searchTerm.toLowerCase();
 
@@ -90,11 +99,16 @@ export default class Index extends React.Component {
           });
       }
       if (this.state.filterYear !== 'everyone') {
-        rflag = 0;
-        if (this.state.filterYear === user.profile.batch.toString()) rflag = 1;
+        yflag = 0;
+        if (this.state.filterYear === user.profile.batch.toString()) yflag = 1;
       }
-      if (qflag && rflag) return 1;
+      if (this.state.filterRole !== 'everyone') {
+        rflag = 0;
+        if (this.state.filterRole === user.profile.role) rflag = 1;
+      }
+      if (qflag && yflag && rflag) return 1;
     });
+
     return (
       <Layout>
         <SEO title="Members" />
@@ -114,9 +128,12 @@ export default class Index extends React.Component {
           }}
           className="fas fa-angle-up p-3"
         />
-        <div className="row m-0 p-1">
-          <div className="col-md-8 col-lg-9 p-2 order-2 order-md-1">
-            <div className="row m-0 p-1 mb-4">
+        <div className="mx-4 mt-4">
+          <p>Total of {filteredMembers.length} active members</p>
+        </div>
+        <div className="row m-0">
+          <div className="col-md-8 col-lg-9 order-2 order-md-1">
+            <div className="row m-0 mb-4">
               {this.state.loaded ? (
                 filteredMembers.map((user) =>
                   user.profile.batch && user.profile.displayInWebsite ? (
@@ -140,7 +157,7 @@ export default class Index extends React.Component {
               )}
             </div>
           </div>
-          <div className="col-md-4 col-lg-3 order-md-2 order-1 px-2 py-4">
+          <div className="col-md-4 col-lg-3 order-md-2 order-1 px-2 py-3">
             <div
               className="card p-4 position-sticky"
               style={{ top: '1rem' }}
@@ -170,10 +187,27 @@ export default class Index extends React.Component {
                       ? 'Change Year'
                       : ' Everyone'}
                   </option>
+                  <option value="2020">2020</option>
                   <option value="2019">2019</option>
                   <option value="2018">2018</option>
                   <option value="2017">2017</option>
-                  <option value="2016">2016</option>
+                </select>
+              </div>
+              <div className="mb-4 mx-2">
+                <div>Filter By Role</div>
+                <select
+                  className="bg-white p-2 w-100 mt-2"
+                  onChange={this.memberRoleFilter.bind(this)}
+                  value={this.state.filterRole}
+                >
+                  <option value="everyone">
+                    {this.state.filterRole === 'Everyone'
+                      ? 'Change Role'
+                      : ' Everyone'}
+                  </option>
+                  <option value="Member">Member</option>
+                  <option value="Mentor">Mentor</option>
+                  <option value="Alumni">Alumni</option>
                 </select>
               </div>
             </div>
