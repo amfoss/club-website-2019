@@ -129,7 +129,7 @@ export default class Index extends React.Component {
           className="fas fa-angle-up p-3"
         />
         <div className="mx-4 mt-4">
-          <p>Total of {filteredMembers.length} active members</p>
+          <p>Showing {filteredMembers.length} out of {this.state.data.length} members</p>
         </div>
         <div className="row m-0">
           <div className="col-md-8 col-lg-9 order-2 order-md-1">
