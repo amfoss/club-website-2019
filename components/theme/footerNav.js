@@ -75,6 +75,9 @@ const FooterNav = () => (
             <li>
               <a href="/news">Press & Media</a>
             </li>
+            <li>
+              <a href="/branding">Branding</a>
+            </li>
           </ul>
         </div>
       </div>
