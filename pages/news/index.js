@@ -72,7 +72,10 @@ const Index = () => {
 
   return (
     <Layout>
-      <SEO title="News" />
+      <SEO
+        title="News"
+        description="Catch the latest news from member achievements to official event updates from amFOSS"
+      />
       <TitleBar title="News" />
       <div className="row m-0 p-1">
         <div className="col-md-8 col-lg-9 p-2 order-2 order-md-1">

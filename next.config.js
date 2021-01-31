@@ -7,8 +7,8 @@ const withYAML = require('next-yaml');
 module.exports = withYAML(module.exports);
 module.exports = {
   siteMetadata: {
-    title: `FOSS@Amrita (amFOSS) - Code | Share | Grow`,
-    description: `A Student Community of Open Source Enthusiasts based in Amrita Vishwa Vidyapeetham, Amritapuri. We promote and contribute to FOSS, and mentor students for achieving excellence.`,
+    title: `amFOSS (FOSS@Amrita)`,
+    description: `A student community based in Amrita Vishwa Vidyapeetham, Amritapuri focused on contributing to FOSS and mentoring students to achieve excellence.`,
     author: 'amfoss',
     siteUrl: 'https://amfoss.in/',
   },

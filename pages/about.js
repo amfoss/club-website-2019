@@ -7,7 +7,10 @@ import StorySections from '../components/about/storySections';
 
 const About = () => (
   <Layout>
-    <SEO title="About the Club" />
+    <SEO
+      title="About the Club"
+      description="amFOSS is a student community based in Amrita Vishwa Vidyapeetham, Amritapuri founded in 2006 by Vipin Pavithran."
+    />
     <TitleBar title="About the Club" />
     <h2 className="mt-4 ml-4">Our Story</h2>
     <StorySections />

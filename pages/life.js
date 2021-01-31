@@ -7,7 +7,10 @@ import ClubLife from '../components/clubLife/clubLife';
 
 const Life = () => (
   <Layout>
-    <SEO title="Life in the Club" />
+    <SEO
+      title="Life in the Club"
+      description="A look into an amFOSS member's daily life in the club"
+    />
     <TitleBar title="Life in the Club" />
     <ClubLife />
   </Layout>

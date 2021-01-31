@@ -82,7 +82,10 @@ const Achievements = () => {
 
   return isLoading ? (
     <Layout>
-      <SEO title="Achievements" />
+      <SEO
+        title="Achievements"
+        description="View achievements of amFOSS club members and alumni"
+      />
       <TitleBar title="Achievements" />
       <div className="row m-0 px-2 py-4">
         <div className="col-md-6 col-lg-4 px-2 py-0">

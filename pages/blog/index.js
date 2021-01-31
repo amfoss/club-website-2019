@@ -73,7 +73,10 @@ const News = () => {
   });
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO
+        title="Blog"
+        description="Visit the official amFOSS blog to catch  everything latest in tech and FOSS"
+      />
       <TitleBar title="Blog" />
       <div className="row m-0 p-1">
         <div className="col-md-8 col-lg-9 p-2 order-2 order-md-1">

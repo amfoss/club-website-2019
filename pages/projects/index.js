@@ -43,7 +43,7 @@ const Project = () => {
 
   return (
     <Layout>
-      <SEO title="Projects" />
+      <SEO title="Projects" description="View projects created by amFOSS" />
       <TitleBar title="Projects" />
       <div className="row m-0 p-1">
         <div className="col-md-8 col-lg-9 p-2 order-2 order-md-1">

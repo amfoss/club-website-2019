@@ -7,7 +7,10 @@ import img404 from '../public/illus/404_stuart.png';
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404 - Page not Found" />
+    <SEO
+      title="404 - Page not Found"
+      description=" 404 - You reached a page that does not exist"
+    />
     <TitleBar title="This page does not exist" />
     <img src={img404} class="img-fluid mx-auto d-block m-4 p-4" alt="404" />
   </Layout>

@@ -2,68 +2,36 @@ import Head from 'next/head';
 import React from 'react';
 
 export default function SEO({ description, title }) {
-  const siteTitle = 'FOSS@Amrita (amFOSS) - Code | Share | Grow';
+  const siteTitle = 'amFOSS (FOSS@Amrita)';
   const siteDescription =
-    'A Student Community of Open Source Enthusiasts based in Amrita Vishwa Vidyapeetham, Amritapuri. We promote and contribute to FOSS, and mentor students for achieving excellence.';
+    'A student community based in Amrita Vishwa Vidyapeetham, Amritapuri focused on contributing to FOSS and mentoring students to achieve excellence.';
   const author = 'amfoss';
   const siteUrl = 'https://amfoss.in/';
-
+  const twitterHandle = 'amfoss_in';
+  const seoCardImagePath = '/logos/amfoss_seo.png';
   const metaDescription = description || siteDescription;
-
-  const metaData = [
-    {
-      name: `description`,
-      content: metaDescription,
-    },
-    {
-      property: `og:title`,
-      content: title,
-    },
-    {
-      property: `og:siteURL`,
-      content: siteUrl,
-    },
-    {
-      property: `og:description`,
-      content: metaDescription,
-    },
-    {
-      property: `og:type`,
-      content: `website`,
-    },
-    {
-      property: `og:image`,
-      content: `https://amfoss.in/logos/amfoss_seo.png`,
-    },
-    {
-      name: `twitter:card`,
-      content: `summary_large_image`,
-    },
-    {
-      name: `twitter:creator`,
-      content: `@${author}`,
-    },
-    {
-      property: `twitter:image`,
-      content: `https://amfoss.in/logos/amfoss_seo.png`,
-    },
-    {
-      name: `twitter:title`,
-      content: title,
-    },
-    {
-      name: `twitter:description`,
-      content: metaDescription,
-    },
-  ];
 
   return (
     <Head>
       <title>{`${title} | ${siteTitle}`}</title>
       <link rel="shortcut icon" href="favicon.png" />
-      {metaData.map(({ name, content }, i) => (
-        <meta key={i} name={name} content={content} />
-      ))}
+      <meta
+        name="keywords"
+        content="amfoss, foss@amrita, amrita foss, amritapuri foss, amrita, foss club, foss amrita, foss india, foss"
+      />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content={metaDescription} />
+      <meta property="og:title" content={title} />
+      <meta property="og:siteURL" content={siteUrl} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content={seoCardImagePath} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={twitterHandle} />
+      <meta name="twitter:site" content={author} />
+      <meta name="twitter:image" content={seoCardImagePath} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
     </Head>
   );
 }
