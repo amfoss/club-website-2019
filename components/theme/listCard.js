@@ -17,23 +17,25 @@ const ListCard = ({
 }) =>
   username ? (
     <div className="card">
-      <div className="d-flex">
-        <div className="p-0">
-          <img
-            src={avatar ? avatar : defaultAvatar}
-            alt={firstName + ' ' + lastName + `'s photo`}
-          />
-        </div>
-        <div className="item-details">
-          <div>
-            <h6>
-              {' '}
-              {firstName} {lastName}{' '}
-            </h6>
-            <div className="list-tagline">{tagline}</div>
+      <a href={`/@${username}`}>
+        <div className="d-flex">
+          <div className="p-0">
+            <img
+              src={avatar ? avatar : defaultAvatar}
+              alt={firstName + ' ' + lastName + `'s photo`}
+            />
+          </div>
+          <div className="item-details">
+            <div>
+              <h6>
+                {' '}
+                {firstName} {lastName}{' '}
+              </h6>
+              <div className="list-tagline">{tagline}</div>
+            </div>
           </div>
         </div>
-      </div>
+      </a>
     </div>
   ) : (
     <div className="card px-4 pt-4 pb-2 h-100 text-center my-2">

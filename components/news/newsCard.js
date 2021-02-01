@@ -1,10 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
 import dateFormat from 'dateformat';
 
 export default ({ article, pinned }) => (
   <div className="post-card h-100">
-    <a href={'news/' + article.slug}>
+    <a href={article.slug}>
       <img
         src={`https://api.amfoss.in/${article.cover}`}
         alt={article.slug + `'s image`}

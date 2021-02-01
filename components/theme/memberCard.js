@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Link from 'next/link';
 
 import defaultAvatar from '../../public/defaults/avatar.png';
 
@@ -14,7 +13,7 @@ const MemberCard = ({
   profilePic,
 }) => (
   <div className="member-card card">
-    <a href={'@' + username}>
+    <a href={'/@' + username}>
       <img
         src={
           profilePic

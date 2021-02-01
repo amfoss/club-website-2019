@@ -10,7 +10,7 @@ const ProjectCard = ({ project }) =>
         src={`https://api.amfoss.in/${project.cover}`}
         alt={project.slug + `'s image`}
       />
-      <a href={'projects/' + project.slug}>
+      <a href={project.slug}>
         <div className="text-dark px-4 py-4">
           <h6 className="mb-2">{project.name}</h6>
           <div>{project.tagline}</div>
