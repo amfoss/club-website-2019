@@ -1,0 +1,29 @@
+[
+    {
+        "title":"Course Mentors",
+        "perks":
+        [
+          {
+            "Text": [
+              "Abhishek J M","Security Engineer, CRED"
+            ],
+            "Icon": "/photos/abhishek_jm.jpg"
+          },
+          {
+            "Text": [
+              "Rahul Sani","Security Intern, CRED"
+            ],
+            "Icon": "/photos/rahul_sani.jpg"
+          },
+          {
+              "Text": [
+                "Abhilash G","Software Engineer,  YARA"
+              ],
+              "Icon": "/photos/abhilash_g.jpg"
+            }
+          
+        ]
+    
+      }
+    
+]

@@ -662,3 +662,51 @@ hr.yellow
 .vertical-align
   display: flex
   align-items: center
+@property --num
+  syntax: "<integer>"
+  initial-value: 0
+  inherits: false
+
+.font-new
+  font-size: 2rem
+
+
+@media only screen and (min-width: 768px)
+  .vertical-timeline-element-content .vertical-timeline-element-date
+    font-size: 2rem
+
+.card-flip > div 
+  backface-visibility: hidden
+  transition: transform 300ms
+  transition-timing-function: linear
+  width: 100%
+  height: 15rem
+  margin: 0
+  display: flex
+
+.bottompad
+  padding: 10px
+
+.card-front 
+  transform: rotateY(0deg) 
+
+.card-back 
+  transform: rotateY(180deg) 
+  position: absolute
+  top: 0
+
+
+.card-flip:hover .card-front 
+  transform: rotateY(-180deg)
+  
+.card-flip:hover .card-back 
+  transform: rotateY(0deg)
+
+
+.font-lg
+  font-size: 21.5px
+@media only screen and (min-width: 771px )
+  .right
+    right : 70px
+.righttitile
+  right : 70px

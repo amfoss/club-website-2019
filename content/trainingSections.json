@@ -1,0 +1,32 @@
+[
+    {
+      "title":"Overview",
+      "point1":"Master Android Studio IDE using Java to Deploy apps on emulator and on any device that runs android",
+      "point3":"Targeted towards beginning Android developers with a background in software development or computer science.",
+      "point2":"Create 3 Hands-on applications, get feedback from experienced mentors and if you feel like going above and beyond - publish your app in the Playstore.",
+      "image": "/illus/overview.jpg"
+      
+      
+      
+    },
+    {
+      "title": "Why take this course",
+      "point1":"Become industry ready for a highly paid, in-demand skill set.",
+      "point2":"Develop applications for the most used OS in the world with over 1.5 million new devices activated every day.",
+      "point3":"Learn how to build end-to-end Android apps from concept to deployment",
+      "image": "/illus/skills.jpg"
+      
+        
+      },
+    
+    {
+      "title":"Learning Objectives",
+      "image":"/illus/objective.jpg",
+      "point1":"Get comfortable with using Android Studio",
+      "point2":"Learn to implement different navigation strategies, use themes,styles and provide structure to the app.",
+      "point3":"Get an understanding of how to work on background, schedule tasks and trigger events and learn to store user data"
+      
+  
+    }
+  ]
+  

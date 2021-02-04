@@ -1,0 +1,39 @@
+[
+    {
+        "title":"Key Highlights",
+        "perks":
+        [
+          {
+            "Text": [
+              "Certificate",
+              ""
+            ],
+            "Icon": "/illus/certificate.svg"
+          },
+          {
+            "Text": [
+              "Assignments",
+              ""
+            ],
+            "Icon": "/illus/assigment.svg"
+          },
+          {
+              "Text": [
+                "1 on 1 attention",
+                ""
+              ],
+              "Icon": "/illus/attention.svg"
+            },
+            {
+              "Text": [
+                "Curated content",
+                ""
+              ],
+              "Icon": "/illus/content.svg"
+            }
+          
+        ]
+    
+      }
+    
+]
