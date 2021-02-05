@@ -21,8 +21,10 @@ const query = `
     lastName
     username
     email
+    isMembershipActive
     isVerified
     profile {
+      displayInWebsite
       profilePic
       githubUsername
       gitlabUsername
@@ -51,7 +53,7 @@ const query = `
 }
 `;
 
-const ProfileTemplate = (props) => {
+const ProfileTemplate = () => {
   const router = useRouter();
   const { username } = router.query;
   const [data, setData] = useState('');
@@ -139,7 +141,7 @@ const ProfileTemplate = (props) => {
   };
 
   return isLoading ? (
-    data.isVerified ? (
+    data.isMembershipActive && data.isVerified && data.profile.displayInWebsite ? (
       <Layout>
         <section className="profile">
           <SEO title={data.firstName + ' ' + data.lastName} />
