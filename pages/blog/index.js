@@ -75,7 +75,7 @@ const News = () => {
     <Layout>
       <SEO
         title="Blog"
-        description="Visit the official amFOSS blog to catch  everything latest in tech and FOSS"
+        description="Visit the official amFOSS blog to catch everything latest in tech and FOSS"
       />
       <TitleBar title="Blog" />
       <div className="row m-0 p-1">

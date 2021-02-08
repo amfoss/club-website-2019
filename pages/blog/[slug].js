@@ -17,6 +17,7 @@ const query = `query ($slug: String!){
     cover
     author{
       fullName
+      username
     }
     tags{
       name
@@ -54,8 +55,10 @@ export default function BlogTemplate(props) {
       <SEO
         title={data.title}
         slug={data.slug}
+        description={data.description
+          .replace(/<\/?[^>]+(>|$)/g, '')
+          .substring(0, 255)}
         keywords={data.tags ? data.tags.join(', ') : null}
-        image={`https://amfoss.in/blog/${data.slug}/seo.jpg`}
       />
       <TitleBar title={data.title} type="h3" />
       <div className="row mx-2 my-4">
@@ -80,16 +83,16 @@ export default function BlogTemplate(props) {
                 ))}
               </div>
             </div>
-            <div>
-              <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-              {'Author: ' + data.author.fullName}
+            <div className="px-4">
+              Author:{' '}
+              <a href={`/@${data.author.username}`}>{data.author.fullName}</a>
             </div>
           </div>
         </div>
       </div>
       <div className="mx-4">
         <div
-          className="card-no-hover blog-content p-4 content-text-size"
+          className="card-no-hover p-4 blog-content"
           dangerouslySetInnerHTML={{ __html: data.description }}
         />
       </div>
