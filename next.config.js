@@ -1,14 +1,10 @@
-const withPlugins = require('next-compose-plugins');
-const withSass = require('@zeit/next-sass');
-const withCSS = require('@zeit/next-css');
-const withSourceMaps = require('@zeit/next-source-maps');
-
-const customConfig = {
+module.exports = {
   target: 'serverless',
   devIndicators: {
     autoPrerender: false,
   },
   trailingSlash: true,
+  productionBrowserSourceMaps: true,
   webpack(config, options) {
     config.module.rules.push({ test: /\.md$/, use: 'raw-loader' });
     config.module.rules.push({ test: /\.yml$/, use: 'raw-loader' });
@@ -24,8 +20,3 @@ const customConfig = {
     return config;
   },
 };
-
-module.exports = withPlugins(
-  [[withSourceMaps], [withCSS], [withSass]],
-  customConfig
-);

@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../styles/style.sass';
 import Image from 'next/image';
 export default () => {
   return (

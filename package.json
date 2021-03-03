@@ -13,9 +13,6 @@
     "lint-check": "prettier --check '**/*.js'"
   },
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "@zeit/next-sass": "^1.0.1",
-    "@zeit/next-source-maps": "0.0.3",
     "babel-runtime": "^6.26.0",
     "dateformat": "^3.0.3",
     "disqus-react": "^1.0.10",
@@ -25,8 +22,6 @@
     "js-yaml": "^3.14.0",
     "marked": "^1.2.3",
     "next": "10.0.1",
-    "next-compose-plugins": "^2.2.1",
-    "node-sass": "^5.0.0",
     "prettier": "^2.1.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -38,7 +33,8 @@
     "react-vertical-timeline-component": "^3.3.3",
     "sass": "^1.29.0",
     "slick-carousel": "^1.8.1",
-    "url-loader": "^4.1.1"
+    "url-loader": "^4.1.1",
+    "webpack": "^4.44.2"
   },
   "devDependencies": {
     "raw-loader": "^4.0.2"
