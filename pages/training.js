@@ -32,14 +32,14 @@ export default () => {
               <div>
                 <img src={android} width="150" height="210" />
                 <h3>Android Development</h3>
-                <button className="mt-2 btn btn-lg button heading-font bg-light">
                   <a
-                    href="#registration-form"
+                    href="https://www.payumoney.com/events/#/buyTickets/android-app-development-online-course"
                     style={{ color: 'black', textDecoration: 'none' }}
                   >
-                    REGISTER NOW
+                    <button className="mt-2 btn btn-lg button heading-font bg-light">
+                      REGISTER NOW
+                    </button>
                   </a>
-                </button>
                 <h5 className="mt-4">40 hours • Limited Seats</h5>
               </div>
             </div>
