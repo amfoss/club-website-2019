@@ -24,6 +24,10 @@ const query = `query ($slug: String!){
     }
     featured
     description
+    pagination{
+      previous
+      next
+    }
   }
 }`;
 
@@ -95,6 +99,29 @@ export default function BlogTemplate(props) {
           className="card-no-hover p-4 blog-content"
           dangerouslySetInnerHTML={{ __html: data.description }}
         />
+      </div>
+      <div className="p-4">
+        {data.pagination.previous && (
+          <a href={`https://amfoss.in/blog/${data.pagination.previous}/`}>
+            <button style={{ backgroundColor: '#fec007' }}>
+              {'<'} PREVIOUS POST
+            </button>
+          </a>
+        )}
+        {data.pagination.next && (
+          <a href={`https://amfoss.in/blog/${data.pagination.next}/`}>
+            <button
+              style={{
+                backgroundColor: '#fec007',
+                float: 'right',
+                display: 'flex',
+                position: 'relative',
+              }}
+            >
+              NEXT POST {'>'}
+            </button>
+          </a>
+        )}
       </div>
       <div className="p-2">
         <DiscussionEmbed shortname="amfoss" config={disqusConfig} />
