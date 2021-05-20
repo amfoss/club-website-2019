@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CollectionCard = ({ collection }) => (
-  <div className="post-card h-100">
+  <div className="post-card h-100" style={{ cursor: 'pointer' }}>
     <img
       src={`https://api.amfoss.in/${collection.cover}`}
       alt={`${collection.name}'s image`}

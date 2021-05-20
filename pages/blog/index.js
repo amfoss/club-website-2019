@@ -125,7 +125,7 @@ const Blog = () => {
             <React.Fragment>
               <h4 className="mx-4 mt-4">Collection - {collection}</h4>
               <div className="row m-0 mt-3">
-                {Collections.map((c) => {
+                {Collections.reverse().map((c) => {
                   if (c.collection.name === collection)
                     return (
                       <div key={c.name} className="col-sm-12 col-md-6 p-3">
