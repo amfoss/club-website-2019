@@ -1,4 +1,4 @@
-image: registry.gitlab.com/amfoss/website:latest
+image: node:latest
 
 stages:
   - caching 
