@@ -1,4 +1,5 @@
 import React from 'react';
+import CookieCons from '../cookieConsent';
 
 export default () => {
   const styling = {
@@ -11,7 +12,7 @@ export default () => {
         <div id="landing-btn">
           <a
             href="#home-section-1"
-            className="fa fa-chevron-down animated infinite bounceOutDown delay-2s slow"
+            className="fa fa-chevron-down animated infinite bounceOutDown delay-2s slow p-4"
           />
         </div>
         <div id="landing-info">
@@ -27,6 +28,7 @@ export default () => {
               loving what they do.
             </p>
           </div>
+          <CookieCons />
         </div>
       </div>
     </div>

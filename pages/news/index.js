@@ -5,6 +5,7 @@ import TitleBar from '../../components/theme/titleBar';
 import NewsCard from '../../components/news/newsCard';
 import dataFetch from '../../utils/dataFetch';
 import ReactLoading from 'react-loading';
+import CookieConsent from '../../components/cookieConsent';
 
 const newsQuery = ` {
   news{
@@ -126,6 +127,7 @@ const Index = () => {
           </div>
         </div>
       </div>
+      <CookieConsent />
     </Layout>
   );
 };

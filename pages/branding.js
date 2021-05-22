@@ -4,6 +4,7 @@ import SEO from '../components/seo';
 import TitleBar from '../components/theme/titleBar';
 
 import Link from 'next/link';
+import CookieConsent from '../components/cookieConsent';
 
 const Branding = () => (
   <Layout>
@@ -175,6 +176,7 @@ const Branding = () => (
         </div>
       </div>
     </div>
+    <CookieConsent />
   </Layout>
 );
 

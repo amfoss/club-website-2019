@@ -8,6 +8,7 @@ import BlogCard from '../../components/blog/blogCard';
 import dataFetch from '../../utils/dataFetch';
 import CollectionCard from '../../components/blog/collectionCard';
 import Loading from '../../components/theme/loading';
+import CookieConsent from '../../components/cookieConsent';
 
 const blogsQuery = `{
   blogs{
@@ -194,6 +195,7 @@ const Blog = () => {
           </div>
         </div>
       </div>
+      <CookieConsent />
     </Layout>
   ) : (
     <Loading />

@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import TitleBar from '../components/theme/titleBar';
 import ClubLife from '../components/clubLife/clubLife';
+import CookieConsent from '../components/cookieConsent';
 
 const Life = () => (
   <Layout>
@@ -13,6 +14,7 @@ const Life = () => (
     />
     <TitleBar title="Life in the Club" />
     <ClubLife />
+    <CookieConsent />
   </Layout>
 );
 

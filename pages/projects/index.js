@@ -7,6 +7,7 @@ import ProjectCard from '../../components/projects/projectCard';
 import TitleBar from '../../components/theme/titleBar';
 import dataFetch from '../../utils/dataFetch';
 import ReactLoading from 'react-loading';
+import CookieConsent from '../../components/cookieConsent';
 
 const projectsQuery = ` query {
     projects{
@@ -76,6 +77,7 @@ const Project = () => {
           </div>
         </div>
       </div>
+      <CookieConsent />
     </Layout>
   );
 };

@@ -7,6 +7,7 @@ import MemberCard from '../../components/theme/memberCard';
 import TitleBar from '../../components/theme/titleBar';
 import dataFetch from '../../utils/dataFetch';
 import ReactLoading from 'react-loading';
+import CookieConsent from '../../components/cookieConsent';
 
 const query = ` query {
       activeUsers(sort: "username") {
@@ -215,6 +216,7 @@ export default class Index extends React.Component {
             </div>
           </div>
         </div>
+        <CookieConsent />
       </Layout>
     );
   }
