@@ -86,12 +86,6 @@ const FooterNav = () => (
           <h4>Contact Us</h4>
           <div className="footer-contact">
             <h6>
-              <i className="fa fa-comments" /> IRC Chat
-            </h6>
-            <p>
-              #amfoss on <a href="https://webchat.freenode.net/">Freenode.</a>
-            </p>
-            <h6>
               <i className="fa fa-envelope" /> Email
             </h6>
             <p>
