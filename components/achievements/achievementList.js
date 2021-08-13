@@ -3,7 +3,9 @@ import ListCard from '../theme/listCard';
 import defaultAvatar from '../../public/defaults/avatar.png';
 
 const AchievementList = ({ title, achievements }) => {
-  let years = [...new Set(achievements.map((obj) => obj.year))];
+  let years = [...new Set(achievements.map((obj) => obj.year))].sort(
+    (a, b) => b - a
+  );
   const [year, setYear] = useState(years[0]);
   let filtered = achievements.filter((achievement) => achievement.year == year);
 
@@ -28,7 +30,7 @@ const AchievementList = ({ title, achievements }) => {
       {filtered.map((achievement) => {
         return (
           <ListCard
-            key={achievement.user.username}
+            key={achievement.user.username + achievement.title}
             username={achievement.user.username}
             firstName={achievement.user.firstName}
             lastName={achievement.user.lastName}
