@@ -26,6 +26,20 @@ const Index = () => {
   const [isLoading, setLoading] = useState(false);
   const [query, setQuery] = useState('');
   const [filterType, setFilterType] = useState('all');
+  const [year, setYear] = useState('all');
+
+  let currentYear = [];
+  for (let i = 2019; i <= new Date().getFullYear(); i++) {
+    currentYear.push(String(i));
+  }
+  currentYear = currentYear.reverse();
+  let Yearlist = currentYear.map((item, index) => {
+    return (
+      <option key={index} value={item}>
+        {item}
+      </option>
+    );
+  });
 
   const fetchData = async () => await dataFetch({ query: newsQuery });
   useEffect(() => {
@@ -39,6 +53,7 @@ const Index = () => {
   const filter = data.filter((news) => {
     let queryFlag = 1;
     let filterFlag = 1;
+    let yearFlag = 1;
 
     if (query !== '') {
       queryFlag = 0;
@@ -52,7 +67,12 @@ const Index = () => {
       filterFlag = 0;
       if (news.category.name === filterType) filterFlag = 1;
     }
-    if (queryFlag && filterFlag) return 1;
+    if (year !== 'all') {
+      yearFlag = 0;
+      let YEAR = String(news.date).substr(0, 4);
+      if (String(YEAR) === year) yearFlag = 1;
+    }
+    if (queryFlag && filterFlag && yearFlag) return 1;
   });
 
   const Articles = [];
@@ -109,6 +129,19 @@ const Index = () => {
               />
               <hr />
             </div>
+
+            <div className="mb-4 mx-2">
+              <div>Filter By Year</div>
+              <select
+                className="bg-white p-2 w-100 mt-2"
+                onChange={(e) => setYear(e.target.value)}
+                value={year}
+              >
+                <option value="all">{year === 'all' ? 'Change Year' : 'All'}</option>
+                {Yearlist}
+              </select>
+            </div>
+
             <div className="mb-4 mx-2">
               <div>Filter By Type</div>
               <select
