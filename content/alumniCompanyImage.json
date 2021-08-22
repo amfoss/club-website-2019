@@ -84,6 +84,9 @@
     "image": "logos/alumni-company/28_hackerrank.svg"
   },
   {
+    "image": "logos/alumni-company/36_yara.svg"
+  },
+  {
     "image": "logos/alumni-company/29_okta.svg"
   },
   {
@@ -94,5 +97,15 @@
   },
   {
     "image": "logos/alumni-company/32_appviewX.svg"
+  },
+  {
+    "image": "logos/alumni-company/33_daily.svg"
+  },
+  {
+    "image": "logos/alumni-company/34_intuit.svg"
+  },
+  {
+    "image": "logos/alumni-company/35_spoon.svg"
   }
+
 ]
