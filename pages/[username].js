@@ -28,6 +28,8 @@ const query = `
       profilePic
       githubUsername
       gitlabUsername
+      twitterUsername
+      telegramUsername
       tagline
       about
       role
@@ -186,6 +188,22 @@ const ProfileTemplate = () => {
                       name="gitlab"
                       link={`https://gitlab.com/` + data.profile.gitlabUsername}
                     />
+                    {data.profile.twitterUsername != null ? (
+                      <SocialIcon
+                        name="twitter"
+                        link={`https://twitter.com/` + data.profile.twitterUsername}
+                      />
+                    ) : (
+                      <div />
+                    )}
+                    {data.profile.telegramUsername != null ? (
+                      <SocialIcon
+                        name="telegram"
+                        link={`https://t.me/` + data.profile.telegramUsername}
+                      />
+                    ) : (
+                      <div />
+                    )}
                     {data.profile.links.length > 0 &&
                       data.profile.links.map((link) => (
                         <SocialIcon name={link.portal.name} link={link.link} />
