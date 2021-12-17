@@ -101,7 +101,7 @@ export default class Index extends React.Component {
       }
       if (this.state.filterYear !== 'everyone') {
         yflag = 0;
-        if (this.state.filterYear === user.profile.batch.toString()) yflag = 1;
+        if (this.state.filterYear === user.profile.batch) yflag = 1;
       }
       if (this.state.filterRole !== 'everyone') {
         rflag = 0;
@@ -190,6 +190,7 @@ export default class Index extends React.Component {
                       ? 'Change Year'
                       : ' Everyone'}
                   </option>
+                  <option value="2021">2021</option>
                   <option value="2020">2020</option>
                   <option value="2019">2019</option>
                   <option value="2018">2018</option>
