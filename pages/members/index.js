@@ -138,23 +138,25 @@ export default class Index extends React.Component {
           <div className="col-md-8 col-lg-9 order-2 order-md-1">
             <div className="row m-0 mb-4">
               {this.state.loaded ? (
-                filteredMembers.map((user) =>
-                  user.profile.batch && user.profile.displayInWebsite ? (
-                    <div
-                      key={user.username}
-                      className="col-6 col-md-6 col-lg-4 col-xl-3 p-2"
-                    >
-                      <MemberCard
-                        username={user.username}
-                        firstName={user.firstName}
-                        lastName={user.lastName}
-                        tag={user.profile.role}
-                        profilePic={user.profile.profilePic}
-                        githubUsername={user.profile.githubUsername}
-                      />
-                    </div>
-                  ) : null
-                )
+                filteredMembers
+                  .sort((a, b) => a.firstName.localeCompare(b.firstName))
+                  .map((user) =>
+                    user.profile.batch && user.profile.displayInWebsite ? (
+                      <div
+                        key={user.username}
+                        className="col-6 col-md-6 col-lg-4 col-xl-3 p-2"
+                      >
+                        <MemberCard
+                          username={user.username}
+                          firstName={user.firstName}
+                          lastName={user.lastName}
+                          tag={user.profile.role}
+                          profilePic={user.profile.profilePic}
+                          githubUsername={user.profile.githubUsername}
+                        />
+                      </div>
+                    ) : null
+                  )
               ) : (
                 <ReactLoading type="spinningBubbles" color="#000" />
               )}
