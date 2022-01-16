@@ -8,6 +8,10 @@ const SocialMenu = () => (
     <SocialIcon name="twitter" link="https://twitter.com/amfoss_in" />
     <SocialIcon name="instagram" link="https://instagram.com/amfoss.in" />
     <SocialIcon name="linkedin" link="https://linkedin.com/company/amfoss" />
+    <SocialIcon
+      name="matrix"
+      link="https://matrix.to/#/%23amfoss-general:matrix.org"
+    />
   </div>
 );
 

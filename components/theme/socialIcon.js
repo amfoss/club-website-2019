@@ -11,6 +11,7 @@ import chatroom from '../../public/icons/chatroom.png';
 import gitlab from '../../public/icons/gitlab.png';
 import gmail from '../../public/icons/gmail.png';
 import telegram from '../../public/icons/telegram.png';
+import matrix from '../../public/icons/matrix-logo.png';
 
 const SocialIcon = ({ name, link }) =>
   link ? (
@@ -25,6 +26,7 @@ const SocialIcon = ({ name, link }) =>
       {name === 'gitlab' ? <img src={gitlab} alt={name} /> : null}
       {name === 'gmail' ? <img src={gmail} alt={name} /> : null}
       {name === 'telegram' ? <img src={telegram} alt={name} /> : null}
+      {name === 'matrix' ? <img src={matrix} alt={name} /> : null}
     </a>
   ) : null;
 
@@ -41,6 +43,7 @@ SocialIcon.propTypes = {
     'gitlab',
     'telegram',
     'web',
+    'matrix',
   ]),
   link: PropTypes.string,
 };
