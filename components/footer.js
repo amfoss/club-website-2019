@@ -12,9 +12,6 @@ const Footer = () => (
         <a href="https://amrita.edu">
           <img src={amritaLogo} alt="amrita" />
         </a>
-        <a href="https://bi0s.in">
-          <img src={bi0sLogo} alt="bi0s" />
-        </a>
       </div>
       <div className="col-lg-4 p-2">
         <div className="w-100">
