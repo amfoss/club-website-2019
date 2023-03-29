@@ -22,7 +22,7 @@ export default ({ event, title }) => (
           ? event.album.photos.map((slide, i) => (
               <img
                 key={i}
-                src={`https://api.amfoss.in/${slide.image}`}
+                src={`https://api2.amfoss.in/${slide.image}`}
                 alt={'Photos of ' + title}
               />
             ))

@@ -120,7 +120,7 @@ const ProfileTemplate = () => {
               <div key={blog.title} className="col-sm-12 col-md-6 p-3">
                 <div className="post-card text-center h-100">
                   <img
-                    src={`https://api.amfoss.in/${blog.cover}`}
+                    src={`https://api2.amfoss.in/${blog.cover}`}
                     alt={blog.slug + `'s image`}
                   />
                   <Link href={'https://amfoss.in/blog/' + blog.slug}>
@@ -154,7 +154,7 @@ const ProfileTemplate = () => {
                   <img
                     src={
                       data.profile.profilePic
-                        ? `https://api.amfoss.in/${data.profile.profilePic}`
+                        ? `https://api2.amfoss.in/${data.profile.profilePic}`
                         : data.profile.githubUsername
                         ? `https://avatars.githubusercontent.com/${data.profile.githubUsername}`
                         : Avatar

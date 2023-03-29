@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-fetch';
 
-const API_URL = 'https://api.amfoss.in/';
+const API_URL = 'https://api2.amfoss.in/';
 
 export default ({ query, variables }) => {
   const body = {

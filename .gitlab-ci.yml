@@ -1,12 +1,12 @@
 image: node:16
 
 stages:
-  - caching 
+  - caching
   - lint check
   - build
   - deploy review
-  - deploy staging 
-  - test staging 
+  - deploy staging
+  - test staging
   - pages
 
 variables:
@@ -45,7 +45,7 @@ build-website:
     - npm install next
   script:
     - echo ${CI_COMMIT_REF_SLUG}
-    - npm install 
+    - npm install
     - npm run export
     - rm -rf public
     - mv out public
@@ -99,7 +99,6 @@ deploy staging:
   variables:
     DOMAIN: $STAGING_DOMAIN
   environment:
-
     name: staging
 
 test staging:
@@ -112,7 +111,7 @@ test staging:
     - cicd
   script:
     - apk add --no-cache curl grep
-    - curl -s http://$STAGING_DOMAIN 
+    - curl -s http://$STAGING_DOMAIN
     - echo "Commit SHA:" "$CI_COMMIT_SHORT_SHA"
 
 pages:
@@ -123,5 +122,4 @@ pages:
     paths:
       - public
   only:
-      - master
-
+    - master

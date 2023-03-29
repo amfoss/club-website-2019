@@ -6,7 +6,7 @@ export default ({ article, featured }) => (
     <a href={article.slug}>
       <img
         style={{ objectFit: 'cover' }}
-        src={`https://api.amfoss.in/${article.cover}`}
+        src={`https://api2.amfoss.in/${article.cover}`}
         alt={article.slug + `'s image`}
       />
       <div>

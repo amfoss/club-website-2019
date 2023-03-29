@@ -65,7 +65,7 @@ const ArticleTemplate = (props) => {
         <div className="post-header col-md-9 order-2 order-md-1">
           <img
             className="w-100 post-cover mb-2"
-            src={`https://api.amfoss.in/${data.cover}`}
+            src={`https://api2.amfoss.in/${data.cover}`}
             alt={data.slug + `'s image`}
           />
         </div>

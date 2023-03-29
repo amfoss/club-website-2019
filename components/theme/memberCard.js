@@ -17,7 +17,7 @@ const MemberCard = ({
       <img
         src={
           profilePic
-            ? `https://api.amfoss.in/${profilePic}`
+            ? `https://api2.amfoss.in/${profilePic}`
             : githubUsername
             ? `https://avatars.githubusercontent.com/${githubUsername}`
             : defaultAvatar
