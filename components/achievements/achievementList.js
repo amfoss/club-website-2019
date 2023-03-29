@@ -37,7 +37,7 @@ const AchievementList = ({ title, achievements }) => {
             tagline={achievement.title}
             avatar={
               achievement.user.profile.profilePic
-                ? `https://api2.amfoss.in/${achievement.user.profile.profilePic}`
+                ? `https://api.amfoss.in/${achievement.user.profile.profilePic}`
                 : defaultAvatar
             }
           />

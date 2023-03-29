@@ -83,7 +83,7 @@ const Project = (props) => {
             <div className="row m-0 bg-white section-card">
               <div className="col-md-4">
                 <img
-                  src={`https://api2.amfoss.in/${data.cover}`}
+                  src={`https://api.amfoss.in/${data.cover}`}
                   alt={data.slug + `'s image`}
                 />
               </div>

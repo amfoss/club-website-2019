@@ -5,7 +5,7 @@ export default ({ article, pinned }) => (
   <div className="post-card h-100">
     <a href={article.slug}>
       <img
-        src={`https://api2.amfoss.in/${article.cover}`}
+        src={`https://api.amfoss.in/${article.cover}`}
         alt={article.slug + `'s image`}
       />
       <div>

@@ -7,7 +7,7 @@ const ProjectCard = ({ project }) =>
     <div className="card no-decoration h-100">
       <img
         className="cover"
-        src={`https://api2.amfoss.in/${project.cover}`}
+        src={`https://api.amfoss.in/${project.cover}`}
         alt={project.slug + `'s image`}
       />
       <a href={project.slug}>
