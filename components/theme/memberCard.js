@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import Image from 'next/image';
 
 import defaultAvatar from '../../public/defaults/avatar.png';
 
@@ -13,17 +14,36 @@ const MemberCard = ({
   profilePic,
 }) => (
   <div className="member-card card">
-    <a href={'/@' + username}>
-      <img
-        src={
-          profilePic
-            ? `https://api.amfoss.in/${profilePic}`
-            : githubUsername
-            ? `https://avatars.githubusercontent.com/${githubUsername}`
-            : defaultAvatar
-        }
-        alt={firstName + ' ' + lastName + `'s photo`}
-      />
+    <a href={''}>
+      {profilePic ? (
+        <Image
+          src={profilePic}
+          alt="avatar"
+          width={100}
+          height={100}
+          className="avatar"
+        />
+      ) : githubUsername ? (
+        <Image
+          src={`https://avatars.githubusercontent.com/${githubUsername}`}
+          alt="avatar"
+          width={100}
+          height={100}
+          className="avatar"
+        />
+      ) : (
+        <img
+          src={
+            githubUsername
+              ? `https://avatars.githubusercontent.com/${githubUsername}`
+              : defaultAvatar
+          }
+          alt="avatar"
+          width={100}
+          height={100}
+          className="avatar"
+        />
+      )}
       <div className={'role-tag ' + tag}>{tag}</div>
       <div>
         {' '}

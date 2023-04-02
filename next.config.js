@@ -3,6 +3,16 @@ module.exports = {
   devIndicators: {
     autoPrerender: false,
   },
+  images: {
+    domains: [
+      'images.unsplash.com',
+      'avatars.githubusercontent.com',
+      'user-images.githubusercontent.com',
+      'imgur.com',
+      'images.unsplash.com',
+      'drive.google.com',
+    ],
+  },
   trailingSlash: true,
   productionBrowserSourceMaps: true,
   webpack(config, options) {

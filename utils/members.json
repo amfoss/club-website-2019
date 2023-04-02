@@ -1,0 +1,431 @@
+[
+  {
+    "firstName": "Akshat",
+    "lastName": "Tripathi",
+    "username": "Akshat Tripathi#5163",
+    "profile": {
+      "role": "Mentor",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "Akshatji800",
+      "tagline": "",
+      "batch": "2020"
+    }
+  },
+  {
+    "firstName": "Aman",
+    "lastName": "Kumar Singh",
+    "username": "amankumarsingh#5676",
+    "profile": {
+      "role": "Mentor",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "theamankumarsingh",
+      "tagline": "",
+      "batch": "2020"
+    }
+  },
+  {
+    "firstName": "Pranavdhar",
+    "lastName": "",
+    "username": "iampranavdhar#3148",
+    "profile": {
+      "role": "Mentor",
+      "displayInWebsite": true,
+      "profilePic": " https://user-images.githubusercontent.com/73348574/195999610-8175e63d-ece2-4603-b793-a331bf4c2422.jpeg",
+      "githubUsername": "iampranavdhar",
+      "tagline": "",
+      "batch": "2020"
+    }
+  },
+  {
+    "firstName": "Pavithra",
+    "lastName": "Nair",
+    "username": "Pavithra Nair#5131",
+    "profile": {
+      "role": "Mentor",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "pavithranair",
+      "tagline": "",
+      "batch": "2020"
+    }
+  },
+  {
+    "firstName": "Lakshmi",
+    "lastName": "Warrier",
+    "username": "lakshmi#4102",
+    "profile": {
+      "role": "Mentor",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "lakshmi-warrier",
+      "tagline": "",
+      "batch": "2020"
+    }
+  },
+  {
+    "firstName": "Kavya",
+    "lastName": "Krishnan",
+    "username": "Kavya Krishnan#4282",
+    "profile": {
+      "role": "Mentor",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "krishkavya",
+      "tagline": "",
+      "batch": "2020"
+    }
+  },
+  {
+    "firstName": "Sujith",
+    "lastName": "Bolisetty",
+    "username": "Sujith#4426",
+    "profile": {
+      "role": "Mentor",
+      "displayInWebsite": true,
+      "profilePic": "https://avatars.githubusercontent.com/u/73323807?v=4",
+      "githubUsername": "BolisettySujith",
+      "tagline": "",
+      "batch": "2020"
+    }
+  },
+  {
+    "firstName": "Geo",
+    "lastName": "Jolly",
+    "username": "juno#2674",
+    "profile": {
+      "role": "Mentor",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "krishkavya",
+      "tagline": "",
+      "batch": "2020"
+    }
+  },
+  {
+    "firstName": "Anoushka",
+    "lastName": "Ramesh",
+    "username": "anoushka#1163",
+    "profile": {
+      "role": "Mentor",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "anoura12",
+      "tagline": "",
+      "batch": "2020"
+    }
+  },
+  {
+    "firstName": "Arun",
+    "lastName": "Govind M",
+    "username": "arungovind_m#8419",
+    "profile": {
+      "role": "Mentor",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "arungovindm2001",
+      "tagline": "",
+      "batch": "2020"
+    }
+  },
+  {
+    "firstName": "Adithya",
+    "lastName": "Kumar",
+    "username": "SilentCruzer#5269",
+    "profile": {
+      "role": "Mentor",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "SilentCruzer",
+      "tagline": "",
+      "batch": "2020"
+    }
+  },
+  {
+    "firstName": "R.V.Rajagopalan",
+    "lastName": ".",
+    "username": "Rv#1065",
+    "profile": {
+      "role": "Member",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "rv602",
+      "tagline": "",
+      "batch": "2021"
+    }
+  },
+  {
+    "firstName": "Anshuman",
+    "lastName": "Swain",
+    "username": "Anshuman#7671",
+    "profile": {
+      "role": "Member",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "Anshuman-8",
+      "tagline": "",
+      "batch": "2021"
+    }
+  },
+  {
+    "firstName": "Pakhi",
+    "lastName": "Banchalia",
+    "username": "Pakhi#7831",
+    "profile": {
+      "role": "Member",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "Pakhi07",
+      "tagline": "",
+      "batch": "2021"
+    }
+  },
+  {
+    "firstName": "Gautham",
+    "lastName": "Krishnan",
+    "username": "Gk119#7825",
+    "profile": {
+      "role": "Member",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "gauthamk02",
+      "tagline": "",
+      "batch": "2021"
+    }
+  },
+  {
+    "firstName": "Rishav",
+    "lastName": "Kumar",
+    "username": "Rishav_a2z#2657",
+    "profile": {
+      "role": "Member",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "rishuriya",
+      "tagline": "",
+      "batch": "2021"
+    }
+  },
+  {
+    "firstName": "Manoj",
+    "lastName": "S",
+    "username": "manoj1749#7476",
+    "profile": {
+      "role": "Member",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "manoj1749",
+      "tagline": "",
+      "batch": "2021"
+    }
+  },
+  {
+    "firstName": "Harikrishna",
+    "lastName": "Pillai",
+    "username": "Dragonixx#7736",
+    "profile": {
+      "role": "Member",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "Harikrishna-AL",
+      "tagline": "",
+      "batch": "2021"
+    }
+  },
+  {
+    "firstName": "Aashraya",
+    "lastName": "Katiyar",
+    "username": "Aashray Katiyar#5600",
+    "profile": {
+      "role": "Member",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "aashray446",
+      "tagline": "",
+      "batch": "2021"
+    }
+  },
+  {
+    "firstName": "Yash",
+    "lastName": "Arora",
+    "username": "stealthflame#0091",
+    "profile": {
+      "role": "Member",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "yasharora102",
+      "tagline": "",
+      "batch": "2021"
+    }
+  },
+  {
+    "firstName": "Rakshith",
+    "lastName": "S",
+    "username": "rak_s_hith#3447",
+    "profile": {
+      "role": "Member",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "rakshith6404",
+      "tagline": "",
+      "batch": "2021"
+    }
+  },
+  {
+    "firstName": "Chaithanya",
+    "lastName": "Kalyan",
+    "username": "Chaithanya#8716",
+    "profile": {
+      "role": "Member",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "Chaithanya512",
+      "tagline": "",
+      "batch": "2021"
+    }
+  },
+  {
+    "firstName": "Vyshnav",
+    "lastName": "Unnikrishnan",
+    "username": "Phantom_371#7810",
+    "profile": {
+      "role": "Member",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "Vyshnav371",
+      "tagline": "",
+      "batch": "2021"
+    }
+  },
+  {
+    "firstName": "Gopikrishna",
+    "lastName": "M",
+    "username": "Hurtchelar#6983",
+    "profile": {
+      "role": "Member",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "Hurt-chelar",
+      "tagline": "",
+      "batch": "2021"
+    }
+  },
+  {
+    "firstName": "David",
+    "lastName": "Tony Veliath",
+    "username": "Punk Samurai#7228",
+    "profile": {
+      "role": "Member",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "PunkSamurai42",
+      "tagline": "",
+      "batch": "2021"
+    }
+  },
+  {
+    "firstName": "Vishal",
+    "lastName": "J",
+    "username": "Vishal0501",
+    "profile": {
+      "role": "Member",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "vishalj0501",
+      "tagline": "",
+      "batch": "2021"
+    }
+  },
+  {
+    "firstName": "Shashank",
+    "lastName": "Priyadarshi",
+    "username": "iamsh4shank#3338",
+    "profile": {
+      "role": "mentor",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "iamsh4shank",
+      "tagline": "",
+      "batch": "2019"
+    }
+  },
+  {
+    "firstName": "Anantha",
+    "lastName": "Nandanan",
+    "username": "[BLANK]#8631",
+    "profile": {
+      "role": "mentor",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "ananthanandanan",
+      "tagline": "",
+      "batch": "2019"
+    }
+  },
+  {
+    "firstName": "Govind",
+    "lastName": "Goel",
+    "username": "govindgoel#5375",
+    "profile": {
+      "role": "mentor",
+      "displayInWebsite": true,
+      "profilePic": "https://avatars.githubusercontent.com/u/52847415?v=4",
+      "githubUsername": "govindgoel",
+      "tagline": "",
+      "batch": "2019"
+    }
+  },
+  {
+    "firstName": "Rishab",
+    "lastName": "Mudliar",
+    "username": "lazyCodes7#3424",
+    "profile": {
+      "role": "mentor",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "lazyCodes7",
+      "tagline": "",
+      "batch": "2019"
+    }
+  },
+  {
+    "firstName": "Akshay",
+    "lastName": "V",
+    "username": "akymaster#3878",
+    "profile": {
+      "role": "mentor",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "akshayaky",
+      "tagline": "",
+      "batch": "2019"
+    }
+  },
+  {
+    "firstName": "Abhijit",
+    "lastName": "Ramesh",
+    "username": "Abhijit Ramesh#6724",
+    "profile": {
+      "role": "alumni",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "abhijitramesh",
+      "tagline": "",
+      "batch": "2018"
+    }
+  },
+  {
+    "firstName": "Yash",
+    "lastName": "Khare",
+    "username": "yashk2000#1994",
+    "profile": {
+      "role": "alumni",
+      "displayInWebsite": true,
+      "profilePic": "",
+      "githubUsername": "yashk2000",
+      "tagline": "",
+      "batch": "2018"
+    }
+  }
+]

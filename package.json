@@ -32,6 +32,7 @@
     "react-slick": "^0.27.14",
     "react-vertical-timeline-component": "^3.5.2",
     "sass": "^1.45.0",
+    "sharp": "^0.32.0",
     "slick-carousel": "^1.8.1",
     "url-loader": "^4.1.1",
     "webpack": "^4.44.2"
