@@ -260,32 +260,6 @@
     }
   },
   {
-    "firstName": "Rakshith",
-    "lastName": "S",
-    "username": "rak_s_hith#3447",
-    "profile": {
-      "role": "Member",
-      "displayInWebsite": true,
-      "profilePic": "",
-      "githubUsername": "rakshith6404",
-      "tagline": "",
-      "batch": "2021"
-    }
-  },
-  {
-    "firstName": "Chaithanya",
-    "lastName": "Kalyan",
-    "username": "Chaithanya#8716",
-    "profile": {
-      "role": "Member",
-      "displayInWebsite": true,
-      "profilePic": "",
-      "githubUsername": "Chaithanya512",
-      "tagline": "",
-      "batch": "2021"
-    }
-  },
-  {
     "firstName": "Vyshnav",
     "lastName": "Unnikrishnan",
     "username": "Phantom_371#7810",
@@ -299,19 +273,6 @@
     }
   },
   {
-    "firstName": "Gopikrishna",
-    "lastName": "M",
-    "username": "Hurtchelar#6983",
-    "profile": {
-      "role": "Member",
-      "displayInWebsite": true,
-      "profilePic": "",
-      "githubUsername": "Hurt-chelar",
-      "tagline": "",
-      "batch": "2021"
-    }
-  },
-  {
     "firstName": "David",
     "lastName": "Tony Veliath",
     "username": "Punk Samurai#7228",
@@ -320,19 +281,6 @@
       "displayInWebsite": true,
       "profilePic": "",
       "githubUsername": "PunkSamurai42",
-      "tagline": "",
-      "batch": "2021"
-    }
-  },
-  {
-    "firstName": "Vishal",
-    "lastName": "J",
-    "username": "Vishal0501",
-    "profile": {
-      "role": "Member",
-      "displayInWebsite": true,
-      "profilePic": "",
-      "githubUsername": "vishalj0501",
       "tagline": "",
       "batch": "2021"
     }
