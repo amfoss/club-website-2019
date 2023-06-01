@@ -31,11 +31,11 @@ const query = ` query {
 // const fetchData = async () => await dataFetch({ query });
 // fetchData().then(result => {
 //     const activeUsers = result.data.activeUsers;
-//     const batches = activeUsers.map(user => user.profile.batch);
+//     const batches = activeUsers.map(user => user.profile.batch).filter(batch => batch !== null);
+//     const startYear = Math.min(...batches);
 //     const currentYear = Math.max(...batches);
-//     for (let year = currentYear; year >= 2017; year--) {
+//     for (let year = currentYear; year >= startYear; year--) {
 //         years.push(year);
-//         console.log(years)
 //     }
 // })
 
@@ -76,7 +76,7 @@ export default class Index extends React.Component {
       filterRole: event.target.value,
     });
   }
-
+  //
   componentDidMount() {
     this.setState({
       data: memebers,
@@ -101,11 +101,12 @@ export default class Index extends React.Component {
 
 // For use when datafetch not in use.
 
-      const currentYear = new Date().getFullYear();
-      const years = []
-    for (let year = currentYear; year >= 2017; year--) {
-      years.push(year);
-    }
+      let years=[];
+    const batches = this.state.data.map(user => user.profile.batch).filter(batch => batch !== null);
+    const startYear = Math.min(...batches);
+    const currentYear = Math.max(...batches);
+    for (let year = currentYear; year >= startYear; year--) {
+        years.push(year);}
 
 
 
@@ -229,7 +230,7 @@ export default class Index extends React.Component {
                           : ' Everyone'}
                     </option>
                     {years.map((year) => (
-                        <option value={year}>{year}</option>
+                        <option key={year} value={year}>{year}</option>
                     ))}
                   </select>
                 </div>
