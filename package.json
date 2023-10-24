@@ -21,7 +21,7 @@
     "isomorphic-fetch": "^3.0.0",
     "js-yaml": "^3.14.1",
     "marked": "^1.2.9",
-    "next": "10.0.1",
+    "next": "13.5.0",
     "prettier": "^2.5.1",
     "react": "17.0.1",
     "react-cookie-consent": "6.2.3",
