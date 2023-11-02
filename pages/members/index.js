@@ -8,7 +8,7 @@ import TitleBar from '../../components/theme/titleBar';
 import dataFetch from '../../utils/dataFetch';
 import ReactLoading from 'react-loading';
 import CookieConsent from '../../components/cookieConsent';
-import memebers from '../../utils/members.json';
+// import memebers from '../../utils/members.json';
 
 const query = ` query {
       activeUsers(sort: "username") {
@@ -38,7 +38,7 @@ export default class Index extends React.Component {
     };
   }
 
-  // fetchData = async () => await dataFetch({ query });
+  fetchData = async () => await dataFetch({ query });
 
   goTop = () => {
     window.scrollTo(0, 0);
@@ -65,9 +65,11 @@ export default class Index extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({
-      data: memebers,
-      loaded: true,
+    this.fetchData().then((r) => {
+      this.setState({
+        data: r.data.activeUsers,
+        loaded: true,
+      });
     });
   }
 
